@@ -30,9 +30,12 @@
 
         
     </head>
-    <body class="light">
+    <body class="rust">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">var path_to_root = "";</script>
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
@@ -54,7 +57,7 @@
         <script type="text/javascript">
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = 'light'; }
+            if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
         </script>
@@ -72,7 +75,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.1.9.</strong> Commands, Interfaces &amp; Listeners</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.1.9.</strong> Commands, Interfaces &amp; Listeners</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra.html"><strong aria-hidden="true">4.3.</strong> Extras</a></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -89,8 +92,8 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -108,6 +111,7 @@
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -1390,6 +1394,76 @@ end,
 )
 </code></pre>
 <p>So this listener will cancel after one use if &quot;GarrisonOccupiedEvent&quot; is triggered, regardless of whether or not &quot;this is done&quot; returns as true or false.</p>
+<a class="header" href="#battle-maps" id="battle-maps"><h1>Battle Maps</h1></a>
+<p>This section will cover all the tutorials related to <strong><em>Creating Battle Maps</em></strong>, all the way from the simplest land map, to the more complex siege maps. And all of that, just for the price of a youngling soul.... well, let's begin. As this is a series of kinda complex tutorials, they're separated in parts:</p>
+<ul>
+<li><a href="chapter_4_1.html"><strong>Land Battle Maps</strong></a>: How to make a basic working land battle map. <strong>Technical part</strong>. Decorations are on you!</li>
+<li><a href="chapter_4_2.html"><strong>Siege Battle Maps</strong></a>: How to make EVERYTHING of a siege map work. <strong>Technical part</strong>, but we'll cover part of the decorations too.</li>
+<li><a href="chapter_4_extra.html"><strong>Battle Maps Extras</strong></a>: Whatever doesn't fit in the other sections, like PSA, TIL, ACB,.... Yes, I just come up with the last one.</li>
+</ul>
+<p>So, with that said, let's begin!</p>
+<a class="header" href="#land-battle-maps" id="land-battle-maps"><h1>Land Battle Maps</h1></a>
+<a class="header" href="#whats-a-land-battle-map" id="whats-a-land-battle-map"><h3>What's a <em>Land Battle Map</em>?</h3></a>
+<p>Land maps are <strong><em>any normal battle map</em></strong>. This includes ambush maps, land battles, underground battles.... but for the sake of simplicity, we're going to focus on how to make a basic plain and simple land battle. Everything else is up to you to expand upon.</p>
+<a class="header" href="#requeriments" id="requeriments"><h3>Requeriments</h3></a>
+<p>For a land battle map to <em>just work</em>, you need to fulfill some requeriments:</p>
+<ul>
+<li>
+<p>Have <strong>a playable area</strong> with two deployment zones inside.</p>
+</li>
+<li>
+<p>Each deployment zone has to have an <em>additive</em> region inside.</p>
+</li>
+</ul>
+<p>That's all. What? Did you though this was difficult? It's rather simple.</p>
+<a class="header" href="#getting-our-hands-dirty" id="getting-our-hands-dirty"><h3>Getting our hands dirty</h3></a>
+<p>To create a land map, just open Terry. Then got to <code>File/New</code> and choose the <em>vista</em> (a.k.a. the borders of your map + climate, lighting,.... <em>environment</em>) for your map, then hit <code>Ok</code>. Wait and you'll see an empty plain. Paint it, tweak the height,.... change it until you get the map you want. And once that is done, <strong>let's start with the Technical part</strong>.</p>
+<p>First, the <strong><em>Playable area</em></strong>. It's simple, click in the <code>Playable Area</code> button, then draw a rectangle. That's your map, where your units will fight. The borders are where they're going to retreat to. Simple, isn't? Here it's how it looks (hint: it's the white square):</p>
+<p><img src="images/4_1-01.png" alt="Play with me! I know of games...." /></p>
+<p>Second, Go-NoGo Regions. The game automatically guesses where a unit can walk and where it cannot, but you can change it with these regions.</p>
+<p><img src="images/4_1-02.png" alt="But you can't come here!" /></p>
+<p>See those red lines? That's where the game <em>thinks</em> your units cannot walk (You can make them appear changing a setting in Terry). But <strong>those are imprecise</strong>, and wrong in some situations. To fix it, we have to manually set the zones we want to be walkable, and the ones that we don't want to be it. But I'm lazy, so I use the lazy method: put a Go Region around the entire Playable Area, then place the No-Go Regions manually. This is the result:</p>
+<p><img src="images/4_1-03.png" alt="Now you can!" /></p>
+<p>Now, the last thing, deployment zones. Just hit the <code>Deployment Zone</code> button, then draw one for the attacker, and one for the defender (Alliance ID, 0 is attacker, 1 defender). Like this.</p>
+<p><img src="images/4_1-04.png" alt="Deploy me baby, use satelites" /></p>
+<p>That's the basics. With that, you just have a working land battle map, but there are some extras you'll need to get the best of your map.</p>
+<a class="header" href="#love-death--ai" id="love-death--ai"><h3>Love, Death &amp; AI</h3></a>
+<p>First, we need to add AI hints. These are lines we draw in the map that tells the AI <em>this place is good for defending, here you can deploy your units in a line, from here reinforcements will come,...</em> Basically, it makes the AI *understand the map. There are multiple AI hints:</p>
+<ul>
+<li><strong>Forest</strong>: It tells the AI <strong>where the forest is</strong>, so they can get there to get extra defense from proyectiles. This one is automatically generated around forest terrain.</li>
+<li><strong>Defensive hill</strong>: It tells the AI about <strong>good places to defend</strong>. Just put it around the places you want the AI to defend.</li>
+<li><strong>Default deployment line</strong>: It tells the AI <strong>where to deploy his units</strong> on a line. When using this, just draw a line with just two vertex. More than that breaks this one.</li>
+<li><strong>Attacker/Defender deployment line</strong>: It tells the AI <strong>where the reinforcements will form a line</strong> after arriving to the map through the closest walkable border to this line. Only used in campaign. If you got a campaign map without these and reinforcements come it may crash, or you may have no reinforcements.</li>
+</ul>
+<p>So for this example we are going to put deployment and defensive hill hints, so the AI knows how to deploy and how to defend the hill. To give more variety to your maps, I recommend you to put multiple deployment hints per deployment zone, so the AI deploy differently from time to time. Here it is a screenshot with the deployment hints done:</p>
+<p><img src="images/4_1-05.png" alt="Ayyyy lmao" /></p>
+<p>And here is an example of the deployment hill hint:</p>
+<p><img src="images/4_1-06.png" alt="Ayyyy lmao x2" /></p>
+<p>With that, you can test our map ingame. Just hit export, what until it finishes, start the game, enable your map's mod in the launcher, and... play the game. It should popup under <em>Land Battles</em>.</p>
+<a class="header" href="#siege-battle-maps" id="siege-battle-maps"><h1>Siege Battle Maps</h1></a>
+<p>TBD</p>
+<a class="header" href="#extras" id="extras"><h1>Extras</h1></a>
+<p>Here it goes extra stuff that's good to know about Terry. So... here we go:</p>
+<ul>
+<li>
+<p>The stuff you put outside the map <strong>doesn't have his height relative to 0</strong>. Instead, their <em>0</em> is the height of the terrain in the place you put them. For example, put a building at 30 height. If the ground it's at 60 in that exact place, then once the map loads <strong>you'll find a floating building at 90 height</strong>. This can only be seen ingame, not in Terry.</p>
+</li>
+<li>
+<p>Of the 8x8 green square map, the border row/columns are special. The game will <strong>autolevel any terrain</strong> from the middle of those squares to the border of the map to 0 height, but that it's not shown in Terry, only in-game. So, if you place stuff there, account for the height change once the game loads the map, because that part of the map acts like the outside of the map.</p>
+</li>
+<li>
+<p>Vegetation on prefabs you put outside your map dissapears.</p>
+</li>
+<li>
+<p>If your deployment zone goes outside your playable area, the game will <strong>expand the playable area</strong> to cover the full size of the deployment zone.</p>
+</li>
+<li>
+<p>The priority of Go/No-Go Regions is: <code>Walkable Terrain</code> &gt; <code>Automatic No-Go Region</code> &gt; <code>Go Region</code> &gt; <code>No Go Region</code>. The thing <strong>most to the right</strong> will take priority over the rest.</p>
+</li>
+<li>
+<p>If you don't let any walkable connections with the map's border, the game will load your map as <strong>a fully unwalkable map</strong>, and it'll crash on loading/deploying.</p>
+</li>
+</ul>
 <a class="header" href="#etc" id="etc"><h1>Etc</h1></a>
 <p>All other auxillary stuff goes here, I s'pose.</p>
 
