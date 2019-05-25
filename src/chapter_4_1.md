@@ -3,6 +3,8 @@
 ### What's a *Land Battle Map*?
 
 Land maps are ***any normal battle map***. This includes ambush maps, land battles, underground battles.... but for the sake of simplicity, we're going to focus on how to make a basic plain and simple land battle. Everything else is up to you to expand upon.
+
+As a bonus, the map used for this tutorial can be found [here][Map]. Just unpack it inside `Total War WARHAMMER II\assembly_kit\raw_data\terrain\tiles\battle\_assembly_kit` and it should appear in Terry's `Open` dialog.
 ### Requeriments
 
 For a land battle map to *just work*, you need to fulfill some requeriments:
@@ -51,6 +53,7 @@ And here is an example of the deployment hill hint:
 
 With that, you can test our map ingame. Just hit export, what until it finishes, start the game, enable your map's mod in the launcher, and... play the game. It should popup under *Land Battles*.
 
+[Map]: files/wh2_tutorial_land_battle.7z
 [Playable area]: images/4_1-01.png
 [Nogo region]: images/4_1-02.png
 [Nogo region 2]: images/4_1-03.png
