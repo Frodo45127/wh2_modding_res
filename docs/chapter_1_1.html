@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Mod Troubleshooting Guide - Modding Resources</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_1.html" class="active"><strong aria-hidden="true">1.1.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.2.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.3.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.4.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_foreword.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.1.9.</strong> Commands, Interfaces &amp; Listeners</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra.html"><strong aria-hidden="true">4.3.</strong> Battle Map Extras</a></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Modding Resources</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#mod-troubleshooting-guide" id="mod-troubleshooting-guide"><h1>Mod Troubleshooting Guide</h1></a>
+<p>This is a troubleshooting guide for mod users in TW: Warhammer 2. The generic pointers should be valid for all recent TW games.</p>
+<ul>
+<li>Your neighbourhood Cataph</li>
+</ul>
+<a class="header" href="#managing-mods" id="managing-mods"><h4>Managing Mods</h4></a>
+<p>So, you have subscribed to mods on the workshop. You now open CA's current mod manager (hereby called <strong>George II</strong>) and - they don't work. We called it George II cause it's the new launcher. He's new in town, prettier than George, but he's still not good at what he should be doing and forgets to make mods work. We're sorry but George II needs some time.</p>
+<p>If mods appear to not work, check the support pages about it. If that doesn't work, which is feasible, the standing recommendation is to rollback to George I (<code>game properties&gt; betas&gt; launcher_release_candidate</code>). George I is faulty as well but slightly more reliable.
+<strong><em>[disregard all of the above right now (during P&amp;W dlc release), they're both bugged more than before; this is basically a &quot;shut up and use KMM&quot;]</em></strong></p>
+<p>Even better, just use the <a href="https://github.com/Kaedrin/warhammer-mod-manager">community mod manager</a> (hereby called KMM). Long story short, George is unwieldy and has grown responsible for a lot of issues of its own, becoming hated by modders and users alike. Among other things, KMM can launch the game without even bothering George.</p>
+<p>One of the things George I cannot do is let you change load order because it only uses the default alphabetical order. KMM and even George II have that function, so sometimes you'd be tempted to change load order manually, right? WRONG.
+The truth is that <strong>compatibility-minded modders already handle load order on their own</strong> as far as possible. Manually changing load order may do absolutely nothing <strong>or break everything</strong>.
+Some context. There are six main possible categories of folders in a mod pack and this is how they handle load order, either through actual pack name or table name:</p>
+<ul>
+<li><strong>Db</strong>: table name.</li>
+<li><strong>Scripts</strong>: pack name.</li>
+<li><strong>Startpos</strong>: the big bad, pack name.</li>
+<li><strong>Text</strong>: table name.</li>
+<li><strong>UI</strong>: pack name.</li>
+<li><strong>Variants</strong>: pack name.</li>
+</ul>
+<p>And that is if the modder doesn't redirect content. KMM can only affect pack name order, so there are things like balance submods (Db overrides) that are still completely in the hands of the modders and intentionally so.</p>
+<p>In other words, <strong>there are <strong>only two possible cases</strong> in which you may want to alter load order manually: UI and variants</strong>, basically if you want to use specific reskin B.pack in the midst of larger reskin A.pack, in which case you push B on top.</p>
+<p>You DON'T WANT to change script or startpos load order, because bad stuff happens. For example, the Community Modding Framework, aka bunch of script hooks, should always be LAST or you'll break things.</p>
+<p><em>In conclusion, you want to follow KMM's instructions, give Steam time to download/remove mods and mostly keep load order in an alphabetical fashion (e.g. order by name and save profile), especially after adding new mods.</em></p>
+<p>Which, incidentally, is this:
+! # $ % &amp; ' ( ) + , - ; = @ 0-9 a-z [ ] ^ _ ` { } ~
+Where &quot;!&quot; wins over &quot;a&quot;.</p>
+<a class="header" href="#common-troubleshooting" id="common-troubleshooting"><h4>Common Troubleshooting</h4></a>
+<p>In an efficient mod, at least half of the reported issues are down to user error or what is technically called launcher f***-up. We’re going to try and cut that amount down for the greater good.</p>
+<a class="header" href="#most-common-user-mistakes" id="most-common-user-mistakes"><h6>Most common user mistakes:</h6></a>
+<ol>
+<li><strong>Not reading the mod description</strong>. Seriously, it’s there for a reason. The modder took time to write it and it’s downright disrespectful to ignore it. Some mods will also have FAQs or a list of known issues and instructions.</li>
+<li><strong>Ignoring the required items</strong>. Ditto. The mod may show you a popup upon subscribing, disregarding that is almost always cue for disaster. This popup is not shown when subbing from a Steam collection, so actually check the mod’s page.</li>
+<li><strong>Mixing up incompatible mods</strong>. Too often, some users will make the said mistakes and just subscribe. The most common example is using two startpos mods at the same time, or two overhauls. Don’t do that. If in doubt, read the description again or ask the modder in a comment.</li>
+<li><strong>Not providing details upon reporting an issue</strong>. Ok, you did everything right but that ugly bug is still there. That’s fine. The worst thing you could do at this point is comment &quot;mod doesn’t work&quot; because that means absolutely nothing.</li>
+</ol>
+<p><strong>Your comment for the modder should include as many as possible of the following:</strong></p>
+<ul>
+<li><strong>Context</strong>: when and how the thing happened. E.g. during the interturn after X’s turn, or clicking this button, whether it was Vortex/ME/multiplayer, custom battle or campaign battle.</li>
+<li><strong>Mod list</strong>: always tell if you have other mods up and which ones, we see people somehow not mention that they were using a total overhaul, and that’s kind of a huge deal. Do not skip on certain mods because you think they can’t be the culprit. Linking a collection is the handiest method you have.</li>
+<li><strong>Screenshot</strong>: always helps, it can at least show the context.</li>
+<li><strong>Save game</strong>: if requested, you can find your save game in (example) C:\Users%USER%\AppData\Roaming\The Creative Assembly\Warhammer2\save_games. Remember the mod list, because the modder may not be able to load without it.</li>
+</ul>
+<p><strong>And not to do:</strong></p>
+<ul>
+<li><strong>The Hit &amp; Run</strong>: if you comment about an issue but then solve it on your own, let the modder know. Sometimes people just report a problem and disappear.</li>
+<li><strong>Ignoring previous comments</strong>: the answer to your problem may lie as far as two comments below. If any, look for the FAQs as well.</li>
+</ul>
+<p><em>This list is of course not meant to insult anybody’s intelligence, but you’d be surprised at how many issues and massive wastes of time are due to neglect of these simple rules. Following them is in the user’s interest in order to find a solution sooner, and it will allow the modder more time for improvement rather than wasted in unnecessary bug-hunts.</em></p>
+<a class="header" href="#most-common-launcher-or-game-issues-with-either-george-i-or-george-ii" id="most-common-launcher-or-game-issues-with-either-george-i-or-george-ii"><h6>Most common launcher or game issues (with either George I or George II):</h6></a>
+<ol>
+<li><strong>Failed to download/remove mod</strong>. This happens relatively often and if in doubt you should always check in the mod download folder (example: Z:\Steam\steamapps\workshop\content\594570??????) whether that mod was successfully downloaded/removed. Open George/Steam again until it is. The final folder id is the same as the one on the mod’s Steam url and you can sort by date for the most recently poked folder.
+<ul>
+<li><strong>More on this if using KMM</strong>: Kaedrin’s manager moves active mod packs back to the data folder. Moreover, when mods update you will likely need to refresh/restart KMM. Most people will be using the Skip Intros mod, and if the game starts without loading it it’s an easy symptom something didn’t reload correctly. If you get that or suddenly crash for no good reason, just <strong>refresh/restart KMM first thing</strong>!</li>
+</ul>
+</li>
+<li><strong>Ghost mods</strong>. Definitely spooky. You have toggled off that mod, but somehow it turns out it was still being loaded and crashing your game. Or a mod updates and self-enables. Using KMM seems enough to prevent this kind of poltergeist.</li>
+<li><strong>Corrupted download</strong>. This is something that has been happening increasingly over time. The mod’s download is botched and it either crashes the game or presents less visible problems (e.g.: this lord’s graphics are wrong/missing). Go again in your content or data folder, delete the mod pack and let George download it again. In theory, you should do this every time a mod that is clearly not supposed to do that crashes on game start, especially when the mod hasn’t been updated recently and nobody has reported such a glaring problem in a while.</li>
+<li><strong>Random crashes</strong>: sometimes stuff just breaks and you have to verify your game’s cache: Steam Library&gt;right click on game&gt;Properties&gt;Local Files&gt;Verify yadda yadda. Or check with the game’s support.</li>
+<li><strong>THE DREADED DURTHU BUG</strong>: once upon a time, a bug with Durthu’s Lamentation ability rampaged through the workshop, mods being blamed without anybody being able to find a culprit. Eventually, it turned out that it was a vanilla bug that only popped up when certain mods were around and yes, I’m serious. Any similar glitch may be now affectionately dubbed Durthu by modders. The user can do nothing about it but just keep in mind, for giggles, that sometimes this sort of thing happens and this is when modders grow white hair in digging through their innocent mods. Probably karma for the analogous reports CA get for mod-originated bugs.</li>
+<li><strong>Can only do one thing at a time, guv</strong>: new bug introduced with the lizard&amp;rat DLC, supposedly to be fixed asap cause it breaks the new launchers on most cases. Basically only one mod is loaded at any time. I don’t have to specify how bad that is. Just use KMM.</li>
+</ol>
+<a class="header" href="#most-common-kmm-issues" id="most-common-kmm-issues"><h6>Most common KMM issues:</h6></a>
+<ol>
+<li><strong>Doesn’t work</strong>: KMM can be installed anywhere, BUT in the game’s stuff. Don’t install in data/ or anywhere close. Hell, plop it in the desktop.</li>
+<li><strong>Doesn’t work cause I’m pirating the game</strong>: KMM can smell piracy. Buy the game.</li>
+<li><strong>Freeze on start</strong>: try again.</li>
+<li><strong>DLC not found</strong>: I don’t know the specifics but 1.8.6 should fix that from .4. If it doesn’t, Detect installs again. Past that, report to Kaedrin with what he needs or rollback to the .2.</li>
+</ol>
+<a class="header" href="#appendix-trimming-the-mod-list" id="appendix-trimming-the-mod-list"><h4>APPENDIX: Trimming the Mod List</h4></a>
+<p>You should always keep in mind that even if the mod list is technically sound there is always a <strong>background mod limit of unknown entity</strong>. Long story short, beyond 40 mods you’re potentially flirting with disaster because risk of incompatibility increases and the game may simply throw more random problems and crashes, or just plain balance issues. At 70ish, you surely have something wrong going on somewhere.
+As a rule of thumb, try not to overload it. No, don’t assemble and publish a bunch of mods, that kind of thing is terribly dangerous and bad for a variety of reasons. We’ll go more in-depth about this another time.</p>
+<a class="header" href="#finding-the-culprit" id="finding-the-culprit"><h6>Finding the culprit</h6></a>
+<p>The other problem with large mod lists is this: bad, I got a crash; worse, which one of the N mods I have is the culprit?</p>
+<p>Generic pointers:</p>
+<ul>
+<li>Pure Text, Variant and UI mods can NEVER crash the game for the user. If they do, it’s a botched download.</li>
+<li>Sort by date either on KMM or George to find the most recent updates, if you didn’t add additional mods those may be responsible.</li>
+<li>If you had the issue during a campaign, do not remove mods that have custom items, units or buildings because you’re just going to crash harder if they are around in the campaign map.</li>
+</ul>
+<p>One of the things you should try upon encountering a reproducible crash is to toggle off all mods  from the ground up by loading the bare minimum to make that mod work, for example loading only the Unlocker+ and CMF. And up from there, adding one or small groups of mods at a time until you can reproduce the issue.
+<strong>Keep in mind mod requirements while you do this.</strong></p>
+<p>It’s patient work but the modder will appreciate it.
+Remember: a happy modder is a happy user.</p>
+<a class="header" href="#appendix-scripts" id="appendix-scripts"><h4>APPENDIX: Scripts</h4></a>
+<p>Scripts are being increasingly used by mods. Scripters are getting smarter by the day to maintain compatibility, but some mods still require frameworks like CMF or UIMF (we’ll read about them later).</p>
+<p>You may encounter symptoms of broken scripts, due to botched downloads, bad compatibility, lack of CMF/UIMF or just plain unforeseen issues because we can just mess stuff up sometimes. Script glitches tend to be quite tricky.</p>
+<p>How to recognize broken scripts:</p>
+<ul>
+<li>Rites button on a faction that shouldn’t have that.</li>
+<li>You’re playing Tomb Kings or a modded faction and you see foreign mortuary cult/crafting options.</li>
+<li>You see an unchained Sword of Khaine button right off. (Example below, with broken Books too)
+<img src="images/1_1-01.png" alt="Example (with broken Books too)" />.</li>
+<li>Chaos and all Rogue armies may spawn immediately.</li>
+<li>Campaign camera on a fresh campaign starts zoomed-out and doesn’t pan in.</li>
+<li>Chivalry starts at 0.</li>
+<li>Some LLs appear as trapezist Loremasters (e.g. in TEB).</li>
+<li>One of the worst, characters do not gain XP (this may sometimes happen in full vanilla too, requires repair).</li>
+</ul>
+<p>What do?
+In most cases, it’s just a botched download (see Launcher error 3). Other times it may be trickier and require you to start trimming the mod list to find the culprit. When/if you report the issue to modders, remember to provide as much info as humanly possible because finding a script break can turn ugly and complicated.
+Please also consider using <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1271877744">this debugger mod</a> and sending the resulting log, generated in Steam\steamapps\common\Total War WARHAMMER II. Specific scripty mods may come with additional instructions.</p>
+<a class="header" href="#appendix-a-hrefhttpsteamcommunitycomworkshopfiledetailsid1175369579community-modding-framework-cmfa" id="appendix-a-hrefhttpsteamcommunitycomworkshopfiledetailsid1175369579community-modding-framework-cmfa"><h4>APPENDIX: <a href="http://steamcommunity.com/workshop/filedetails/?id=1175369579">Community Modding Framework (CMF)</a></h4></a>
+<a class="header" href="#currently-needs-maintenance-as-of-7-may" id="currently-needs-maintenance-as-of-7-may"><h4>CURRENTLY NEEDS MAINTENANCE, AS OF 7 MAY</h4></a>
+<p>CMF is basically a community-driven dock where all ships come to do whatever ships do in ports. In other words, <strong>it is a required framework that allows high layers of compatibility between a bunch of mods</strong>. It used to be pretty mandatory before new opportunities arose, but it’s still required for some mods out there. A bunch of problems are caused by not having CMF, or by a botched download of the latter.</p>
+<p>So, what to do:</p>
+<ol>
+<li>If it’s a required mod, do grab it.</li>
+<li>ALWAYS keep CMF right at the bottom of the mod list if you are using KMM. Always.</li>
+</ol>
+<a class="header" href="#appendix-a-hrefhttpssteamcommunitycomsharedfilesfiledetailsid1354363596ui-modding-frameworka" id="appendix-a-hrefhttpssteamcommunitycomsharedfilesfiledetailsid1354363596ui-modding-frameworka"><h4>APPENDIX: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1354363596">UI Modding Framework</a></h4></a>
+<p>Pretty much the same reasoning, this mod was a breakthrough that allowed UI mods via scripting, and there are zero reasons not to have it around just in case one of your mods is actually using it or starts doing it.
+This framework may be required by scripty mods that do pretty nifty stuff including new UI panels and such.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_1_0.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_1_2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="chapter_1_0.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="chapter_1_2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

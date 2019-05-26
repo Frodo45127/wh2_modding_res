@@ -1,7 +1,5 @@
 ### Tutorials to Convert
 
-- [Tolerant Tables by Cataph](https://docs.google.com/document/d/1b1qF9PJUdBsW6Zj6msFImfT275EpnT8jNf4H2Kjct_Q/edit?usp=sharing)
-- [Mod Troubleshooting Guide by Cataph](https://docs.google.com/document/d/13WhCMaeXeO8yi7X7vEIHA9_h-i6lXvclmC3bf2Z7U6Q/edit?usp=sharing)
 - [Unit Card Guide by Cataph](https://docs.google.com/document/d/1ouBxVjIcdz_pcdWjvR0UUNlBMgpk_iOkS2_YqsR8vjQ/edit?usp=sharing)
 - [Lua Overview by Vandy](https://docs.google.com/document/d/1hrg3VP3Fl15bYm5I6cvPe3ZYU7OasXsztGOkJ4RugaA/edit?usp=sharing)
 - [How to Write Readable Script by theSniperDevil](https://steamcommunity.com/sharedfiles/filedetails/?id=1218756773)

@@ -5,9 +5,11 @@
 [TO DO](./to_do.md)
 
 - [Tools & Resources](./chapter_1_0.md)
+    - [Mod Troubleshooting Guide](./chapter_1_1.md)
+    - [Tolerant Tables](./chapter_1_2.md)
+    - [Unit Card Guide](./chapter_1_3.md)
+    - [Building Buildings](./chapter_1_4.md)
 - [Database Editing](./chapter_2_0.md)
-    - [Tolerant Tables](./chapter_2_1.md)
-    - [Building Buildings](./chapter_2_2.md)
 - [Lua](./chapter_3_0.md)
     - [From Start To Scratch](./chapter_3_1_0.md)
         - [Foreword: Devtool Console](./chapter_3_1_foreword.md)

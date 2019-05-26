@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Unit Card Guide - Modding Resources</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.1.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.2.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html" class="active"><strong aria-hidden="true">1.3.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.4.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_foreword.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.1.9.</strong> Commands, Interfaces &amp; Listeners</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra.html"><strong aria-hidden="true">4.3.</strong> Battle Map Extras</a></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Modding Resources</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#unit-card-guide" id="unit-card-guide"><h1>Unit Card Guide</h1></a>
+<a class="header" href="#why" id="why"><h5>Why</h5></a>
+<p>Hello, my name is Cataph and I am a cardoholic.</p>
+<p>You made a new unit and you need a new flashy unit card. Simple. No, it ain’t.
+Unit cards are probably <strong>the unit’s component you will be staring at for the majority of the time</strong>, even more than the actual variant. Get it wrong and it can be an eyesore for the entire campaign and battle.</p>
+<p><strong>A good unit card will</strong>:</p>
+<ul>
+<li>blend in with other vanilla pieces</li>
+<li>show the unit’s appearance</li>
+<li>display, possibly, its character and gear and role</li>
+</ul>
+<a class="header" href="#what" id="what"><h5>What</h5></a>
+<p>But first things first.
+<strong>A unit card is a 60x130 PNG</strong>. Don’t make it larger than that or it will automatically be compressed in-game and lose more quality than if you did it yourself.
+<strong>Its location is ui/units/icons</strong>, and it’s a good idea to open the data.pack and extract that folder for future reference. Its name needs to be the same in the card column in the <code>unit_variants</code> table.
+In units/info you may find a version with a larger “shredded frame”, this is however only used in loading screens, so ignore that unless you need those for promo or stuff like that.</p>
+<a class="header" href="#how" id="how"><h5>How</h5></a>
+<p>You can use stuff like GIMP or Photoshop to assemble a unit card. Personally I use the latter so I will use its lingo.
+Making nice cards is not easy. During the transition between Rome2’s and Warhammer’s art style I made truly <em>horrendous</em> cards myself, but with time I noticed things and developed some tricks.</p>
+<p>Most CA cards are similar to existing GW artwork, but are still made by a proper artist. I am surely not one, but you’ll want to respect these factors:</p>
+<ul>
+<li><strong>Positioning</strong> of the portrayed unit: not too zoomed in, not too far away; varies with races too (notice how Empire cards tend to have a western knee-cut, Dwarfs a full body).</li>
+<li><strong>Lighting</strong>: CA cards are generally good luminosity, low contrast but with drawn highlights. This is important, you don’t want your card to be a confused blob.</li>
+</ul>
+<p>Before we get to the chase, <a href="files/template.psd">get this template</a>! Always periodically test with the card frame on top, I used to get immensely pissed off when important details of my card got hidden by the UI. You will never see the entire card in the game, especially on ranged units due to the additional ammo bar. Remember to hide the frame again when you’re done. It’s a PSD file, but should work just fine in GIMP too.</p>
+<a class="header" href="#the-three-jedi-ways" id="the-three-jedi-ways"><h6>The Three Jedi Ways</h6></a>
+<p><strong>[please don't use the sampled pictures without permission]</strong></p>
+<ol>
+<li>
+<p><strong>THE ARTWORK</strong>. You grab a <em>legal</em>* and beautiful artwork around, and tweak it until it fits and shines. Usually the quickest method, but it requires a good sample. Example below, for my Skullreapers, <a href="https://vignette.wikia.nocookie.net/warhammerfb/images/7/76/BORKIL.jpg/revision/latest?cb=20130829160001">based on this artwork</a>.
+<img src="images/1_3-01.png" alt="skullreepz" /></p>
+</li>
+<li>
+<p><strong>THE MONTAGE</strong>. You grab parts from existing CA cards and glue them together. This may look simple but it’s actually an excellent way to get god-awful cards, because each bloke in a card may have its size, positioning and lighting, and mixing them may not work like you’d think. You don’t want your card to look like the portrait of the Frankenstein’s Monster, or too samey with the neighbouring unit.
+Working examples: below for my Estalian Lancers, <a href="https://cdn.discordapp.com/attachments/374122686034477057/452435403610259457/berserker_champion.png">or this infopic by not-a-spoon</a>.
+<img src="images/1_3-02.png" alt="lancels" /></p>
+</li>
+<li>
+<p><strong>THE PHOTOSHOOT</strong>. You take things in your hands and start taking screenshots of the unit in-game. This can be a lengthy process, especially for cavalry and ranged units, but can be quite satisfying and produce a faithful portrait of the unit. It’s my favourite and most used method, and the one I’m going to describe.
+This is also where Positioning and Lighting really come to play.</p>
+</li>
+</ol>
+<p>* Remember that you can't use non-WHFB stuff and if fan-art, you want to check/ask permission.</p>
+<a class="header" href="#guide-to-the-photoshoot" id="guide-to-the-photoshoot"><h6>Guide to the Photoshoot</h6></a>
+<p><strong>First off you need to take a good screenshot</strong> in which the unit comes with a good pose, possibly no animation glitches and clipping. As said, you need something that will fit in a 60x130, so some photography experience may come in handy.</p>
+<p>Here are two examples that can give you an idea of how to crop and photoshop a battle screenshot and what the final result can potentially look like.</p>
+<p><img src="images/1_3-03.png" alt="ayy" /></p>
+<p>These two blokes are Estalian reskins for Swordsmen and Spearmen. As you can see, the pose needs to fit in a quite longilineal frame, so not all stances will work and also why cavalry is more difficult. You want to show at least part of the body and weaponry.
+<em>Protip! Use a better camera mod and the &gt;N&lt; key high-detail camera for better screenshots.</em></p>
+<p><img src="images/1_3-04.png" alt="bee" /></p>
+<p>Usually you will want a decent lighting, so no early dawn or cloudy battles. You can still make those work but it’s harder. For these guys I wanted a sunny look instead of the gloomy Empire cards.</p>
+<p>The beginning may be as simple as auto-tuning Luminosity and/or Tone to remove weird tints.
+Afterwards you want to reduce contrast (by a lot, even up to 100!) and probably still increase luminosity (otherwise they are likely going to look quite bleak in-game).
+Test in custom battle selection until it’s not a grey blob anymore.</p>
+<p>Then comes the holistic and complicated part.</p>
+<p><strong>Protagonism</strong>: the bloke must be instantly distinguishable from the background. Selecting them and making them a separate layer is always a good idea. Afterwards you may further lighten or darken the background stuff. Blurring also works but I usually don’t like it, it can look too fake. Giving it a <em>minimalist</em> oil paint touch can also help.</p>
+<p><strong>Background</strong>: when you have extra time and experience in your hands, you may want to add smoke, happy clouds, grim clouds, that sort of thing, behind the protagonist’s layer. Can look really cool.</p>
+<p><strong>Contours</strong>: this is the secret recipe and why we lowered contrast. We said CA cards are artworks, and they have visible dark contours to highlight parts. So we start drawing them (1-2 pixel width) with medium hardness brush or pencil in black and white in a new layer. Usually it looks good when it’s set as Soft Light, probably between 60 and 100% opacity, tweak at will. Contours can make a huge difference between a flat icon and one that can blend in with vanilla ones.
+Examples (Empire Archers and Teutogen Guard) without and with contour:
+<img src="images/1_3-05.png" alt="yaaaas" /></p>
+<p>The cards were already heavily-engineered, but you can still notice an improvement.
+In any case, you will still check how the card looks in custom battle (where it’s extra tiny) and in the following loading screen. Sometimes it will suck so hard that it’s back to the drawing board, but that’s ok.</p>
+<p>For a true step by step tutorial I’m gonna need a fresh unit card project. Stay tuned.</p>
+<p>Consolation prize, my first and terrible unit card for WH1, versus the same unit in WH2:
+<img src="images/1_3-06.png" alt="rip" /> <img src="images/1_3-07.png" alt="yay" /></p>
+<a class="header" href="#appendix-character-icons" id="appendix-character-icons"><h5>APPENDIX: Character Icons</h5></a>
+<p><strong>Characters want their portraits too</strong>, of course.
+Their cards are kept in ui/portraits/units/(designated culture) and are quite simpler to make. You follow the Photoshoot method, fix the tone, lower contrast, increase luminosity, and bam, done. Except that you want to use that faction’s face-to-frame size ratio to make it look better next to the other heroes and lords. For example Empire characters tend to be more zoomed-out, whereas Vampires have a creepier and closer portrait (you can recognize a bloodsucker by their selfies).
+Making that stuff actually work in campaign is done <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1194811468">by following the binning guide</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_1_2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_1_4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="chapter_1_2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="chapter_1_4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
