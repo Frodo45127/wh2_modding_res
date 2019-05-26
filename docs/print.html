@@ -548,7 +548,7 @@ For now, however, delete all previous entries like usual, add a new row, and inp
 <p>I'll be covering a handful of setups that I find vital for programming in Lua. I'll be showing Notepad++, Visual Studio Code, and VSCode extension that helps debug your scripts. I find all of this to be essential, but you'll be safe with just starting as Notepad++ and returning for the rest later, when you feel more comfortable. For the love of all things holy, don't use Notepad basic.</p>
 <p>This tutorial assumes you already have RPFM downloaded. If you don't yet, go grab it.</p>
 <a class="header" href="#notepad-setup" id="notepad-setup"><h4>Notepad++ Setup</h4></a>
-<p>First off, [we need to grab Notepad++][https://notepad-plus-plus.org/]. Download it, install it wherever.</p>
+<p>First off, <a href="https://notepad-plus-plus.org/">we need to grab Notepad++</a>. Download it, install it wherever.</p>
 <p>Notepad++ is a beautiful text-editing program, and we'll be using it for a couple things. At this point in my existence, I use Notepad++ mainly for global searching through libraries of scripts, it's a great way to quickly read very many scripts at the same time.</p>
 <p>While you wait for Notepad++ to finish installing, you should open RPFM, and use the &quot;Open All CA Packs&quot; command (after making sure you have the proper game selected, under Game Selected).</p>
 <p>Now, go find a spot to create a script dump folder. You'll need to grab all CA's vanilla scripts and put them somewhere on your PC - I recommend an HDD, if you have two drives! - in order to easily browse through their files. Once you have one created and pinned and you know where it is, go back to RPFM, and go find the main &quot;script&quot; directory. Right-click it and select &quot;Extract&quot;, and target the new folder you just made.</p>
@@ -556,7 +556,7 @@ For now, however, delete all previous entries like usual, add a new row, and inp
 <p>Lastly, open up Notepad++, and press &quot;File -&gt; Open Folder As Workspace...&quot;. Target your renamed &quot;script&quot; folder within the script dump directory, and you'll notice that the directory appears on the left-hand side. If you right-click the main folder over there, and press &quot;Find in Files...&quot;, you'll be able to global-search all CA scripts. Incredibly handy for looking at their usage of commands, or to see any references to, say, a lord.</p>
 <p>And that's Notepad++! You can make scripts in there as well, using &quot;File -&gt; New&quot; and naming it &quot;whatever_you_want.lua&quot; when saving. Though, I personally prefer using Visual Studio Code for programming in Lua (and it's what I'm typing this tutorial in), and that's where I have my IDE setup. If you're interested in VSCode, continue reading, if not carry on to the Hello World tutorial!</p>
 <a class="header" href="#visual-studio-code-setup" id="visual-studio-code-setup"><h4>Visual Studio Code Setup</h4></a>
-<p>Clearly, one needs Visual Studio Code. [Go get Visual Studio Code][https://code.visualstudio.com/].</p>
+<p>Clearly, one needs Visual Studio Code. <a href="https://code.visualstudio.com/">Go get Visual Studio Code</a>.</p>
 <p>You got it? No? Why are you reading this?</p>
 <p>Okay, now you're ready? Good.</p>
 <p>Visual Studio Code is really nice for a handful of reasons. You can save &quot;code workspace&quot; files, which allow you to easily access several folders or files that you have saved for one project. I can jump really easily between, say, my Return of the Lichemaster code workspace, and my Other Currently Secret Things code workspace, with only a couple clicks. It has a really pretty dark mode, and the syntax highlighting for Lua is gorgeous, in my opinion.</p>
@@ -570,7 +570,7 @@ For now, however, delete all previous entries like usual, add a new row, and inp
 <p>Once you're done, open a new folder to work in within VSCode. The first thing you'll do is create a new folder in that folder (reference the image below), and name that folder &quot;.vscode&quot;.</p>
 <p><img src="images/3_1-02.png" alt="test" /></p>
 <p>Create a new file within the &quot;.vscode&quot; folder, and name that new file &quot;kailua.json&quot;. Within that file, input the following exactly:</p>
-<pre><code>{
+<pre><code class="language-json">{
    &quot;start_path&quot;: &quot;.vscode/entry.lua&quot;,
    &quot;preload&quot;: {
        &quot;open&quot;: [&quot;lua51&quot;],
@@ -1222,9 +1222,14 @@ out(a) → 5
     Description: 	create a navy or army at a position.  Final parameter specified whether the command goes via the command queue	
     Usage: 		create_force(&quot;faction_key&quot;, &quot;unit_list&quot;, &quot;region_key&quot;, x_position, y_position, exclude_named_characters, &quot;id&quot;, true)
 </code></pre>
-<p>The same applies here. <code>cm:create_force()</code>, with a bunch of parameters. You might notice, however, that it's <em>completely wrong</em> compared to what we used before. Instead of <code>&quot;id&quot;</code>, we used <code>success_callback</code>, and there WAS no parameter after that. What the heck?</p>
-<p>Well, in this situation, it pays to be careful. I advise you to use the CM Scripting Doc cautiously. It isn't fool-proof, and every change that CA has made over the years hasn't been recorded in there - there are commands listed that haven't been functional since Total War: Empire. This is when I point you back to the <a href="./chapter_3_1.html">Setup lesson</a>, if you haven't done that, and tell you to go do it. There are two hyper important tricks in there that will help you understand what to do in a situation like this:</p>
+<p>The same applies here. <code>cm:create_force()</code>, with a bunch of parameters. You might notice, however, that it's <em>completely different</em> compared to what we used before. Instead of <code>&quot;id&quot;</code>, we used <code>success_callback</code>, and there WAS no parameter after that. What the heck? Let's back-up and talk about why.</p>
+<p>The commands in this document are commands to the <em>game interface</em>, something that you really should never, ever touch directly, for fear of crashing the game if you mess something up. These functions -<code>cm:create_force()</code> - are <em>wrappers</em>, over that base command, so we don't have to directly touch the game interface directly. Using the CA functions will quickly error-check our code, and prevent any such crashes (when wrappers for those commands exist!). But what do I mean? Let's open up our script dump and go to script/_lib/lib_campaign_manager.lua, and search for <code>create_force(</code>.</p>
+<p>We'll see a line that looks similar to what I have already shown you - <code>function campaign_manager:create_force(faction_key, unit_list, region_key, x, y, exclude_named_characters, success_callback)</code>. This is the <em>wrapper</em>. Within this function, lower down at the bottom, we can see the call to the game interface - <code>self.game_interface:create_force(faction_key, unit_list, region_key, x, y, id, exclude_named_characters, true);</code>. This looks a lot closer to the definition CA has in their documentation, and I belive it was the definition they were trying to go with. Not sure though!</p>
+<p>In these situations, it pays to be careful. I advise you to use the CM Scripting Doc cautiously. It isn't fool-proof, and every change that CA has made over the years hasn't been recorded in there - there are commands listed that haven't been functional since Total War: Empire. This is when I point you back to the <a href="./chapter_3_1.html">Setup lesson</a>, if you haven't done that, and tell you to go do it. There are three hyper important tricks in there that will help you understand what to do in a situation like this:</p>
 <ol>
+<li>
+<p>Check the lib files! Most functions in this document will be in <code>lib_campaign_manager.lua</code>. Bonus, as you could see with the above example, CA gives a quick explanation for what the function does and what the types are, and where they are found. This is always my first check</p>
+</li>
 <li>
 <p>Use the script dump! All you have to do is use &quot;Find In Files ... &quot; within Notepad++, type in the name of the command (ie. <code>create_force</code>), and wait for it to search all the files. It will come up with some hits, and you can read through CA scripts to see what they do and how it's used.</p>
 </li>
@@ -1256,7 +1261,33 @@ out(a) → 5
     if excess_faction:is_dead() == true then
 </code></pre>
 <p>Wherein, of course, <code>excess_name</code> was a local variable a bit further up. In this example, <code>cm:get_faction()</code> has a <em>return value</em> of a <code>FACTION_SCRIPT_INTERFACE</code>, which we assigned to the local variable <code>excess_faction</code>. <code>FACTION_SCRIPT_INTERFACES</code> have a method called <code>is_dead()</code>, which lets us read if the faction is, well... dead. But how did I know to use that? <em>gasp</em></p>
-<p>Also similar to commands, script interfaces are documented with a slightly-questionable CA file, though this one is typically waaaay more reliable, if a bit inconsistent with some naming. We can, again, grab it from the <a href="./chapter_1.html">Tools &amp; Resources</a> page, this time under the title &quot;Scripting Doc (Events &amp; Interfaces). Our big focus for now is the latter half of that name - Interfaces - though we'll be getting into events right in the next section!</p>
+<p>Also similar to commands, script interfaces are documented with a slightly-questionable CA file, though this one is typically waaaay more reliable, if a bit inconsistent with some naming. We can, again, grab it from the <a href="./chapter_1.html">Tools &amp; Resources</a> page, this time under the title &quot;Scripting Doc (Events &amp; Interfaces). Our big focus for now is the latter half of that name - Interfaces - though we'll be getting into events right in the next section below!</p>
+<p>Open your newest Scripting Doc, and search for <code>FACTION_SCRIPT_INTERFACE</code>. It should be towards the top of the document, right near the word &quot;Interfaces&quot; in big boldage. Like this: <strong>Interfaces</strong>. Cool, found it? Click it!</p>
+<p>You should get a big, long list of blue links, followed by more clear definitions. A typical entry here would look similar to the follows (because the following <em>is</em> an entry here):</p>
+<pre><code>Function: holds_entire_province
+Description: Does this faction hold the entire specified province? Also may include vassals
+Parameters: holds_entire_province(String province, bool include_vassals)
+Return: bool
+</code></pre>
+<p>As before, like the commands above were done with a prefix of <code>cm:</code>, these interface functions are done with a prefix of that script interface. But it won't just be <code>FACTION_SCRIPT_INTERFACE:holds_entire_province</code>, that makes no sense! In our previous, excess-based example, it would look like the following:</p>
+<pre><code>    local excess_faction = cm:get_faction(excess_name)
+    if excess_faction:holds_entire_province(
+</code></pre>
+<p>The second line - description - is quite obvious. It's just a description. Read it, don't read it, I don't care.</p>
+<p>Parameters! We talked about this recently, you remember it right? It'll be a type and a very brief stand-in name to explain what should go there. In this case, you can tell that it wants the key of the province, in strings, and a boolean that determines whether or not you'd like to include vassals in the check. Sometimes, they'll just put the stand-in name in quotation marks to show that it should be a string.</p>
+<p>Return values are much the same. Sometimes there will be returns of other script interfaces, and that's how you can start getting some fun stuff. With a <code>FACTION_SCRIPT_INTERFACE</code>, you can use <code>character_list()</code> to get a <code>CHARACTER_LIST_SCRIPT_INTERFACE</code>, and then use <code>item_at()</code> to get a <code>CHARACTER_SCRIPT_INTERFACE</code>, and then use <code>get_forename()</code> to get a string. That'll look like:</p>
+<pre><code>    local faction = cm:get_faction(&quot;whatever&quot;)
+    local character_list = faction:character_list()
+    local character = character_list:item_at(0)
+    local forename = character:get_forename()
+</code></pre>
+<p>I will note that you don't have to assign everything a local variable here. It can look, albeit much uglier and less safe, like this:</p>
+<pre><code>    local forename = cm:get_faction(&quot;whatever&quot;):character_list():item_at(0):get_forename()
+</code></pre>
+<p>But I do not recommend doing something like this, until you're very comfortable with the language. I do it very, very, very rarely, only when it makes perfect sense to do it, and that's lie-talk for &quot;when I'm tired and it makes perfect sense to my tired brain&quot;.</p>
+<p>Script interfaces are stupidly, stupidly powerful, and using all these smartly allows you to make some serious change within the game, and to read a lot more details, from &quot;how many units are in this army&quot; to &quot;what level is this character&quot; to &quot;how many armies were in the last battle?&quot; But, above all, these interfaces are used <em>best</em> and <em>most powerfully</em> when used in conjunction with listeners and events.</p>
+<p>What are listeners and events? Ah, well...</p>
+<a class="header" href="#listeners-and-events" id="listeners-and-events"><h4>Listeners and Events</h4></a>
 <a class="header" href="#listeners" id="listeners"><h1>Listeners</h1></a>
 <a class="header" href="#can-you-hear-me" id="can-you-hear-me"><h3>Can You Hear Me?</h3></a>
 <p>A listener is an important script command that, simply, waits for something to happen - or, <em>listens</em> for something to happen - in the game, and then triggers something else. Using a listener, we can listen for an event such as the creation of an army, the occupation of a city, or even a battle, and then we use the information from that situation, check for something specific, and run our code if the event matches our criteria. For example: we may be looking for Mannfred to occupy Altdorf. In this case we'd have to use a listener to &quot;listen&quot; for a city being occupied, but we don't want to listen for just <em>any</em> city being occupied. In our example, we have to listen for Altdorf being occupied, and for Mannfred doing the occupying. The listener will listen for every single time a city is occupied, and once those two conditions are met - <em>Mannfred</em> occupying <em>Altdorf</em>... Clue, anyone? - then our listener will trigger some code. In layman's code, our listener will <em>do a thing</em>!</p>
