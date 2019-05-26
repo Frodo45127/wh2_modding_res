@@ -1,4 +1,4 @@
-# Extras
+# Battle Map Extras
 
 Here it goes extra stuff that's good to know about Terry. So... here we go:
 
