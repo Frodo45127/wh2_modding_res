@@ -139,7 +139,7 @@
                         <a class="header" href="#functions-arguments--parameters-also-returns" id="functions-arguments--parameters-also-returns"><h1>Functions, Arguments &amp; Parameters (Also, Returns)</h1></a>
 <p>Welcome back! On today's lesson, we're going to cover one of the most fundamental types in Lua much further, and that type is, if you can read, <em>functions</em>. Everybody loves functions.</p>
 <p>Functions are a special data type in Lua. Functions have two specific stages: <strong>definition</strong>, and <strong>call</strong>. A function can be defined as many times as one would like, but it will not do anything until the function is <em>called</em>. Quick look, followed by a breakdown:</p>
-<pre><code>    -- DEFINE the function, which we can call and trigger later on, as much as we'd like
+<pre><code class="language-lua">    -- DEFINE the function, which we can call and trigger later on, as much as we'd like
     function example_function()
         out(&quot;This is your example function&quot;) -- at this point, nothing is output
     end
@@ -148,13 +148,13 @@
     example_function() → This is your example function
 </code></pre>
 <p>And that's the basics of it! We should note that in this example, <code>example_function</code> is actually a variable name. The above is syntactic sugar for the following:</p>
-<pre><code>    example_function = function()
+<pre><code class="language-lua">    example_function = function()
         out(&quot;This is your example function&quot;)
     end
 </code></pre>
 <p>But the other way is a lot more common, and probably prettier for all eyes. On the case of syntactic sugar, you can simply put the keyword <code>local</code> prior to the keyword <code>function</code>, and it will make it a local variable. I'll be doing that from now on, to beat that idea in your own head.</p>
 <p>Since the name of a function is just a variable, it can be redefined, and even as a different type. If a variable is defined more than once, the latest definition will &quot;win&quot;.</p>
-<pre><code>    local function example_function()
+<pre><code class="language-lua">    local function example_function()
         out(&quot;This is your example function&quot;)
     end
 
@@ -164,7 +164,7 @@
 </code></pre>
 <p>The term &quot;call&quot; here is what I mentioned earlier - the <em>call</em> phase of a function. A call to a function is triggered by those two brackets - <code>()</code>.</p>
 <p>At this point, we have a function that prints the same text over and over again. Let's give it some way to change the text based on some dynamism!</p>
-<pre><code>    local function example_function(text)
+<pre><code class="language-lua">    local function example_function(text)
         out(text)
     end
 
@@ -175,7 +175,7 @@
 <p>A clarity-for-clarity's-sake note here: in the above example, &quot;text&quot; is a <em>parameter</em>, which is the fancy word for a local variable assigned to the function's scope. The string &quot;Testing&quot;, or the string &quot;Example!&quot;, are <em>arguments</em>, which is a variable or value that is &quot;passed&quot; into the function and takes the place of the parameter at runtime. We can think of a parameter as a &quot;fill-in-the-blank&quot; space on an entry form, and the argument as whatever we fill in there.</p>
 <p>One final thing we should know about before we go on is <em>return values</em>. In the above, we're just passing stuff <em>into</em> a function. But what if I want to take stuff <em>out</em> of a function? Well, return values, of course!</p>
 <p>The keyword <code>return</code> is neat, and two-fold. Its first, and primary purpose, is to take whatever is to the right of it and shoot it back out, if the function is called. Its second, and still very-important, purpose is to stop the function once the keyword is called. Let's take a look at a common example of return values:</p>
-<pre><code>    local function double(num)
+<pre><code class="language-lua">    local function double(num)
         -- if the parameter is not a number type, then output some text and then STOP the function, to prevent it from going on
         if not is_number(num) then
             out(&quot;double() called, but you didn't supply a number! Aborting function!&quot;)
@@ -195,7 +195,7 @@
     out(b) → 4
 </code></pre>
 <p>You can return any type, and you can even return multiple values at once. Say you wanted to take the above function, but instead of just doubling the number, you <em>also</em> tripled it, and wanted to get both values.</p>
-<pre><code>    local function double_and_triple(num)
+<pre><code class="language-lua">    local function double_and_triple(num)
         -- if the parameter is not a number type, then output some text and then STOP the function, to prevent it from going on
         if not is_number(num) then
             out(&quot;double_and_triple() called, but you didn't supply a number! Aborting function!&quot;)

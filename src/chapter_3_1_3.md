@@ -10,12 +10,12 @@ Every chunk is a to-do list, and a statement is an objective on that list. You c
 The Lua interpreter divides everything it takes into specific chunks, which we'll look at later on. For now, we understand the term chunk - a to-do list.
 
 Within each chunk is one or more statements. A statement is one coherent thought or action within Lua. Something like this can be one statement:
-```
+```lua
 a = 1
 ```
 
 Or, this can be one statement:
-```
+```lua
 a = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 - 1 / 70 * 300 + 5180 - 418 + 405
 ```
 

@@ -145,7 +145,7 @@
 <p>The project here is to build a slightly solid script that affects a good amount of change. What we'll have by the end of this lesson is a script that gives Lothern control over the Phoenix Gate at the start of a new campaign, and will spawn a new army automatically when the Cult of Excess faction is destroyed.</p>
 <a class="header" href="#transfer-region-on-campaign-start" id="transfer-region-on-campaign-start"><h4>Transfer Region on Campaign Start</h4></a>
 <p>First thing's first, let's grant the region to them! It's important to note <em>when</em> we call <em>what</em> in our scripts. For things we want to do only once, on game start, we can use a nice CA command, <code>cm:is_new_game()</code>. All that command does is check if it's the very first turn, and the game hasn't been saved yet. We'll use that within an &quot;if&quot; statement, as follows:</p>
-<pre><code>function example_script()
+<pre><code class="language-lua">function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so it'll run this stuff here
     else
@@ -157,7 +157,7 @@ end
 <p>You might be wondering about the &quot;if cm:is_new_game() == true then&quot; bit, too. More or less, when you use the command &quot;cm:is_new_game()&quot;, it returns a value of true/false, depending on whether or not it's currently a new game. We can read that value, like I show above, and go down different branches of our script depending on the answer.</p>
 <p>In a future tutorial, I'll be showing how to find these commands and use them, but for now, blind faith will make this tutorial go quicker and easier.</p>
 <p>On our &quot;if cm:is_new_game() == true&quot; branch, we'll be transfering the region over to Lothern. The command we need to use is <code>cm:transfer_region_to_faction(region_name, faction_name)</code>. region_name and faction_name are both database keys, easy enough to find using the Assembly Kit.</p>
-<pre><code>function example_script()
+<pre><code class="language-lua">function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
         cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
@@ -173,7 +173,7 @@ end
 <p>And no, I won't give you the answers to that challenge above! Figure it out, chap!</p>
 <p>First, a new concept - listeners. One of the lessons very soon, after the basics, goes over listeners in big depth, but suffice it to say: listeners are love, listeners are life. They allow you to &quot;listen&quot; for different things happening in the game - like a battle, a region being captured, a character dying - and to &quot;trigger&quot; a function afterwards. It's the mechanic that powers things like Legendary Lord/Rite unlocks, the Chaos Invasion in big part, post-battle Chivalry or Infamy gains, and a whooole lot more!</p>
 <p>We're going to use a listener that &quot;listens&quot; for Lothern's turn to start, and it'll <em>check</em> to see if the Cult of Excess faction is dead-o-rama. If they are, it'll <em>trigger</em> the spawn of the new army.</p>
-<pre><code>function example_script()
+<pre><code class="language-lua">function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
         cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
@@ -199,7 +199,7 @@ end
 </code></pre>
 <p>Again, don't fear - I'll cover all this in way more depth, and this is the last time I'm gonna give this warning or clarification. Just accept it.</p>
 <p>To check if they're dead yet, we have to <em>get</em> the faction object, and run a quick check on if they're living or not. We can do that with the CA command <code>cm:get_faction(faction_name)</code>. That returns what CA calls a &quot;FACTION_SCRIPT_INTERFACE&quot;. You can run a lot of functions on a faction object, a &quot;FACTION_SCRIPT_INTERFACE&quot;, as one of them is <code>is_dead()</code>. You can see more if you go to the scripting-doc.html file in Tools &amp; Resources, and search for &quot;FACTION_SCRIPT_INTERFACE&quot;.</p>
-<pre><code>function example_script()
+<pre><code class="language-lua">function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
         cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
@@ -236,7 +236,7 @@ end
 <a class="header" href="#spawn-that-aaaaarmy" id="spawn-that-aaaaarmy"><h4>Spawn That Aaaaarmy!</h4></a>
 <p>We're coming up close to being done here! All we've gotta do left is spawn the army, and all I've gotta do is challenge you a couple more times!</p>
 <p>The next and penultimate CA command we'll be using is <code>cm:create_force(faction_key, army_list, region_key, x_position, y_position, exclude_named_chars, success_callback)</code>. The parameter list looks slightly daunting, but if you take some time to critically think, the only strange thing should be the very last parameter - success_callback. Luckily for you, we won't even be using that one, really.</p>
-<pre><code>function example_script()
+<pre><code class="language-lua">function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
         cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
@@ -292,7 +292,7 @@ end
 <a class="header" href="#packaging-and-testing" id="packaging-and-testing"><h4>Packaging and Testing</h4></a>
 <p>Alright, with the <code>army_list</code> string expanded, this mod should be fully functional. There is one definite bug that I know will exist, and I'll point out now - if there's a character already standing on (516, 430) game coordinates, the army will not spawn. Explaining how to avoid so would take more time than I want to spend on this lesson, so deal with it.</p>
 <p>Your final task - start testing! If it doesn't work, here's a quick tip: use the out(text) function! You can use it throughout scripts to take a look at what's triggering and what isn't, like so:</p>
-<pre><code>    if cm:is_new_game() == true then
+<pre><code class="language-lua">    if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
         out(&quot;It's a new game!&quot;)
         cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)

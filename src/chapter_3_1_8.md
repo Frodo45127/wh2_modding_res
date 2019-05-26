@@ -16,7 +16,7 @@ Now, before we go on, one thing MUST be covered. **EVERY command in this documen
 
 In this document, let's take a look at the two commands that we've used already.
 
-```
+```lua
     Command: 	transfer_region_to_faction	
     Description: 	Transfer a region ownership to a faction.	
     Usage: 		transfer_region_to_faction("region", "faction")
@@ -26,7 +26,7 @@ This is relatively straightforward. The `Command:` line tells you what to affix 
 
 We can see in `Usage:` that it takes TWO parameters. They seem to be strings, one of which says "region", the other "faction". It's easy enough to tell that means "the region key in string", and "the faction key in string". So, overall, the command call would look like this: `cm:transfer_region_to_faction("phoenix_gate", "eataine")`.
 
-```
+```lua
     Command: 	create_force	
     Description: 	create a navy or army at a position.  Final parameter specified whether the command goes via the command queue	
     Usage: 		create_force("faction_key", "unit_list", "region_key", x_position, y_position, exclude_named_characters, "id", true)
@@ -46,7 +46,7 @@ In these situations, it pays to be careful. I advise you to use the CM Scripting
 
 3) Use Kailua! It might take some time to fully understand the `ca_types.lua` file that we've made for TW:WH2, but it should be pretty easy to *read* it if you want to know the parameters of a function. Open `ca_types.lua`, within VSCode (or whatever), search for the name of the command again (`create_force`), and it will show you some neat stuff. I'll go over what it looks like now, just so you know:
 
-```
+```lua
 --# assume CM.create_force: method(
 --#     faction_key: string,
 --#     unitstring: string,
@@ -62,7 +62,7 @@ Each of these lines is a *parameter*, and it's split into a name and a type. The
 
 There's a third example I'd like to go into, which is return types via the CA commands. It works just like regular return values (seen from the [last lesson](./chapter_3_1_7.md)), but sometimes the return value is vague, and it's really hard to read using CA's scripting doc. Again, utilize the script dump and Kailua. In Kailua, it'll look a little different - let's grab an example of a command with a return value.
 
-```
+```lua
 --# assume CM.get_saved_value: method(valueKey: string) --> WHATEVER
 ```
 
@@ -78,7 +78,7 @@ Similar to commands, script interfaces are a way to access some game data with s
 
 Script interfaces are objects that we can apply some functions *to* (functions applied to an object are known as methods, but we'll talk about that terminology later). In our previous example, we did the following:
 
-```
+```lua
     local excess_faction = cm:get_faction(excess_name)
     if excess_faction:is_dead() == true then
 ```
@@ -91,7 +91,7 @@ Open your newest Scripting Doc, and search for `FACTION_SCRIPT_INTERFACE`. It sh
 
 You should get a big, long list of blue links, followed by more clear definitions. A typical entry here would look similar to the follows (because the following *is* an entry here):
 
-```
+```lua
 Function: holds_entire_province
 Description: Does this faction hold the entire specified province? Also may include vassals
 Parameters: holds_entire_province(String province, bool include_vassals)
@@ -100,7 +100,7 @@ Return: bool
 
 As before, like the commands above were done with a prefix of `cm:`, these interface functions are done with a prefix of that script interface. But it won't just be `FACTION_SCRIPT_INTERFACE:holds_entire_province`, that makes no sense! In our previous, excess-based example, it would look like the following:
 
-```
+```lua
     local excess_faction = cm:get_faction(excess_name)
     if excess_faction:holds_entire_province(
 ```
@@ -111,7 +111,7 @@ Parameters! We talked about this recently, you remember it right? It'll be a typ
 
 Return values are much the same. Sometimes there will be returns of other script interfaces, and that's how you can start getting some fun stuff. With a `FACTION_SCRIPT_INTERFACE`, you can use `character_list()` to get a `CHARACTER_LIST_SCRIPT_INTERFACE`, and then use `item_at()` to get a `CHARACTER_SCRIPT_INTERFACE`, and then use `get_forename()` to get a string. That'll look like:
 
-```
+```lua
     local faction = cm:get_faction("whatever")
     local character_list = faction:character_list()
     local character = character_list:item_at(0)
@@ -120,7 +120,7 @@ Return values are much the same. Sometimes there will be returns of other script
 
 I will note that you don't have to assign everything a local variable here. It can look, albeit much uglier and less safe, like this:
 
-```
+```lua
     local forename = cm:get_faction("whatever"):character_list():item_at(0):get_forename()
 ```
 

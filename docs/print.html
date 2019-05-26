@@ -590,7 +590,7 @@ For now, however, delete all previous entries like usual, add a new row, and inp
 <p>As with basically every programming tutorial on the globe, I'll begin where they all do - printing a message that says &quot;Hello World!&quot;</p>
 <p>I'd like to quickly note that as this tutorial series progresses, I'm going to be helping less and less and explaining more and more. I don't want to hand-hold you through the entire project, and each lesson will include at least one &quot;challenge&quot;, where I give you an objective and tell you to go do it. Self-guided teaching is important, and once you're done this tutorial series, you'll be expected to be at least remotely competent and able to work this stuff out independently. I highly recommend you stick to the challenges and give them a shot, they'll benefit you if you really want to get good with Lua.</p>
 <p>Alright, within your text editor of choice, create a new file. Within that file, type the following block:</p>
-<pre><code>function testing_init()
+<pre><code class="language-lua">function testing_init()
     out(&quot;Hello World!&quot;)
 end
 </code></pre>
@@ -625,7 +625,7 @@ end
 <p>The project here is to build a slightly solid script that affects a good amount of change. What we'll have by the end of this lesson is a script that gives Lothern control over the Phoenix Gate at the start of a new campaign, and will spawn a new army automatically when the Cult of Excess faction is destroyed.</p>
 <a class="header" href="#transfer-region-on-campaign-start" id="transfer-region-on-campaign-start"><h4>Transfer Region on Campaign Start</h4></a>
 <p>First thing's first, let's grant the region to them! It's important to note <em>when</em> we call <em>what</em> in our scripts. For things we want to do only once, on game start, we can use a nice CA command, <code>cm:is_new_game()</code>. All that command does is check if it's the very first turn, and the game hasn't been saved yet. We'll use that within an &quot;if&quot; statement, as follows:</p>
-<pre><code>function example_script()
+<pre><code class="language-lua">function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so it'll run this stuff here
     else
@@ -637,7 +637,7 @@ end
 <p>You might be wondering about the &quot;if cm:is_new_game() == true then&quot; bit, too. More or less, when you use the command &quot;cm:is_new_game()&quot;, it returns a value of true/false, depending on whether or not it's currently a new game. We can read that value, like I show above, and go down different branches of our script depending on the answer.</p>
 <p>In a future tutorial, I'll be showing how to find these commands and use them, but for now, blind faith will make this tutorial go quicker and easier.</p>
 <p>On our &quot;if cm:is_new_game() == true&quot; branch, we'll be transfering the region over to Lothern. The command we need to use is <code>cm:transfer_region_to_faction(region_name, faction_name)</code>. region_name and faction_name are both database keys, easy enough to find using the Assembly Kit.</p>
-<pre><code>function example_script()
+<pre><code class="language-lua">function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
         cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
@@ -653,7 +653,7 @@ end
 <p>And no, I won't give you the answers to that challenge above! Figure it out, chap!</p>
 <p>First, a new concept - listeners. One of the lessons very soon, after the basics, goes over listeners in big depth, but suffice it to say: listeners are love, listeners are life. They allow you to &quot;listen&quot; for different things happening in the game - like a battle, a region being captured, a character dying - and to &quot;trigger&quot; a function afterwards. It's the mechanic that powers things like Legendary Lord/Rite unlocks, the Chaos Invasion in big part, post-battle Chivalry or Infamy gains, and a whooole lot more!</p>
 <p>We're going to use a listener that &quot;listens&quot; for Lothern's turn to start, and it'll <em>check</em> to see if the Cult of Excess faction is dead-o-rama. If they are, it'll <em>trigger</em> the spawn of the new army.</p>
-<pre><code>function example_script()
+<pre><code class="language-lua">function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
         cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
@@ -679,7 +679,7 @@ end
 </code></pre>
 <p>Again, don't fear - I'll cover all this in way more depth, and this is the last time I'm gonna give this warning or clarification. Just accept it.</p>
 <p>To check if they're dead yet, we have to <em>get</em> the faction object, and run a quick check on if they're living or not. We can do that with the CA command <code>cm:get_faction(faction_name)</code>. That returns what CA calls a &quot;FACTION_SCRIPT_INTERFACE&quot;. You can run a lot of functions on a faction object, a &quot;FACTION_SCRIPT_INTERFACE&quot;, as one of them is <code>is_dead()</code>. You can see more if you go to the scripting-doc.html file in Tools &amp; Resources, and search for &quot;FACTION_SCRIPT_INTERFACE&quot;.</p>
-<pre><code>function example_script()
+<pre><code class="language-lua">function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
         cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
@@ -716,7 +716,7 @@ end
 <a class="header" href="#spawn-that-aaaaarmy" id="spawn-that-aaaaarmy"><h4>Spawn That Aaaaarmy!</h4></a>
 <p>We're coming up close to being done here! All we've gotta do left is spawn the army, and all I've gotta do is challenge you a couple more times!</p>
 <p>The next and penultimate CA command we'll be using is <code>cm:create_force(faction_key, army_list, region_key, x_position, y_position, exclude_named_chars, success_callback)</code>. The parameter list looks slightly daunting, but if you take some time to critically think, the only strange thing should be the very last parameter - success_callback. Luckily for you, we won't even be using that one, really.</p>
-<pre><code>function example_script()
+<pre><code class="language-lua">function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
         cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
@@ -772,7 +772,7 @@ end
 <a class="header" href="#packaging-and-testing" id="packaging-and-testing"><h4>Packaging and Testing</h4></a>
 <p>Alright, with the <code>army_list</code> string expanded, this mod should be fully functional. There is one definite bug that I know will exist, and I'll point out now - if there's a character already standing on (516, 430) game coordinates, the army will not spawn. Explaining how to avoid so would take more time than I want to spend on this lesson, so deal with it.</p>
 <p>Your final task - start testing! If it doesn't work, here's a quick tip: use the out(text) function! You can use it throughout scripts to take a look at what's triggering and what isn't, like so:</p>
-<pre><code>    if cm:is_new_game() == true then
+<pre><code class="language-lua">    if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
         out(&quot;It's a new game!&quot;)
         cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
@@ -793,10 +793,10 @@ end
 <p>Every chunk is a to-do list, and a statement is an objective on that list. You can have to-do lists of all shapes and sizes, and each thing that needs to be done can be small - &quot;brushing your teet&quot; - or huge - &quot;spend way too much money on transmission repairs&quot;. No, I'm not still salty about the money I spent on transmission repairs, why do you ask?</p>
 <p>The Lua interpreter divides everything it takes into specific chunks, which we'll look at later on. For now, we understand the term chunk - a to-do list.</p>
 <p>Within each chunk is one or more statements. A statement is one coherent thought or action within Lua. Something like this can be one statement:</p>
-<pre><code>a = 1
+<pre><code class="language-lua">a = 1
 </code></pre>
 <p>Or, this can be one statement:</p>
-<pre><code>a = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 - 1 / 70 * 300 + 5180 - 418 + 405
+<pre><code class="language-lua">a = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 - 1 / 70 * 300 + 5180 - 418 + 405
 </code></pre>
 <p>That is, one bit of data that Lua has to evaluate and run.</p>
 <p>Remember the term &quot;chunk&quot; - we'll be covering how they're defined later on, when we look at some more keywords.</p>
@@ -806,14 +806,14 @@ end
 <p><strong>Variable</strong>: A custom-made keyword that can be used to represent a value
 <strong>Type</strong>: The sort of value that is in a variable. Lua types include: boolean, string, number, table, nil, function. There are more, but we won't need them.</p>
 <p>But before going deeper into a definition, let's look at an example:</p>
-<pre><code>a = 10
+<pre><code class="language-lua">a = 10
 b = 5
 c = a + b
 </code></pre>
 <p>We can see that each of those letters in the chunk above is a <strong>variable</strong>, which are each assigned a <strong>value</strong>. In this case, variable <strong>a</strong> is assigned the value <strong>10</strong>, variable <strong>b</strong> is assigned the value <strong>5</strong>, and the variable <strong>c</strong> is assigned the <strong>value of a plus the value of b</strong>. This instance (c = a + b) works a lot like algebra - you aren't making &quot;c = ab&quot;, but you're adding the value of a (10) to the value of b (5), to get the result of <strong>15</strong>.</p>
 <p>The coolest thing about variables is their dynamism. They can be assigned to any type, change to any type, and they can infinitely change values. Let's take the above code, and mess with it a little bit.</p>
 <p><em>NOTE: From this point on, you'll see → after out() calls. This is to specify what text is actually output.</em></p>
-<pre><code>a = 10
+<pre><code class="language-lua">a = 10
 b = 5
 c = a + b
 
@@ -833,7 +833,7 @@ out(c) → 30
 <p>So, we see here that variables can be numbers, which is one of the primary types in Lua.</p>
 <p><strong>Number</strong>: <em>any</em> numerical value, within a specific number range (a much bigger number than needs to be worried about)</p>
 <p>As we saw above, we can perform some basic arithmetic on numbers.</p>
-<pre><code>a = 5
+<pre><code class="language-lua">a = 5
 b = 2 - 0.34
 c = a + b
 d = c * 2
@@ -845,22 +845,22 @@ out(e) → 5.04
 </code></pre>
 <p><strong>String</strong>: <em>any</em> alphanumerical value, within quotation marks (&quot;&quot; or ''). Similar to numbers, size <em>does not matter</em>, Lua can handle millions of characters within a string.</p>
 <p>Like arithmetic for numbers, one can concatenate strings (along with many other stuffs!) to combine several, using the <code>..</code> operator.</p>
-<pre><code>    a = “This “; b = “is “; c = “an “; d = “example.”
+<pre><code class="language-lua">    a = “This “; b = “is “; c = “an “; d = “example.”
     out(a .. b .. c .. d) → This is an example.
 </code></pre>
 <p><em>NOTE: Yes, you can have several statements on the same line in Lua! The semi-colons are not necessary, I added them for extra readability.</em></p>
 <p>While on the subject, you can concat (cool-kid for concatenate) string literals and variables.</p>
-<pre><code>    a = &quot;example&quot;
+<pre><code class="language-lua">    a = &quot;example&quot;
     out(&quot;This is an &quot; .. a) → This is an example
 </code></pre>
 <p><strong>Boolean</strong>: a <code>true</code> or <code>false</code> value.</p>
-<pre><code>    a = false
+<pre><code class="language-lua">    a = false
     out(a) → false
     out(a == false) → true
 </code></pre>
 <p>The above probably looks a little weird, but that's because we're learning a new operator! The <code>==</code> operator checks for <em>equality</em>, whereas the <code>=</code> operator <em>assigns a value</em>. The final statement above reads &quot;output the result of a == false&quot;. Since <code>a</code> DOES equal false, it prints &quot;true&quot;.</p>
 <p>It's very important to note that any variable can be <em>treated</em> as a boolean, such as when using the &quot;if something then&quot; statement, or by comparing it to a boolean. If a non-boolean variable is treated as a boolean, it will be converted to <code>false</code> if the value is <code>nil</code> or <code>false</code>; otherwise, it will be converted to <code>true</code>.</p>
-<pre><code>    a = 0
+<pre><code class="language-lua">    a = 0
     b = nil
     out(a) → 0
     out(a == false) → false 
@@ -870,13 +870,13 @@ out(e) → 5.04
 <p>You're probably asking by now, what IS nil? I've mentioned it a number of times already, you're probably ready to lear about it. Here we go!</p>
 <p><strong>Nil</strong>: the absence of data.</p>
 <p>If one were to try to print a <em>non-existent</em> variable, the result would be <code>nil</code>. That's because there <strong>is</strong> no data for that variable.</p>
-<pre><code>    out(a) → nil
+<pre><code class="language-lua">    out(a) → nil
     a = 5
     out(a) → 5
 </code></pre>
 <p>Nil is a good way to check whether or not something exists, and we'll, towards the bottom of this lesson, talk about how to type-check this data in our scripts to see if variables are NOT nil, and thus exist.</p>
 <p>Nil is also a good way to clear away variables that you don't want to use anymore. There's a more realistic way of doing it, and this probably won't be necessary for most of what you will be doing, but I like to give a full knowledge.</p>
-<pre><code>    a = 5
+<pre><code class="language-lua">    a = 5
     out(a) → 5
     a = nil -- Memory deallocated, bye &quot;a&quot;!
     out(a) → nil
@@ -884,12 +884,12 @@ out(e) → 5.04
 <p>Lastly, it's important to note that <code>nil</code> is not the same as <code>null</code>, though they look quick similar. We'll cover that soon-ish, when we get into more CA script interfaces (like FACTION_SCRIPT_INTERFACE that we saw a few lessons ago).</p>
 <p><strong>Function</strong>: a definition for a chunk that can be called at any point, after being defined.</p>
 <p>There are two types of functions - an anonymous function, and a named function. An anonymous function has no name (clearly), so it cannot be called further on in the script. We use anonymous functions relatively frequently, but our focus now will be on named functions, which are functions assigned to a variable.</p>
-<pre><code>    a = 10
+<pre><code class="language-lua">    a = 10
     example = out
     example(a) → 10
 </code></pre>
 <p>Yes, that's valid! You can actually assign a variable to a function like, it's pretty cool! We have syntactic sugar for assigning a variable to a function, however, and it's more common to see script like that:</p>
-<pre><code>    function example(text)
+<pre><code class="language-lua">    function example(text)
         out(text)
     end
 
@@ -900,7 +900,7 @@ out(e) → 5.04
 <p>As an added bonus, we're getting a quick sneak peak at one of the upcoming tutorials: parameters and arguments, for functions. In the above function, &quot;text&quot; is a parameter for <code>example()</code>, which is then passed along to <code>out</code> and triggers that function within the chunk.</p>
 <p><strong>Table</strong>: a collection of more than one piece of data.</p>
 <p>There are several types of tables, which we'll cover later on. I'd like to first look at the <em>array</em> version of tables, the simplest and most common.</p>
-<pre><code>    a = 5
+<pre><code class="language-lua">    a = 5
     b = 10
     c = 17
 
@@ -916,7 +916,7 @@ out(e) → 5.04
     out(table[4]) → nil -- doesn't exist!
 </code></pre>
 <p>Arrays are numbered automatically, so it really reads &quot;the first index of table is 5, the second index of table is 10&quot;, and so on. You <em>access</em> those indexes by using the <code>\[num\]</code> operator, which we'll look further at in the next tables tutorial later on. The reason this works, however, is because Lua is automatically numbering these values, giving them a <em>key</em>. When you make an array like that, Lua reads it more like the following:</p>
-<pre><code>    a = 5
+<pre><code class="language-lua">    a = 5
     b = 10
     c = 17
 
@@ -927,7 +927,7 @@ out(e) → 5.04
     }
 </code></pre>
 <p>The other major type of tables is a <strong>map</strong>, which works by manually assigning the key of a value instead of letting Lua automatically number them, like in arrays.</p>
-<pre><code>    a = 5
+<pre><code class="language-lua">    a = 5
     b = 10
     c = 15
 
@@ -956,7 +956,7 @@ out(e) → 5.04
 <li>is_function(variable)</li>
 <li>is_table(variable)</li>
 </ul>
-<pre><code>    a = 5
+<pre><code class="language-lua">    a = 5
     b = nil
     c = {1, 2, 3, 5, 70}
     function d() end
@@ -971,19 +971,19 @@ out(e) → 5.04
 <p><strong>Expressions</strong> are the section of a statement that, essentially, tell Lua <em>what to do</em>. They come in a billion different shapes and sizes. For now, we'll cover all the basics you'll need, and some basics you really don't need but I'll hand it to you anyway, and we'll go back and review some older stuff. Here we go!</p>
 <a class="header" href="#math-operators" id="math-operators"><h4>Math Operators</h4></a>
 <p>Sweet. This is what all of those quizzes in grade school trained you for. We have the big four from algebra - addition, subtraction, multiplication, and division.</p>
-<pre><code>    out(2 + 3) → 5
+<pre><code class="language-lua">    out(2 + 3) → 5
     out(5 - 1) → 4
     out(16 * 3) → 48
     out(9 / 3) → 3
 </code></pre>
 <p>We can also use a <code>-</code> to <em>negate</em> a value, or, in simple terms, turn a positive number into a negative and vice versa.</p>
-<pre><code>    a = 10
+<pre><code class="language-lua">    a = 10
     b = -20
     out( -a ) → -10
     out( -b ) → 20
 </code></pre>
 <p>We also have a couple other fun math things. We can raise numbers to any power, using an exponential expression.</p>
-<pre><code>    a = 2
+<pre><code class="language-lua">    a = 2
     b = 4
     c = 3
     out( a^a ) → 4
@@ -991,7 +991,7 @@ out(e) → 5.04
     out( 64^0.5 ) → 8 -- getting the square root of a number!
 </code></pre>
 <p>We can also use some modulo math. It's a way of dividing two numbers that gives you the amount <em>remaining</em>, and it's a great way to read if a number is a <em>multiple</em> of another.</p>
-<pre><code>    out(8 % 2) → 0 -- 8/2 = 4, and divides evenly, so nothing is remaining!
+<pre><code class="language-lua">    out(8 % 2) → 0 -- 8/2 = 4, and divides evenly, so nothing is remaining!
     out(7 % 2) → 1 -- 7/2. &quot;6/2&quot; divides evenly, so we subtract 6 from 7, and get &quot;1&quot; as the remainder!
     out(8 % 3) → 2 -- 8/3. &quot;6/3&quot; divides evenly, so we subtract 6 from 8, and get &quot;2&quot; as the remainder.
 </code></pre>
@@ -1006,7 +1006,7 @@ out(e) → 5.04
 == &quot;equal to&quot;
 ~= &quot;not equal to&quot;</p>
 <p>All of these expressions result in a boolean value.</p>
-<pre><code>    a = 10
+<pre><code class="language-lua">    a = 10
     b = 7 + 3
     out(a == b) → true -- they ARE equal!
     out(a ~= b) → false -- they ARE NOT not equal (weird, I know)!
@@ -1018,7 +1018,7 @@ out(e) → 5.04
     out(c &lt; d) → false -- 8 is NOT less than 7
 </code></pre>
 <p>It's important to note that Lua will consider different types to be different values. A string and a number will always be different. Lua will throw an error if you attempt to compare - using less-than or greater-than - any two separate types. Lua will not throw an error for &quot;==&quot; and &quot;~=&quot;, however, and if they are separate types, they will always be inequal.</p>
-<pre><code>    a = 15
+<pre><code class="language-lua">    a = 15
     b = &quot;15&quot;
     out(a == b) → false -- they are different types!
     out(a &gt;= b) → error (attempt to compare number with string)
@@ -1028,7 +1028,7 @@ out(e) → 5.04
 <a class="header" href="#logical-operators" id="logical-operators"><h4>Logical Operators</h4></a>
 <p>Next up are our logical operators! We have three operators to concern ourselves with here - <strong>and</strong>, <strong>or</strong>, and <strong>not</strong>.</p>
 <p><em>Not</em>, as a logical operator, is pretty simple and super handy. It basically converts the value to the right of it into a boolean, and reverses it. Any value other than <code>nil</code> or <code>false</code> will be converted into <code>false</code>, and <code>nil</code> or <code>false</code> will be converted to <code>true</code>. Let's take a look:</p>
-<pre><code>    a = true
+<pre><code class="language-lua">    a = true
     b = nil
     out(not b) → true -- prints a double negative - not false, so true
     out(not a) → false -- reverses the value of &quot;true&quot;
@@ -1038,7 +1038,7 @@ out(e) → 5.04
     out(not not c) → true -- c is a number, &quot;not c&quot; would become &quot;false&quot;, and &quot;not false&quot; would become &quot;true&quot;
 </code></pre>
 <p>The operators <strong>and</strong> and <strong>or</strong> are the hearts of a lot of logic in Lua. &quot;If this and this, then do this&quot;.</p>
-<pre><code>    a = 15
+<pre><code class="language-lua">    a = 15
     b = false
     if a == 15 and not b then -- &quot;if a is equal to the number fifteen, and &quot;not b&quot; returns true, then ... &quot;
         out(&quot;It does the thing!&quot;) -- &quot; ... print the text! &quot;
@@ -1048,19 +1048,19 @@ out(e) → 5.04
 <a class="header" href="#homeless-operators" id="homeless-operators"><h4>Homeless Operators</h4></a>
 <p>I don't really have a category for these two operators, but they're incredibly important.</p>
 <p>First off, we have <strong>concatenation</strong>, which we've seen before. It's a way to add two strings together, and make them into one happy family, using a simple pair of dots.</p>
-<pre><code>    a = &quot;Hello&quot;
+<pre><code class="language-lua">    a = &quot;Hello&quot;
     b = &quot;World!&quot;
     out(a .. &quot; &quot; .. b) → Hello World!
 </code></pre>
 <p>A couple of notes real quick - I have the blank space in a string in the middle, to make sure it doesn't print &quot;HelloWorld!&quot;. Also, I like to add spaces on either side of my concatenation operator, but that's personal taste, this would also be valid:</p>
-<pre><code>    out(a..&quot; &quot;..b) → Hello World!
+<pre><code class="language-lua">    out(a..&quot; &quot;..b) → Hello World!
 </code></pre>
 <p>And lastly, we have one more operator, and this time for the table type. The character <code>#</code> can be used to read the number of entries within an array. It's pretty awesome, let me show you:</p>
-<pre><code>    table = {&quot;this&quot;, &quot;is&quot;, &quot;an&quot;, &quot;example&quot;, &quot;array&quot;}
+<pre><code class="language-lua">    table = {&quot;this&quot;, &quot;is&quot;, &quot;an&quot;, &quot;example&quot;, &quot;array&quot;}
     out(#table) → 5 -- there are five strings within the table!
 </code></pre>
 <p>Please note that you really shouldn't use the <code>#</code> operator if the table is not definitely an array. I'll show you why using it on maps might mess something up:</p>
-<pre><code>    table = {
+<pre><code class="language-lua">    table = {
         [1] = &quot;test&quot;,
         [2] = &quot;example&quot;,
         [5] = &quot;boom&quot;,
@@ -1080,7 +1080,7 @@ out(e) → 5.04
 2) Saving that variable globally is taking up memory, since that variable will never be destroyed. It will take a lot of work to actually cause performance issues, but it's good to be mindful of.
 3) What if we want our variable to be a secret? Huh? They can't get our birthday present! <em>gollum</em></p>
 <p>And all this is where the keyword <code>local</code> comes in. The <code>local</code> keyword defines a specific scope for a variable, and prevents them from being a global variable.</p>
-<pre><code>function example()
+<pre><code class="language-lua">function example()
     local var = &quot;Hello World!&quot;
     out(var)
 end
@@ -1098,7 +1098,7 @@ out(var) → nil -- the variable &quot;var&quot; doesn't exist here!
 <li>while whatever then [[ the scope ]] end</li>
 </ul>
 <p>Let's take a slightly-complicated look at that:</p>
-<pre><code>local a = 5 -- visible to everything BELOW this line!
+<pre><code class="language-lua">local a = 5 -- visible to everything BELOW this line!
 
 function example_thing()
     local b = a -- visible to everything BELOW this line, until the &quot;end&quot; that matches &quot;function&quot;
@@ -1124,7 +1124,7 @@ out(a) → 5
 <a class="header" href="#functions-arguments--parameters-also-returns" id="functions-arguments--parameters-also-returns"><h1>Functions, Arguments &amp; Parameters (Also, Returns)</h1></a>
 <p>Welcome back! On today's lesson, we're going to cover one of the most fundamental types in Lua much further, and that type is, if you can read, <em>functions</em>. Everybody loves functions.</p>
 <p>Functions are a special data type in Lua. Functions have two specific stages: <strong>definition</strong>, and <strong>call</strong>. A function can be defined as many times as one would like, but it will not do anything until the function is <em>called</em>. Quick look, followed by a breakdown:</p>
-<pre><code>    -- DEFINE the function, which we can call and trigger later on, as much as we'd like
+<pre><code class="language-lua">    -- DEFINE the function, which we can call and trigger later on, as much as we'd like
     function example_function()
         out(&quot;This is your example function&quot;) -- at this point, nothing is output
     end
@@ -1133,13 +1133,13 @@ out(a) → 5
     example_function() → This is your example function
 </code></pre>
 <p>And that's the basics of it! We should note that in this example, <code>example_function</code> is actually a variable name. The above is syntactic sugar for the following:</p>
-<pre><code>    example_function = function()
+<pre><code class="language-lua">    example_function = function()
         out(&quot;This is your example function&quot;)
     end
 </code></pre>
 <p>But the other way is a lot more common, and probably prettier for all eyes. On the case of syntactic sugar, you can simply put the keyword <code>local</code> prior to the keyword <code>function</code>, and it will make it a local variable. I'll be doing that from now on, to beat that idea in your own head.</p>
 <p>Since the name of a function is just a variable, it can be redefined, and even as a different type. If a variable is defined more than once, the latest definition will &quot;win&quot;.</p>
-<pre><code>    local function example_function()
+<pre><code class="language-lua">    local function example_function()
         out(&quot;This is your example function&quot;)
     end
 
@@ -1149,7 +1149,7 @@ out(a) → 5
 </code></pre>
 <p>The term &quot;call&quot; here is what I mentioned earlier - the <em>call</em> phase of a function. A call to a function is triggered by those two brackets - <code>()</code>.</p>
 <p>At this point, we have a function that prints the same text over and over again. Let's give it some way to change the text based on some dynamism!</p>
-<pre><code>    local function example_function(text)
+<pre><code class="language-lua">    local function example_function(text)
         out(text)
     end
 
@@ -1160,7 +1160,7 @@ out(a) → 5
 <p>A clarity-for-clarity's-sake note here: in the above example, &quot;text&quot; is a <em>parameter</em>, which is the fancy word for a local variable assigned to the function's scope. The string &quot;Testing&quot;, or the string &quot;Example!&quot;, are <em>arguments</em>, which is a variable or value that is &quot;passed&quot; into the function and takes the place of the parameter at runtime. We can think of a parameter as a &quot;fill-in-the-blank&quot; space on an entry form, and the argument as whatever we fill in there.</p>
 <p>One final thing we should know about before we go on is <em>return values</em>. In the above, we're just passing stuff <em>into</em> a function. But what if I want to take stuff <em>out</em> of a function? Well, return values, of course!</p>
 <p>The keyword <code>return</code> is neat, and two-fold. Its first, and primary purpose, is to take whatever is to the right of it and shoot it back out, if the function is called. Its second, and still very-important, purpose is to stop the function once the keyword is called. Let's take a look at a common example of return values:</p>
-<pre><code>    local function double(num)
+<pre><code class="language-lua">    local function double(num)
         -- if the parameter is not a number type, then output some text and then STOP the function, to prevent it from going on
         if not is_number(num) then
             out(&quot;double() called, but you didn't supply a number! Aborting function!&quot;)
@@ -1180,7 +1180,7 @@ out(a) → 5
     out(b) → 4
 </code></pre>
 <p>You can return any type, and you can even return multiple values at once. Say you wanted to take the above function, but instead of just doubling the number, you <em>also</em> tripled it, and wanted to get both values.</p>
-<pre><code>    local function double_and_triple(num)
+<pre><code class="language-lua">    local function double_and_triple(num)
         -- if the parameter is not a number type, then output some text and then STOP the function, to prevent it from going on
         if not is_number(num) then
             out(&quot;double_and_triple() called, but you didn't supply a number! Aborting function!&quot;)
@@ -1212,13 +1212,13 @@ out(a) → 5
 <p>So, once more in the <a href="./chapter_1.html">&quot;Tools &amp; Resources&quot;</a> page on this site, there's a section within called &quot;Scripting Resources&quot;. We'll look at, first, the &quot;Scripting Doc (CM Functions)&quot; file. Open it up!</p>
 <p>Now, before we go on, one thing MUST be covered. <strong>EVERY command in this document needs to have a prefix of <code>cm:</code>.</strong></p>
 <p>In this document, let's take a look at the two commands that we've used already.</p>
-<pre><code>    Command: 	transfer_region_to_faction	
+<pre><code class="language-lua">    Command: 	transfer_region_to_faction	
     Description: 	Transfer a region ownership to a faction.	
     Usage: 		transfer_region_to_faction(&quot;region&quot;, &quot;faction&quot;)
 </code></pre>
 <p>This is relatively straightforward. The <code>Command:</code> line tells you what to affix to <code>cm:</code>, so this would be <code>cm:transfer_region_to_faction</code>. Since it's a <em>function call</em>, which we learned about just last episode and you wouldn't dare forget so soon, we add the brackets to it: <code>cm:transfer_region_to_faction()</code>.</p>
 <p>We can see in <code>Usage:</code> that it takes TWO parameters. They seem to be strings, one of which says &quot;region&quot;, the other &quot;faction&quot;. It's easy enough to tell that means &quot;the region key in string&quot;, and &quot;the faction key in string&quot;. So, overall, the command call would look like this: <code>cm:transfer_region_to_faction(&quot;phoenix_gate&quot;, &quot;eataine&quot;)</code>.</p>
-<pre><code>    Command: 	create_force	
+<pre><code class="language-lua">    Command: 	create_force	
     Description: 	create a navy or army at a position.  Final parameter specified whether the command goes via the command queue	
     Usage: 		create_force(&quot;faction_key&quot;, &quot;unit_list&quot;, &quot;region_key&quot;, x_position, y_position, exclude_named_characters, &quot;id&quot;, true)
 </code></pre>
@@ -1237,7 +1237,7 @@ out(a) → 5
 <p>Use Kailua! It might take some time to fully understand the <code>ca_types.lua</code> file that we've made for TW:WH2, but it should be pretty easy to <em>read</em> it if you want to know the parameters of a function. Open <code>ca_types.lua</code>, within VSCode (or whatever), search for the name of the command again (<code>create_force</code>), and it will show you some neat stuff. I'll go over what it looks like now, just so you know:</p>
 </li>
 </ol>
-<pre><code>--# assume CM.create_force: method(
+<pre><code class="language-lua">--# assume CM.create_force: method(
 --#     faction_key: string,
 --#     unitstring: string,
 --#     region_key: string,
@@ -1249,7 +1249,7 @@ out(a) → 5
 </code></pre>
 <p>Each of these lines is a <em>parameter</em>, and it's split into a name and a type. The name is just a description of what should go there - a faction key, a region key, etc., - and the type defines, of course, the type!</p>
 <p>There's a third example I'd like to go into, which is return types via the CA commands. It works just like regular return values (seen from the <a href="./chapter_3_1_7.html">last lesson</a>), but sometimes the return value is vague, and it's really hard to read using CA's scripting doc. Again, utilize the script dump and Kailua. In Kailua, it'll look a little different - let's grab an example of a command with a return value.</p>
-<pre><code>--# assume CM.get_saved_value: method(valueKey: string) --&gt; WHATEVER
+<pre><code class="language-lua">--# assume CM.get_saved_value: method(valueKey: string) --&gt; WHATEVER
 </code></pre>
 <p><em>NOTE: <code>WHATEVER</code> is a beautiful keyword in Kailua that lets you not define the type of a value, instead of saying &quot;return a number&quot; it says &quot;return literally whatever&quot;</em></p>
 <p>Some functions in the ca_types files have a <code>--&gt;</code> to their end; on the right side of that arrow is the return value. Easy enough to read!</p>
@@ -1257,32 +1257,32 @@ out(a) → 5
 <a class="header" href="#interfaces" id="interfaces"><h4>Interfaces</h4></a>
 <p>Similar to commands, script interfaces are a way to access some game data with some Lua. We looked at them previously - in the second lesson, we used a <code>FACTION_SCRIPT_INTERFACE</code>, which we got by using the command <code>cm:get_faction(&quot;faction_key&quot;)</code>.</p>
 <p>Script interfaces are objects that we can apply some functions <em>to</em> (functions applied to an object are known as methods, but we'll talk about that terminology later). In our previous example, we did the following:</p>
-<pre><code>    local excess_faction = cm:get_faction(excess_name)
+<pre><code class="language-lua">    local excess_faction = cm:get_faction(excess_name)
     if excess_faction:is_dead() == true then
 </code></pre>
 <p>Wherein, of course, <code>excess_name</code> was a local variable a bit further up. In this example, <code>cm:get_faction()</code> has a <em>return value</em> of a <code>FACTION_SCRIPT_INTERFACE</code>, which we assigned to the local variable <code>excess_faction</code>. <code>FACTION_SCRIPT_INTERFACES</code> have a method called <code>is_dead()</code>, which lets us read if the faction is, well... dead. But how did I know to use that? <em>gasp</em></p>
 <p>Also similar to commands, script interfaces are documented with a slightly-questionable CA file, though this one is typically waaaay more reliable, if a bit inconsistent with some naming. We can, again, grab it from the <a href="./chapter_1.html">Tools &amp; Resources</a> page, this time under the title &quot;Scripting Doc (Events &amp; Interfaces). Our big focus for now is the latter half of that name - Interfaces - though we'll be getting into events right in the next section below!</p>
 <p>Open your newest Scripting Doc, and search for <code>FACTION_SCRIPT_INTERFACE</code>. It should be towards the top of the document, right near the word &quot;Interfaces&quot; in big boldage. Like this: <strong>Interfaces</strong>. Cool, found it? Click it!</p>
 <p>You should get a big, long list of blue links, followed by more clear definitions. A typical entry here would look similar to the follows (because the following <em>is</em> an entry here):</p>
-<pre><code>Function: holds_entire_province
+<pre><code class="language-lua">Function: holds_entire_province
 Description: Does this faction hold the entire specified province? Also may include vassals
 Parameters: holds_entire_province(String province, bool include_vassals)
 Return: bool
 </code></pre>
 <p>As before, like the commands above were done with a prefix of <code>cm:</code>, these interface functions are done with a prefix of that script interface. But it won't just be <code>FACTION_SCRIPT_INTERFACE:holds_entire_province</code>, that makes no sense! In our previous, excess-based example, it would look like the following:</p>
-<pre><code>    local excess_faction = cm:get_faction(excess_name)
+<pre><code class="language-lua">    local excess_faction = cm:get_faction(excess_name)
     if excess_faction:holds_entire_province(
 </code></pre>
 <p>The second line - description - is quite obvious. It's just a description. Read it, don't read it, I don't care.</p>
 <p>Parameters! We talked about this recently, you remember it right? It'll be a type and a very brief stand-in name to explain what should go there. In this case, you can tell that it wants the key of the province, in strings, and a boolean that determines whether or not you'd like to include vassals in the check. Sometimes, they'll just put the stand-in name in quotation marks to show that it should be a string.</p>
 <p>Return values are much the same. Sometimes there will be returns of other script interfaces, and that's how you can start getting some fun stuff. With a <code>FACTION_SCRIPT_INTERFACE</code>, you can use <code>character_list()</code> to get a <code>CHARACTER_LIST_SCRIPT_INTERFACE</code>, and then use <code>item_at()</code> to get a <code>CHARACTER_SCRIPT_INTERFACE</code>, and then use <code>get_forename()</code> to get a string. That'll look like:</p>
-<pre><code>    local faction = cm:get_faction(&quot;whatever&quot;)
+<pre><code class="language-lua">    local faction = cm:get_faction(&quot;whatever&quot;)
     local character_list = faction:character_list()
     local character = character_list:item_at(0)
     local forename = character:get_forename()
 </code></pre>
 <p>I will note that you don't have to assign everything a local variable here. It can look, albeit much uglier and less safe, like this:</p>
-<pre><code>    local forename = cm:get_faction(&quot;whatever&quot;):character_list():item_at(0):get_forename()
+<pre><code class="language-lua">    local forename = cm:get_faction(&quot;whatever&quot;):character_list():item_at(0):get_forename()
 </code></pre>
 <p>But I do not recommend doing something like this, until you're very comfortable with the language. I do it very, very, very rarely, only when it makes perfect sense to do it, and that's lie-talk for &quot;when I'm tired and it makes perfect sense to my tired brain&quot;.</p>
 <p>Script interfaces are stupidly, stupidly powerful, and using all these smartly allows you to make some serious change within the game, and to read a lot more details, from &quot;how many units are in this army&quot; to &quot;what level is this character&quot; to &quot;how many armies were in the last battle?&quot; But, above all, these interfaces are used <em>best</em> and <em>most powerfully</em> when used in conjunction with listeners and events.</p>

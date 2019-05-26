@@ -143,7 +143,7 @@
 2) Saving that variable globally is taking up memory, since that variable will never be destroyed. It will take a lot of work to actually cause performance issues, but it's good to be mindful of.
 3) What if we want our variable to be a secret? Huh? They can't get our birthday present! <em>gollum</em></p>
 <p>And all this is where the keyword <code>local</code> comes in. The <code>local</code> keyword defines a specific scope for a variable, and prevents them from being a global variable.</p>
-<pre><code>function example()
+<pre><code class="language-lua">function example()
     local var = &quot;Hello World!&quot;
     out(var)
 end
@@ -161,7 +161,7 @@ out(var) → nil -- the variable &quot;var&quot; doesn't exist here!
 <li>while whatever then [[ the scope ]] end</li>
 </ul>
 <p>Let's take a slightly-complicated look at that:</p>
-<pre><code>local a = 5 -- visible to everything BELOW this line!
+<pre><code class="language-lua">local a = 5 -- visible to everything BELOW this line!
 
 function example_thing()
     local b = a -- visible to everything BELOW this line, until the &quot;end&quot; that matches &quot;function&quot;

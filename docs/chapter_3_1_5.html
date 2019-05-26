@@ -141,19 +141,19 @@
 <p><strong>Expressions</strong> are the section of a statement that, essentially, tell Lua <em>what to do</em>. They come in a billion different shapes and sizes. For now, we'll cover all the basics you'll need, and some basics you really don't need but I'll hand it to you anyway, and we'll go back and review some older stuff. Here we go!</p>
 <a class="header" href="#math-operators" id="math-operators"><h4>Math Operators</h4></a>
 <p>Sweet. This is what all of those quizzes in grade school trained you for. We have the big four from algebra - addition, subtraction, multiplication, and division.</p>
-<pre><code>    out(2 + 3) → 5
+<pre><code class="language-lua">    out(2 + 3) → 5
     out(5 - 1) → 4
     out(16 * 3) → 48
     out(9 / 3) → 3
 </code></pre>
 <p>We can also use a <code>-</code> to <em>negate</em> a value, or, in simple terms, turn a positive number into a negative and vice versa.</p>
-<pre><code>    a = 10
+<pre><code class="language-lua">    a = 10
     b = -20
     out( -a ) → -10
     out( -b ) → 20
 </code></pre>
 <p>We also have a couple other fun math things. We can raise numbers to any power, using an exponential expression.</p>
-<pre><code>    a = 2
+<pre><code class="language-lua">    a = 2
     b = 4
     c = 3
     out( a^a ) → 4
@@ -161,7 +161,7 @@
     out( 64^0.5 ) → 8 -- getting the square root of a number!
 </code></pre>
 <p>We can also use some modulo math. It's a way of dividing two numbers that gives you the amount <em>remaining</em>, and it's a great way to read if a number is a <em>multiple</em> of another.</p>
-<pre><code>    out(8 % 2) → 0 -- 8/2 = 4, and divides evenly, so nothing is remaining!
+<pre><code class="language-lua">    out(8 % 2) → 0 -- 8/2 = 4, and divides evenly, so nothing is remaining!
     out(7 % 2) → 1 -- 7/2. &quot;6/2&quot; divides evenly, so we subtract 6 from 7, and get &quot;1&quot; as the remainder!
     out(8 % 3) → 2 -- 8/3. &quot;6/3&quot; divides evenly, so we subtract 6 from 8, and get &quot;2&quot; as the remainder.
 </code></pre>
@@ -176,7 +176,7 @@
 == &quot;equal to&quot;
 ~= &quot;not equal to&quot;</p>
 <p>All of these expressions result in a boolean value.</p>
-<pre><code>    a = 10
+<pre><code class="language-lua">    a = 10
     b = 7 + 3
     out(a == b) → true -- they ARE equal!
     out(a ~= b) → false -- they ARE NOT not equal (weird, I know)!
@@ -188,7 +188,7 @@
     out(c &lt; d) → false -- 8 is NOT less than 7
 </code></pre>
 <p>It's important to note that Lua will consider different types to be different values. A string and a number will always be different. Lua will throw an error if you attempt to compare - using less-than or greater-than - any two separate types. Lua will not throw an error for &quot;==&quot; and &quot;~=&quot;, however, and if they are separate types, they will always be inequal.</p>
-<pre><code>    a = 15
+<pre><code class="language-lua">    a = 15
     b = &quot;15&quot;
     out(a == b) → false -- they are different types!
     out(a &gt;= b) → error (attempt to compare number with string)
@@ -198,7 +198,7 @@
 <a class="header" href="#logical-operators" id="logical-operators"><h4>Logical Operators</h4></a>
 <p>Next up are our logical operators! We have three operators to concern ourselves with here - <strong>and</strong>, <strong>or</strong>, and <strong>not</strong>.</p>
 <p><em>Not</em>, as a logical operator, is pretty simple and super handy. It basically converts the value to the right of it into a boolean, and reverses it. Any value other than <code>nil</code> or <code>false</code> will be converted into <code>false</code>, and <code>nil</code> or <code>false</code> will be converted to <code>true</code>. Let's take a look:</p>
-<pre><code>    a = true
+<pre><code class="language-lua">    a = true
     b = nil
     out(not b) → true -- prints a double negative - not false, so true
     out(not a) → false -- reverses the value of &quot;true&quot;
@@ -208,7 +208,7 @@
     out(not not c) → true -- c is a number, &quot;not c&quot; would become &quot;false&quot;, and &quot;not false&quot; would become &quot;true&quot;
 </code></pre>
 <p>The operators <strong>and</strong> and <strong>or</strong> are the hearts of a lot of logic in Lua. &quot;If this and this, then do this&quot;.</p>
-<pre><code>    a = 15
+<pre><code class="language-lua">    a = 15
     b = false
     if a == 15 and not b then -- &quot;if a is equal to the number fifteen, and &quot;not b&quot; returns true, then ... &quot;
         out(&quot;It does the thing!&quot;) -- &quot; ... print the text! &quot;
@@ -218,19 +218,19 @@
 <a class="header" href="#homeless-operators" id="homeless-operators"><h4>Homeless Operators</h4></a>
 <p>I don't really have a category for these two operators, but they're incredibly important.</p>
 <p>First off, we have <strong>concatenation</strong>, which we've seen before. It's a way to add two strings together, and make them into one happy family, using a simple pair of dots.</p>
-<pre><code>    a = &quot;Hello&quot;
+<pre><code class="language-lua">    a = &quot;Hello&quot;
     b = &quot;World!&quot;
     out(a .. &quot; &quot; .. b) → Hello World!
 </code></pre>
 <p>A couple of notes real quick - I have the blank space in a string in the middle, to make sure it doesn't print &quot;HelloWorld!&quot;. Also, I like to add spaces on either side of my concatenation operator, but that's personal taste, this would also be valid:</p>
-<pre><code>    out(a..&quot; &quot;..b) → Hello World!
+<pre><code class="language-lua">    out(a..&quot; &quot;..b) → Hello World!
 </code></pre>
 <p>And lastly, we have one more operator, and this time for the table type. The character <code>#</code> can be used to read the number of entries within an array. It's pretty awesome, let me show you:</p>
-<pre><code>    table = {&quot;this&quot;, &quot;is&quot;, &quot;an&quot;, &quot;example&quot;, &quot;array&quot;}
+<pre><code class="language-lua">    table = {&quot;this&quot;, &quot;is&quot;, &quot;an&quot;, &quot;example&quot;, &quot;array&quot;}
     out(#table) → 5 -- there are five strings within the table!
 </code></pre>
 <p>Please note that you really shouldn't use the <code>#</code> operator if the table is not definitely an array. I'll show you why using it on maps might mess something up:</p>
-<pre><code>    table = {
+<pre><code class="language-lua">    table = {
         [1] = &quot;test&quot;,
         [2] = &quot;example&quot;,
         [5] = &quot;boom&quot;,

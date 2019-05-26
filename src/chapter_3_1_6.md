@@ -9,7 +9,7 @@ By default, all variables are `global`, which means they're in the entire **glob
 
 And all this is where the keyword `local` comes in. The `local` keyword defines a specific scope for a variable, and prevents them from being a global variable.
 
-```
+```lua
 function example()
     local var = "Hello World!"
     out(var)
@@ -30,7 +30,7 @@ Other key-words other than `function` that define a scope (and their end point) 
 - while whatever then [[ the scope ]] end
 
 Let's take a slightly-complicated look at that:
-```
+```lua
 local a = 5 -- visible to everything BELOW this line!
 
 function example_thing()

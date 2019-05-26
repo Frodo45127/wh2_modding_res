@@ -5,7 +5,7 @@ As with basically every programming tutorial on the globe, I'll begin where they
 I'd like to quickly note that as this tutorial series progresses, I'm going to be helping less and less and explaining more and more. I don't want to hand-hold you through the entire project, and each lesson will include at least one "challenge", where I give you an objective and tell you to go do it. Self-guided teaching is important, and once you're done this tutorial series, you'll be expected to be at least remotely competent and able to work this stuff out independently. I highly recommend you stick to the challenges and give them a shot, they'll benefit you if you really want to get good with Lua.
 
 Alright, within your text editor of choice, create a new file. Within that file, type the following block:
-```
+```lua
 function testing_init()
     out("Hello World!")
 end
