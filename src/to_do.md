@@ -1,7 +1,5 @@
 ### Tutorials to Convert
 
-- [Unit Card Guide by Cataph](https://docs.google.com/document/d/1ouBxVjIcdz_pcdWjvR0UUNlBMgpk_iOkS2_YqsR8vjQ/edit?usp=sharing)
-- [Lua Overview by Vandy](https://docs.google.com/document/d/1hrg3VP3Fl15bYm5I6cvPe3ZYU7OasXsztGOkJ4RugaA/edit?usp=sharing)
 - [How to Write Readable Script by theSniperDevil](https://steamcommunity.com/sharedfiles/filedetails/?id=1218756773)
 - [Save States by theSniperDevil](https://steamcommunity.com/sharedfiles/filedetails/?id=1312564661)
 - [Creating Self-Calling Scripts by theSniperDevil](https://steamcommunity.com/sharedfiles/filedetails/?id=1312347007)

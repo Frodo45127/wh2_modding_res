@@ -23,6 +23,11 @@ Get in contact with the creator, Frodo, in the Modding Den's channel [#rpfm](htt
 [Unit Card Guide by Cataph](./chapter_1_3.md) - A helpful series of guidelines on how to create a new unit card. Includes a template file to start off with.
 [Building Buildings by Vandy](./chapter_1_4.md) - A tutorial for creating custom buildings from scratch.
 
+[Creating Custom Units by Cryswar](./chapter_1_cryswar_1.md) - This guide is meant to walk prospective modders through creating a new unit in TWW2 using RPFM, assuming little to no knowledge of modding.
+[Creating a Custom Legendary Lord by Cryswar](./chapter_1_cryswar_2.md) - This walkthrough will walk you through creating a bare-bones custom lord and adding them to the game. It assumes you know the basics of modding and how to create a new unit, covered in the previous guide.
+[Custom Skills, Items, and Effects](./chapter_1_cryswar_3.md) - Here we discuss how to edit or create custom character skills, ancillaries, and effects, then attach them to each other as desired.
+[Creating and Editing Abilities](./chapter_1_cryswar_4.md) - We will cover how abilities of all types work - unit abilities, augments, army abilities, vortexes, etc.
+
 #### Scripting Resources
 
 [entry.lua](files/entry.lua)
