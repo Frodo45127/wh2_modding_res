@@ -1,6 +1,6 @@
 # Unit Card Guide
 
-##### Why
+#### Why
 
 Hello, my name is Cataph and I am a cardoholic.
 
@@ -12,14 +12,14 @@ Unit cards are probably **the unit’s component you will be staring at for the 
 - show the unit’s appearance
 - display, possibly, its character and gear and role
 
-##### What
+#### What
 
 But first things first. 
 **A unit card is a 60x130 PNG**. Don’t make it larger than that or it will automatically be compressed in-game and lose more quality than if you did it yourself.
 **Its location is ui/units/icons**, and it’s a good idea to open the data.pack and extract that folder for future reference. Its name needs to be the same in the card column in the `unit_variants` table. 
 In units/info you may find a version with a larger “shredded frame”, this is however only used in loading screens, so ignore that unless you need those for promo or stuff like that.
 
-##### How
+#### How
 
 You can use stuff like GIMP or Photoshop to assemble a unit card. Personally I use the latter so I will use its lingo. 
 Making nice cards is not easy. During the transition between Rome2’s and Warhammer’s art style I made truly *horrendous* cards myself, but with time I noticed things and developed some tricks.
@@ -30,7 +30,7 @@ Most CA cards are similar to existing GW artwork, but are still made by a proper
 
 Before we get to the chase, [get this template][unit_card_template]! Always periodically test with the card frame on top, I used to get immensely pissed off when important details of my card got hidden by the UI. You will never see the entire card in the game, especially on ranged units due to the additional ammo bar. Remember to hide the frame again when you’re done. It’s a PSD file, but should work just fine in GIMP too.
 
-###### The Three Jedi Ways
+#### The Three Jedi Ways
 
 **[please don't use the sampled pictures without permission]**
 
@@ -46,7 +46,7 @@ This is also where Positioning and Lighting really come to play.
 
 \* Remember that you can't use non-WHFB stuff and if fan-art, you want to check/ask permission.
 
-###### Guide to the Photoshoot
+#### Guide to the Photoshoot
 
 **First off you need to take a good screenshot** in which the unit comes with a good pose, possibly no animation glitches and clipping. As said, you need something that will fit in a 60x130, so some photography experience may come in handy. 
 
@@ -83,7 +83,7 @@ For a true step by step tutorial I’m gonna need a fresh unit card project. Sta
 Consolation prize, my first and terrible unit card for WH1, versus the same unit in WH2:
 ![rip][rip] ![yay][yay]
 
-##### APPENDIX: Character Icons
+#### APPENDIX: Character Icons
 
 **Characters want their portraits too**, of course. 
 Their cards are kept in ui/portraits/units/(designated culture) and are quite simpler to make. You follow the Photoshoot method, fix the tone, lower contrast, increase luminosity, and bam, done. Except that you want to use that faction’s face-to-frame size ratio to make it look better next to the other heroes and lords. For example Empire characters tend to be more zoomed-out, whereas Vampires have a creepier and closer portrait (you can recognize a bloodsucker by their selfies).

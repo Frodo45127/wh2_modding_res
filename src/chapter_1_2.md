@@ -1,6 +1,6 @@
 # Tolerant Tables
 
-##### What's a tolerant table?
+#### What's a tolerant table?
 
 **A tolerant table is an arbitrarily defined table that will not crash when a *referenced* key is missing in a certain column.** This is particularly relevant when you are overriding new content from another mod and it turned out that you do not need to port two or more tables just to provide background references for those keys. Instead, you need just one table for the value to edit. 
 

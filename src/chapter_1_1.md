@@ -40,7 +40,7 @@ Where "!" wins over "a".
 
 In an efficient mod, at least half of the reported issues are down to user error or what is technically called launcher f***-up. We’re going to try and cut that amount down for the greater good.
 
-###### Most common user mistakes:
+**Most common user mistakes**:
 
 1. **Not reading the mod description**. Seriously, it’s there for a reason. The modder took time to write it and it’s downright disrespectful to ignore it. Some mods will also have FAQs or a list of known issues and instructions.
 2. **Ignoring the required items**. Ditto. The mod may show you a popup upon subscribing, disregarding that is almost always cue for disaster. This popup is not shown when subbing from a Steam collection, so actually check the mod’s page.
@@ -59,7 +59,7 @@ __And not to do:__
 
 *This list is of course not meant to insult anybody’s intelligence, but you’d be surprised at how many issues and massive wastes of time are due to neglect of these simple rules. Following them is in the user’s interest in order to find a solution sooner, and it will allow the modder more time for improvement rather than wasted in unnecessary bug-hunts.*
 
-###### Most common launcher or game issues (with either George I or George II):
+**Most common launcher or game issues (with either George I or George II)**:
 
 1. **Failed to download/remove mod**. This happens relatively often and if in doubt you should always check in the mod download folder (example: Z:\Steam\steamapps\workshop\content\594570\??????) whether that mod was successfully downloaded/removed. Open George/Steam again until it is. The final folder id is the same as the one on the mod’s Steam url and you can sort by date for the most recently poked folder.
     - **More on this if using KMM**: Kaedrin’s manager moves active mod packs back to the data folder. Moreover, when mods update you will likely need to refresh/restart KMM. Most people will be using the Skip Intros mod, and if the game starts without loading it it’s an easy symptom something didn’t reload correctly. If you get that or suddenly crash for no good reason, just __refresh/restart KMM first thing__!
@@ -69,7 +69,7 @@ __And not to do:__
 5. **THE DREADED DURTHU BUG**: once upon a time, a bug with Durthu’s Lamentation ability rampaged through the workshop, mods being blamed without anybody being able to find a culprit. Eventually, it turned out that it was a vanilla bug that only popped up when certain mods were around and yes, I’m serious. Any similar glitch may be now affectionately dubbed Durthu by modders. The user can do nothing about it but just keep in mind, for giggles, that sometimes this sort of thing happens and this is when modders grow white hair in digging through their innocent mods. Probably karma for the analogous reports CA get for mod-originated bugs.
 6. **Can only do one thing at a time, guv**: new bug introduced with the lizard&rat DLC, supposedly to be fixed asap cause it breaks the new launchers on most cases. Basically only one mod is loaded at any time. I don’t have to specify how bad that is. Just use KMM.
 
-###### Most common KMM issues:
+**Most common KMM issues**:
 
 1. **Doesn’t work**: KMM can be installed anywhere, BUT in the game’s stuff. Don’t install in data/ or anywhere close. Hell, plop it in the desktop.
 2. **Doesn’t work cause I’m pirating the game**: KMM can smell piracy. Buy the game.
@@ -81,7 +81,7 @@ __And not to do:__
 You should always keep in mind that even if the mod list is technically sound there is always a **background mod limit of unknown entity**. Long story short, beyond 40 mods you’re potentially flirting with disaster because risk of incompatibility increases and the game may simply throw more random problems and crashes, or just plain balance issues. At 70ish, you surely have something wrong going on somewhere.
 As a rule of thumb, try not to overload it. No, don’t assemble and publish a bunch of mods, that kind of thing is terribly dangerous and bad for a variety of reasons. We’ll go more in-depth about this another time.
 
-###### Finding the culprit
+#### Finding the culprit
 
 The other problem with large mod lists is this: bad, I got a crash; worse, which one of the N mods I have is the culprit?
 
