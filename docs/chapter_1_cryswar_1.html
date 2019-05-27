@@ -1,0 +1,376 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Creating Custom Units - Modding Resources</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.1.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.2.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.3.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.4.</strong> Building Buildings</a></li><li><a href="chapter_1_cryswar_1.html" class="active"><strong aria-hidden="true">1.5.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.6.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.7.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.8.</strong> Creating and Editing Abilities</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_foreword.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.1.9.</strong> Commands, Interfaces &amp; Listeners</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra.html"><strong aria-hidden="true">4.3.</strong> Battle Map Extras</a></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Modding Resources</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#creating-custom-units" id="creating-custom-units"><h1>Creating Custom Units</h1></a>
+<a class="header" href="#preface--tools" id="preface--tools"><h4>Preface &amp; Tools</h4></a>
+<p><strong><strong>Preface</strong></strong></p>
+<p>The basics of creating new units are fairly easy and fast, but alien for someone just starting modding. While there are already a few unit creation guides out there (including <a href="https://steamcommunity.com/linkfilter/?url=http://www.twcenter.net/forums/showthread.php?749888-Sebidee-s-Complete-Guide-to-Warhammer-Unit-Modding">Sebidee's</a>), there are often issues with them being out of date or (imo) laid out confusingly, and I have a few other guides I'd like to do that build off of this, custom lords and skills and such, so I figured I'd start out the series with a simple unit creation guide.</p>
+<p><strong><strong>Tools</strong></strong></p>
+<p>You will only really NEED one tool - <a href="https://steamcommunity.com/linkfilter/?url=https://github.com/Frodo45127/rpfm/releases">Rusted Pack File Manager</a>, hereafter referred to as RPFM. It's basically a better and actively updated version of the classic Pack File Manager (PFM) with a lot of useful tools like dependency checkers and MyMod functionality that I mostly won't go heavily into here.</p>
+<p>The one thing I will stress is to get the <strong>Dependency Checker</strong> going ASAP; <code>ctrl+P</code> to open Preferences, check &quot;Enable dependency checker for DB tables&quot;, and (if you didn't do this on initial startup) make sure that your Total War Warhammer game is correctly linked in Packfile-&gt;Preferences as well as that going to Game Selected and ensuring it's set to Warhammer 2. Dependency manager will catch most simple errors for you.</p>
+<p>I also suggest having two instances of RPFM open at once when modding, one opening the Data file to compare with vanilla tables and one for your mod. I usually keep a notepad file open as well with just the unit key so I can copy-paste it easily.</p>
+<p>As one final note - you don't HAVE to follow the exact order I did this guide in. Many things can be done in any order, though you will often run into red dependencies temporarily if you do stuff in a weird order. I tried to lay everything out in the way I found most natural and easy to do, but if you find you REALLY like doing main_units before land_units... suit yaself.</p>
+<a class="header" href="#cheat-sheet" id="cheat-sheet"><h4>Cheat Sheet</h4></a>
+<p>While I will go down the list and explain what to do with each, I'm going to share my shortform list of tables for unit creation; once you get comfortable with unit modding you'll generally only need this rather than the full guide.</p>
+<p><strong>Basic Tables</strong></p>
+<ul>
+<li>land units</li>
+<li>main units</li>
+<li>ui_unit_bullet_point_overrides</li>
+<li>unit_description_short_texts</li>
+<li>unit_set_to_unit_junctions</li>
+<li>units_to_groupings_military_permissions</li>
+</ul>
+<p><strong>Visual Stuff</strong></p>
+<ul>
+<li>variants</li>
+<li>unit_variants</li>
+<li>variantmeshdefinitions</li>
+<li>unit icon</li>
+</ul>
+<p><strong>Utility Tables</strong></p>
+<ul>
+<li>units_custom_battle_permissions</li>
+<li>cdir_military_generator_unit_qualities</li>
+<li>culture_to_battle_animation</li>
+<li>building_units_allowed</li>
+</ul>
+<p><strong>Localisation</strong></p>
+<ul>
+<li>land_units.loc</li>
+<li>unit_description_short_texts.loc</li>
+</ul>
+<a class="header" href="#initial-setup-and-naming-conventions" id="initial-setup-and-naming-conventions"><h4>Initial Setup and Naming Conventions</h4></a>
+<p>First things first, we're going to create a new packfile (Ctrl-N). This gives us a blank pack with no tables or name. If this is your first mod, I would suggest saving it now, NOT in the data folder, with a simple name. There are a lot of different naming conventions out there; some people like prefacing their stuff with their username, some just name everything after the mod's name, whatever. Ideally you do want it to be unique so it doesn't run into incompatibility issues (don't name it mod.pack lmao).</p>
+<p>Note that you can muck with mod order by adding characters to the start, it's common to see packs with ! or !!!!! at the start to ensure they load first. I would not recommend doing this unless you know exactly what you're doing, it's more of a tool for startpos mods and other major overhauls that really want to be loaded first; for most purposes something basic will do just fine.</p>
+<p>While you may not find this works for you, I personally use the same key as much as possible throughout unit creation - if I name a land unit crys_skinwolves, you had damn well better believe the unit variant will be named crys_skinwolves, the main unit will be called that, etc etc. I just find it helps keep things simple, especially when you get into creating agents (lords/heroes) and start needing to attach campaign art and skill sets and all that jazz, and it's just REALLY nice to just have to copy-paste &quot;chs_styrbjorn&quot; instead of remembering 20 different things.</p>
+<a class="header" href="#adding-tables" id="adding-tables"><h4>Adding Tables</h4></a>
+<p>There are two ways to go about adding tables to your mod, both perfectly valid.</p>
+<ul>
+<li>Right clicking on the packfile-&gt;add-&gt;add from packfile-&gt;navigate to Steam\steamapps\common\Total War WARHAMMER II\data-&gt;open data.pack-&gt;open the DB folder-&gt;doubleclick on the tables you want to add, then delete all entries in the table and rename it</li>
+<li>Right clicking on the packfile-&gt;create-&gt;create DB and fill it out</li>
+</ul>
+<p>For simple DB editing purposes, the latter is infinitely faster, easier, and simpler, with the added benefit of letting you name the table and not having to clean it out. However, it is good to know the former because for some purposes, like variants, you will need to do it that way.</p>
+<p>If you do add a db table the first way for whatever reason, an easy way to clean it out is to use Special Stuff-&gt;Warhammer 2-&gt;Optimize Packfile.</p>
+<hr />
+<p><strong>land_units</strong></p>
+<p>For now, let's just create a new table. The bottom box lets you filter results; type in &quot;land_units&quot;, then open the dropdown list - there's only 4 tables there; &quot;land_units&quot; is the one you care about. Add it and name it whatever you like, the game doesn't care as long as it doesn't clash with vanilla table names or other mod tables. Now rightclick and select &quot;add row&quot;, and... oh jesus lord what the hell are all these things?!</p>
+<p>Fret not, you don't actually have to know all of them! This is where having a second window of RPFM open in the data version of the table is useful. Just copy the row from the closest vanilla unit to get us started. At the bottom right is a dropdown menu to change what to filter by; change to &quot;key&quot; and then type in the unit name you want to copy from, which may take a few tries depending on CA's weird naming conventions. In general, only type in 1 word, like &quot;champions&quot; instead of messing around trying to figure out how CA decided to name Marauder Champions with Great Weapons (wh_dlc08_nor_inf_marauder_champions_1 as it happens).</p>
+<p>Some important notes:</p>
+<ul>
+<li>Key is incredibly important - it should be unique and not shared with any mod or vanilla unit. I recommend NOT using CA conventions, keep it simple; if you're making Chaos Fimir then chs_fimir is a decent start, though for compatibility you may want to add more text, say crys_chs_fimir. Whatever you use, save it now and keep it handy somewhere else, you'll be copy-pasting that key a lot in this guide.</li>
+<li>When in doubt, just use the entry from the closest vanilla unit. Good rule of thumb. You don't have to know what the heck dr2_hydra is, but if the vanilla war hydra uses it as an animation, your budget hydra probably should too.</li>
+<li>&quot;Man Entity&quot; references the battle_entities table, which controls unit speed, mass, resistance to knockback, etc. Many vanilla entities are shared between many units; if you want to mess around I'd suggest making custom entities.</li>
+<li>Primary Melee/Missile weapons are fairly self explanatory in what they do; making new melee weapons is almost trivially easy, new missile weapons take some extra tables for projectile stuff but isn't that hard either.</li>
+<li>New attribute Groups have to be defined in unit_attribute_groups and attached to actual attributes in unit_attributes_to_groups.</li>
+<li>Note that you have to either reference vanilla armor/shield values or define new ones in their respective tables - you can't just fill in wh2_main_leather_88 and expect it to work.
+Damage mod [whatever] is the unit's resistance to that type of damage. Flame can be negative, the rest can't as far as I can tell.</li>
+</ul>
+<hr />
+<p><strong>main_units</strong></p>
+<p>Similar to how you added the land_units table, do the same for main_units and copy the closest vanilla unit over.</p>
+<p>As a general rule of thumb, the Main Units table is more focused on out of battle stuff - unit costs, caps in campaign or multiplayer, additional building requirements, etc.</p>
+<ul>
+<li>Change the &quot;unit&quot; field to your personal key, ideally the same one you used for your land unit.</li>
+<li>Additional Building Requirement is used if you want the player to have a secondary building to make the unit, and is left blank otherwise. References the building_levels table if needed.</li>
+<li>Campaign Cap is -1 for most units, but can be limited as desired if you only want a faction to be able to make, say, 6 Steam Tanks total</li>
+<li>Land Unit is a direct reference to the land_units table entry you just filled out, make sure you have your unit's key there.</li>
+<li>Unique Index should be, well, unique. Not much else to say there. Just pick a number that isn't in vanilla.</li>
+<li>Ui Unit Group Land/Naval can be customized if you make a new one in UI Unit Groupings, but using vanilla ones is much easier starting off.</li>
+</ul>
+<hr />
+<p><strong>ui_unit_bullet_point_overrides</strong></p>
+<p>Despite having an utterly terrifying name, this is just the table that assigns those little green/red text lines on the unit card. Note that these DO NOT HAVE ANY MECHANICAL EFFECT, they're solely visual, but you still want to make them as accurate as possible since they're the #1 way you can communicate to users what your unit actually does. You can make custom ones as well but again, that gets into loc editing and if this is your first unit it's probably easiest just to copy and paste from the closest vanilla unit.</p>
+<hr />
+<p><strong>unit_description_short_texts</strong></p>
+<p>Super simple table, just put your unit's key (chs_fimir or whatever) here. This is the stuff that occasionally pops up in events when you recruit a unit, just flavor text.</p>
+<hr />
+<p><strong>unit_set_to_unit_junctions</strong></p>
+<p>Ah, unit sets, love of my life. Much maligned and little understood, unit sets are a huge part of how your unit interacts with campaign mechanics; they define what technology, lord skills, faction effects, etc. work on them. If you're just making, say, tier 4 Empire Halberdiers you can just copy the same unit set junctions from the empire version; new units may take a little more work and especially if you have custom skills targeting specifically them you may need to define some additional unit sets (explained below) as well. Kinda as usual, Unit Record references the main_units key. As usual, this is ezpz if you just use the same key for everything LOL.</p>
+<p>Unit Set can be a bit confusing at times, but as a loose rule of thumb, there are some main types of groups to look out for;</p>
+<ul>
+<li>Oftentimes there's a faction_all set, ex. chs_all, that is used for some factionwide effects</li>
+<li>Some techs and skills may involve unique sets, like empire_infantry or chs_manticores. Try to match up against vanilla units as relevant.</li>
+<li>The format varies by faction, but most units will be in a set of 2-4 units with a name vaguely similar to wh2_dlc11_emp_spearmen_swordsmen_flagellants_halberdiers or something along those lines. That's for the basic red line skill that buffs those unit types. If you put your new unit in that set, they will benefit from those redline buffs.</li>
+<li>Similarly, there's usually a set with &quot;vet&quot; somewhere in the name, ex. wh2_dlc11_chs_vets_chariots_chaos_knights_dragon_ogres_warhounds_manticore. That is for the rank 7+ locked skills.</li>
+</ul>
+<p>You can generally ignore caste, category, and class, and unless you WANT to exclude a unit from a set, leave &quot;exclude&quot; unchecked too.</p>
+<p>As a general rule of thumb, most vanilla units are in 4-6 unit sets.</p>
+<p>Note that if you make a custom unit set (using the <strong>unit_sets</strong> table), you can replicate the vanilla rank 7+ groups by checking &quot;use unit EXP level range&quot; and defining the inclusive range, say from 7-9 or 4-9 or whatever. Otherwise leave that unchecked.</p>
+<hr />
+<p><strong>units_to_groupings_military_permissions</strong></p>
+<p>This table is pretty simple; aside from starting to attach variants together (more on that soon) it also lets you scale your units up or down as desired. &quot;Scale&quot; lets you change the side of non-mounted entities as desired, while &quot;Scale Variation&quot; is how much randomization there is within a unit, often 0.05 in vanilla so not everyone is exactly the same height.</p>
+<p>Note that the actual physical height of the unit, for purposes of being hit by artillery etc, is defined in battle_entities, NOT here, this is just visual.</p>
+<p>Tech folder can be left blank in almost all situations - it's only needed if you're making a custom mount which is A. complex as hell and B. WAY out of the scope of this guide.</p>
+<hr />
+<p><strong>unit_variants</strong></p>
+<p>This table just links units to variants, cards, etc. I just use the same key for every column to keep things simple.</p>
+<hr />
+<p><strong>variantmeshdefinitions</strong></p>
+<p>This is where things get tricky. So the basic idea is that you are going to import a variantmeshdefinition from one of the &quot;variants&quot; files in the actual data folder, then rename it for your unit and customize what's in it. The complexity of this depends a lot on the unit and how many moving parts there are, but as some general commentary;</p>
+<ul>
+<li>Any given variantmeshdefinition is divided into multiple slots, usually stuff like &quot;body&quot; and &quot;head&quot; and &quot;weapon 1&quot;.</li>
+<li>If a given slot has multiple variant meshes inside it, the game will randomly pick one for each model of the unit. Five entries - five possible visuals for that slot. On lower graphics settings the game only cares about the first three, so keep that in mind.</li>
+<li>Weapons have a very specific set of hooks that must be done correctly. As a simple version;</li>
+<li>Dual wielders define their weapons in slots 2 and 5 individually</li>
+<li>Two-handed weapons go in slot 1</li>
+<li>Shields go in the shield slot, huge surprise</li>
+<li>Units with multiple weapon types (ex. Marauder Hunters, Darkshards, etc) vary WILDLY in where each weapon is and should generally be referenced from vanilla</li>
+</ul>
+<p>Beyond that, different models have very different setups - for example a vanilla variantmeshdefinition may or may not have a randomized head slot or just the one. You can mess around and do some seriously cool stuff but be aware that a lot of stuff is built specifically for one model or animation and can be hard to muck with.</p>
+<p>As usual, just copy-pasting from a vanilla unit's definition is a safe start.</p>
+<p>I already mentioned this above, but to repeat, make sure to rename the file to fit whatever you set up in the variants db table so the game knows to link this definition to your unit.</p>
+<hr />
+<p><strong>Unit Icon</strong></p>
+<p>Unit icons are the visuals on the bottom bar of campaign map or in battle. You can find vanilla ones in data/ui/units/icons.</p>
+<p>Depending on what your unit is, you can just steal an existing vanilla one wholesale (ex. if you're giving Fimir to the Warriors of Chaos), or edit it to look a bit different, or use an entirely new image. The only real rules here are that it should be 60x130 and NOT use any copyrighted material from other people that isn't warhammer related.</p>
+<p>Some people are wizards with art and can customize an existing icon in photoshop/gimp to look amazing, others of us are dain bramaged and stuck taking ingame screenshots of the unit then doing some basic editing to focus on the unit and get them down to 60x130, then using &quot;add-&gt;add file&quot; to get that icon into the correct folder layout.</p>
+<p>While creating custom lords is out of the scope of this guide and will be focused on later in the series, I will note that they actually store their icon in a different place, specifically ui/portraits/units.</p>
+<p><strong><em>NOTE FROM VANDY:</em></strong> <em>You can also check out <a href="(./chapter_1_3.html">Cataph's guide on unit cards</a>.</em></p>
+<hr />
+<p><strong>units_custom_battle_permissions</strong></p>
+<p>This is a completely optional table but one that is very useful for testing units quickly. Overall very self explanatory, just define the faction(s) that can get this unit and link the unit key.</p>
+<hr />
+<p><strong>cdir_military_generator_unit_qualities</strong></p>
+<p>Another optional table, this one loosely defines how the AI views the unit's quality, which decides how likely it is to actually recruit it.</p>
+<p>As a general rule of thumb, the lower the number the more likely the AI is to pick it. Don't stress it too much, just rip off the closest unit from vanilla and call it a day.</p>
+<hr />
+<p><strong>culture_to_battle_animation</strong></p>
+<p>This table is only necessary if you're using a cross culture animation - for example, a Wood Elf animation for a Norscan unit. Some factions share cultures with similar ones (ex. Norsca and Chaos don't need to worry about this, the Norscan Berserker animation will work fine on a custom Chosen unit) but if you're trying to give Bretonnians a War Hydra unit, you will need to use this.</p>
+<p>The &quot;Man Animation&quot; column in land_units is the animation you'll want to put here.</p>
+<hr />
+<p><strong>building_units_allowed</strong></p>
+<p>This table allows your unit to be recruited in campaign, using the cost and recruit time values designated in main_units. Pretty self explanatory overall, just note that you need a unique string of numbers for the Key and that EACH level of a building needs a separate entry. For example, if you want to add your new custom Empire Swordsmen to all levels of the Chaos Warrior building (why????), you have the unit key, ex. &quot;emp_my_awesome_swordsmen&quot;, and have three entries for &quot;wh_main_horde_chaos_warriors_1&quot; &quot;wh_main_horde_chaos_warriors_2&quot; &quot;wh_main_horde_chaos_warriors_3&quot; that each attach to your swordsmen.</p>
+<p>If you don't do this and only define it at say, &quot;wh_main_horde_chaos_warriors_1&quot;, then while the chaos warrior building is at rank 1 you'll be able to recruit your new unit there, but as soon as it upgrades to 2 or 3 you'll permanently lose access to recruiting your unit.</p>
+<hr />
+<p><strong>land_units_to_unit_abilities</strong></p>
+<p>Thankfully this is another simple and easy table - you just link your <strong>land unit</strong> (you DO remember your key, right?) to a unit ability - you can either compare across in the vanilla version of this table for a common one (ex. Frenzy) or check <strong>unit_abilities</strong> if you want to add another ability.</p>
+<a class="header" href="#loc-files" id="loc-files"><h4>.loc Files</h4></a>
+<p>You could load up your mod now and see the unit ingame, assuming you didn't muck anything up, but you'll quickly notice there's a problem - the unit's name, description, and (if you made any) ui unit groupings etc. are all blank! That's because you need localization files, which can be found in the &quot;local_en&quot; file in the data folder. You add them the same way you do a normal table, importing from that file and purging the unclean entries, and same as with DB you'll want a second instance of RPFM open to compare.</p>
+<hr />
+<p><strong>land_units.loc</strong></p>
+<p>This may look ugly at first, but is very easy to setup thankfully!</p>
+<p>So the first important thing to know is that your Key will ALWAYS start the same way: &quot;land_units_onscreen_name_&quot;. Then you append your unit's key. So if your unit is &quot;crys_naked_skinwolves&quot;, you end up with a key that looks like &quot;land_units_onscreen_name_crys_naked_skinwolves&quot;. Kinda long and intimidating but whatever.</p>
+<p>For the Text column, just put in the name you want to show up. &quot;Unarmored Skinwolves&quot; or whatever.</p>
+<hr />
+<p><strong>unit_description_short_texts.loc</strong></p>
+<p>You remember about 80,000 years ago when we added that one super small table about unit descriptions? This is where you write the actual description.</p>
+<p>Same as with the last .loc, you preface your unit key with &quot;unit_description_short_texts_text_&quot;</p>
+<p>I don't think there's TECHNICALLY any length cap, I've seen some seriously gnarly long descriptions, but for practical reasons I'd suggest keeping it concise.</p>
+<hr />
+<p><strong>Other Loc Files</strong></p>
+<p>Unless you went crazy with customizing stuff you won't need any extra loc files for a generic unit, but if you're like me and can't stop with the verbal diarrhea, you may need to add more, like &quot;ui_unit_groupings.loc&quot; if you made a new UI group for your unit to add extra flavor text to them.</p>
+<a class="header" href="#troubleshooting" id="troubleshooting"><h4>Troubleshooting</h4></a>
+<p>First thing you always do: after making sure that your preferences are set up correctly, <strong>look for red boxes</strong>! It's almost always the reason the game crashes or the unit doesn't work right, and even as an experienced modder you can still make dumbass mistakes and leave the &quot;shield&quot; column blank instead of &quot;none&quot;. Speaking from experience on that one.</p>
+<p>.loc files will almost never cause a crash (apparently there are a few edge cases with some tables) but in general, mucking up loc files will only lead to invisible text rather than crashes.</p>
+<p>Variants USUALLY only make your unit invisible instead of crashing but it depends on what you mucked up there - be sure that you named the variantmeshdefinition correctly for example.</p>
+<a class="header" href="#balancing" id="balancing"><h4>Balancing</h4></a>
+<p>This is on many levels a deeply subjective and heavily mod reliant subject so I won't tell you what you have to do here, but as a few loose rules of thumb;</p>
+<ul>
+<li>I highly recommend using vanilla reference points for most numbers - if your unit is just a set of Fimir with, idk, shields, then price them around other Fimir, maybe a bit higher if they have all better stats, or similar if they have tradeoffs.</li>
+<li>Similar to the above - tradeoffs are fun! If your unit has incredibly powerful offense, making them squishy or short ranged can make up for it. If you're making 80 speed Irondrakes riding boars, strip off most of their armor. Maybe your new custom Hellcannon hits harder but fires slower.</li>
+<li>AP damage is a weird subject that not even CA seems to know exactly what to do with, given that they've been slowly buffing a number of duelist characters to have a much more AP heavy profile. As a general rule of thumb, if the unit doesn't have a good reason to be AP heavy, don't make them too AP heavy by default; almost all weapons have a healthy balance of AP or not, 99 ap damage and 1 normal can be a fun gimmick but if all your units look like that and have no downsides, they're probably OP.</li>
+<li>Balance is friggin' hard, and you shouldn't feel bad if you aren't sure about it initially! I'm by no means an expert myself, just try testing stuff and see how it feels in practice. Some ideas work out great, others don't.</li>
+</ul>
+<a class="header" href="#closing-notes" id="closing-notes"><h4>Closing Notes</h4></a>
+<p>This is my first TWW2 guide and I am under no illusions about myself being a flawless master of my craft - I am sure there are parts of this guide that will be confusing for newcomers where I accidentally used unnecessary lingo or forgot to explain what the heck to do. Please, let me know! Nicely if possible, I would greatly appreciate that part, but I am eager to improve the guide and constructive criticism is greatly appreciated.</p>
+<a class="header" href="#credits-and-links" id="credits-and-links"><h4>Credits and Links</h4></a>
+<p>I cannot in good faith fail to link <a href="https://steamcommunity.com/linkfilter/?url=http://www.twcenter.net/forums/showthread.php?749888-Sebidee-s-Complete-Guide-to-Warhammer-Unit-Modding">Sebidee's Complete Guide to Warhammer Unit Modding</a>, which is what got me into unit modding in the first place. It goes into a lot of detail on many things, and the dude is clearly VASTLY more skilled at the fancy pants art side of things than I am. I did not copy anything from it, but at the same time I feel that credit where credit is due.</p>
+<p>I highly, highly, HIGHLY recommend the <a href="https://steamcommunity.com/linkfilter/?url=https://discord.gg/vtRPChd">C&amp;C Modding Discord</a>; there are a lot of very knowledgeable modders there who have helped me out greatly over time, and the community as a whole is pretty great. Modding tech 1-4 channels are where you ask questions, they don't always get answered, especially if it's about extra complex or poorly known stuff like startpos modding and the few people who are super knowledgeable about that aren't around, but in general it's helped me a ton.</p>
+<p>I linked it above, but <a href="https://steamcommunity.com/linkfilter/?url=https://github.com/Frodo45127/rpfm/releases">Rusted Pack File Manager</a> is incredibly valuable to all modding I do and I cannot recommend it highly enough, especially over the aging PFM that older guides often recommend. Nothing against PFM, it has its uses, but in general RPFM is just better on almost every level.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_1_4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_1_cryswar_2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="chapter_1_4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="chapter_1_cryswar_2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

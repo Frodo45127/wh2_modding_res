@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Custom Legendary Lord - Modding Resources</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.1.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.2.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.3.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.4.</strong> Building Buildings</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.5.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html" class="active"><strong aria-hidden="true">1.6.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.7.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.8.</strong> Creating and Editing Abilities</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_foreword.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.1.9.</strong> Commands, Interfaces &amp; Listeners</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra.html"><strong aria-hidden="true">4.3.</strong> Battle Map Extras</a></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Modding Resources</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#creating-a-custom-legendary-lord" id="creating-a-custom-legendary-lord"><h1>Creating a Custom Legendary Lord</h1></a>
+<a class="header" href="#setup" id="setup"><h4>Setup</h4></a>
+<p>This guide assumes that you have created the actual unit for your custom lord - if you don't know how to do that, my <a href="(./chapter_1_cryswar_1.html">previous guide</a> covers the basics of unit creation. Same process, just copy from a vanilla lord as much as possible instead of a normal unit. And remember that you need their card in portraits instead of units!</p>
+<p>We will be using <a href="https://steamcommunity.com/linkfilter/?url=https://github.com/Frodo45127/rpfm/releases">Rusted Pack File Manager</a> (RPFM) again for this guide. If you don't have it, get it, it's free and easy to learn.</p>
+<p>One section of the guide touches on the possibility of using the Assembly Kit, specifically DAVE. I recommend against it unless absolutely necessary, but it is a decent search engine; if you mouse over Library, go to Tools, and install the TWW2 Assembly Kit, then open it, DAVE is the DB editor.</p>
+<hr />
+<p><strong>agent_subtypes</strong></p>
+<p>All lords and heroes are 'agents' as far as the game is concerned, and we'll start here since most of the future tables will reference this one.</p>
+<p>Fortunately this is fairly self explanatory and very similar to our previous work; your &quot;Key&quot; is extremely important and should be saved since you'll be referencing it a lot.</p>
+<p><strong>Auto Generate</strong> should be checked ONLY if you are making a generic hero/lord, and left off if you are making a unique lord or hero.</p>
+<p><strong>Is Caster</strong> is self explanatory - do they use magic?</p>
+<p><strong>Associated Unit Override</strong> links to the main_unit key, not land_unit, though I would use the same key for both when possible personally.</p>
+<p><strong>Audio Voiceover Actor Group</strong> is the set of lines they'll use on the campaign map, just pick the closest you can get.</p>
+<p>The rest can just be copied from a similar vanilla lord without issue.</p>
+<hr />
+<p><strong>agent_uniforms</strong></p>
+<p>This is a lot like the unit_variants table, it just links various things together. I like to use the same name for all of them but you can do whatever you want as long as you stick to your scheme and more importantly remember it.</p>
+<hr />
+<p><strong>campaign_character_art_sets</strong></p>
+<p>This table sets up some of the basics of your agent on the map - their size, whatever faction or culture/subculture they're linked to, what type of agent they are, etc.</p>
+<p>Since we're making a custom Lord, their agent type will be general; obviously for say, Exalted Heroes, you would use a different agent type.</p>
+<p>DON'T toggle &quot;is custom&quot;, stuff gets weird.</p>
+<p>ALWAYS toggle &quot;is male&quot; to true! I don't know why but the game gets super weird if you call them female, it can break scripts and lords very badly. Learned that one from Mixu. Even vanilla doesn't understand how this field works, most female lords, legendary or otherwise (ex. Hellebron, Supreme Sorceresses, Isabella von Carstein) are marked as male here.</p>
+<p>Campaign Map Scale is self explanatory - how big your guy is on the campaign map - but be warned that you may have to fiddle with it, some base models are friggin' huge and have to be scaled down to .5 or less to function well, others are fine at 1.0. If you're making monstrous lords, like Arachnaroks or something, you will very likely have to fiddle with this a lot, human lords usually work fine at 1.0.</p>
+<hr />
+<p><strong>campaign_character_arts</strong></p>
+<p>Almost all of this table can just be copy-pasted from a similar vanilla lord without needing much explanation or understanding.</p>
+<p>Ensure that your numerical ID is unique and that the <strong>art set ID</strong> and <strong>uniform</strong> link to the correct ones for your lord - especially if you copy pasted stuff.</p>
+<p>Land Animation must exist already and this can be a problem, most monsters, monstrous infantry, and basically anything that isn't a generic human or a mount don't have campaign map animations, or may only have limited ones, ex. giants have one since there's a giant boss, but it has no walking animation, just idle. It's up to you if you're willing to let your giant lord moonwalk across the map (sorry, Prometheus) or want to limit yourself to only lords who have existing animation types.</p>
+<p>Your land animation can usually be just ripped off of a vanilla lord by comparing vanilla agents in RPFM, but you can view ALL existing campaign map animations in the table <strong>campaign_anim_set_enums</strong> which I believe can only be opened in the Assembly Kit.</p>
+<hr />
+<p><strong>character_skill_node_sets</strong></p>
+<p>A full overview of how skills work is outside the scope of this guide, but we do need to touch on this table regardless. This table is how we attach a set of skill nodes to an agent type; thankfully it's pretty simple and if you've gotten this far it shouldn't be too hard to figure out that your agent subtype goes in the agent subtype field etc.</p>
+<p>Leave the campaign/faction/subculture/army/navy fields empty, they're not used.</p>
+<p>This will leave you with a blank skill tree - I go into MUCH more detail on how to create and customize skills in <a href="(./chapter_1_cryswar_3.html">this guide</a> but if you want to get a ghetto skeleton up, copying a similar lord, I would go to <strong>character_skill_nodes</strong> in the vanilla data file, search character_skill_node_set_key for a similar lord; ex. if you're making a new Chaos custom Legendary Lord, search for &quot;chs&quot; to see all Chaos lords, find <strong>wh_main_skill_node_set_chs_lord</strong> which is the generic Chaos Lord, then change the search parameters to that. That will only show you his nodes (and unfortunately the Lord of Change too...) but still, that tells you all the basic nodes you need.</p>
+<p>How you go from there is up to you, but what I personally do is copy ALL of that lord's generic rows over to <a href="https://steamcommunity.com/linkfilter/?url=https://notepad-plus-plus.org/">Notepad++</a>, then go to Search -&gt; Replace..., and find &quot;wh_main_skill_node_chs_lord&quot; and replace it with say &quot;my_lord&quot;. That turns <strong>wh_main_skill_node_chs_lord_battle_01</strong> into <strong>my_lord_battle_01</strong> which is a lot easier to keep track of lol, at least for me. <strong>chs_gaius_battle_01</strong> is even easier to remember... assuming your lord is a Chaos lord named Gaius anyways.</p>
+<p>After you're done, just copy that entire set of rows back into RPFM, specifically your mod's character_skill_nodes table, and make sure that the <strong>character_skill_node_set_key</strong> matches whatever you put in <strong>character_skill_node_sets</strong>. Again, I like to keep it simple; agent subtype chs_gaius, node set named chs_gaius, node set key chs_gaius.</p>
+<hr />
+<p><strong>faction_agent_permitted_subtypes</strong></p>
+<p>Another easy table, this one just tells the game that it's cool for a faction to have your lord.</p>
+<hr />
+<p><strong>Portraits Part 1 - Portholes</strong></p>
+<p>Portholes are the round character avatars you see at the bottom left when you select them, in diplomacy, etc. Note that they don't actually have to be round images, the game just clips a round section of it so they can be square or whatever.</p>
+<p>Portholes are placed in ui/portraits/portholes, but actually getting them ingame is a bit trickier; as far as I know it's not possible with pure vanilla tools - so I will refer you to the best guide I've found to do it! This guy <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1194811468">wrote up a great guide AND most importantly provides a super handy tool to do it with</a>, and I'd rather give him the attention than waste your time pretending I have a solution haha.</p>
+<hr />
+<p><strong>Portraits Part 2 - Unit Cards</strong></p>
+<p>I mentioned in the unit creation guide that if you were making a lord, you put the unit card in <strong>ui/portraits/units</strong> instead of ui/units/icons. This section is just there to remind you of that.</p>
+<p>I personally find that taking a screenshot of the lord and then mucking around a bit in GIMP gives the best, most fitting cards since that's what the game does for the most part with vanilla lords - but you can use any image of appropriate size.</p>
+<hr />
+<p><strong>names</strong></p>
+<p>The naming system is a bit whack, but I'll try to explain it simply.</p>
+<p>First you define a surname or forename here (the numerical <strong>ID</strong>, must be unique).</p>
+<p>Next you assign it to a <strong>names_group</strong> which tells the game &quot;oh this is a Chaos-ey name&quot;</p>
+<p>Finally you tell the game what <strong>type</strong> of name it is - Forename is 0, Family Name is 1.</p>
+<p>Gender doesn't actually matter I think, I usually just leave it 0, but can be male (0), female (1), or no gender (3).</p>
+<p>Similarly, Frequency is left at 0 for any legendary lord/hero/etc and 1 if you want it to be added to the autogen pool.</p>
+<p>Keep in mind that if you have a multi part name, like Sarthorael the Everwatcher or Sigvald the Disappointment, you will need to define two name IDs here - one for the first part (Sarthorael) and the other for the second (The Everwatcher). And don't screw up their Type!</p>
+<p>We'll actually define the name later via localization.</p>
+<hr />
+<p><strong>agent_subtypes.loc</strong></p>
+<p>This localization file is most commonly used for the &quot;Legendary Lord&quot; subtitle in vanilla, using <strong>agent_subtypes_onscreen_name_override_</strong> followed by the agent_subtype key on the left, and just &quot;Legendary Lord&quot; in the <strong>text</strong> field</p>
+<p>You can also override description with <strong>agent_subtypes_description_text_override_</strong> followed by the key, which seems to be used for generic heroes and such.</p>
+<hr />
+<p><strong>names.loc</strong></p>
+<p>Remember when we defined some arbitrary unique IDs in the &quot;names&quot; DB table earlier? Now we can FINALLY attach them to an actual damn name - use <code>names_name_</code> followed by that number for the key, ex. <strong>names_name_1234567</strong>, and whatever name you like in the Text field.</p>
+<a class="header" href="#actually-spawning-your-lord" id="actually-spawning-your-lord"><h4>Actually Spawning Your Lord</h4></a>
+<p>There are a few ways to go about this depending on what kind of lord you went with.</p>
+<ul>
+<li>Generic lords will spawn ingame without any further effort if you set them to &quot;auto generate&quot; in agent_subtypes.</li>
+<li>Legendary lords can be added via script fairly simply, more on that soon.</li>
+<li>You CAN startpos the lord in DAVE, but unless you're making a new faction and want a custom lord this destroys compatibility for no good reason.</li>
+</ul>
+<hr />
+<p><strong>Spawning Part 1 - Scropting</strong></p>
+<p>No that's not a typo in the title, Vandy calls it scropting and I find it hilarious.</p>
+<p>Anyways, there are many ways to actually script a lord spawn but for the sake of simplicity (and multiplayer compatibility) I'll just go with the simplest option possible here: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1312347007">linking to an amazing basic scripting guide</a>!</p>
+<p>That explains the basic folder organization and Notepad++ usage better than I could and I'd rather not plagiarize their work, so let's move on to what we actually want to do - making the script add our lord.</p>
+<pre><code class="language-lua">    function modname_script()
+        if cm:is_new_game() then
+            cm:spawn_character_to_pool(&quot;faction_key&quot;, &quot;names_name_XXXXXXXX&quot;, &quot;names_name_YYYYYYYY&quot;, &quot;&quot;, &quot;&quot;, 18, true, &quot;general&quot;, &quot;agent_subtype&quot;, true, &quot;&quot;)
+        end;
+    end
+</code></pre>
+<p>What does this do? It adds the lord to your factions lord recruit pool at the start of a new campaign. Actually spawning characters can be a little funky in MP and I don't want to get into some of the complexities of finding a valid spawn location, I'd rather keep it VERY simple here and I don't know lua well enough to teach y'all every possible way to do it. So let's look over how to fill the skeleton above out.</p>
+<ul>
+<li><code>modname_script()</code> - make sure this is the exact same as what you named the file! In other words, if you named the file &quot;storm_script.lua&quot;, this should be &quot;storm_script()&quot;.</li>
+<li><code>faction_key</code> is the, uh, faction key, stolen from the <strong>factions</strong> table. For example, if you're adding this lord to Clan Rictus (Tretch's faction), fill in <strong>wh2_dlc09_skv_clan_rictus</strong></li>
+<li><code>names_name_XXXXXXXX</code> is whatever the character's forename is, based on what you defined in the names table earlier.</li>
+<li><code>names_name_YYYYYYYY</code> is the character's surname. If you don't need a surname, leave this completely blank, so it looks like &quot;&quot;,</li>
+<li>The first &quot;true&quot; is for gender; as discussed earlier, the game gets super derp about women for some reason so just leave this true (male).</li>
+<li><code>General</code> can be changed to say, champion if you're spawning a Champion or Runesmith or something, but since this guide is for lords, we're just gonna assume you leave it as <strong>general</strong>.</li>
+<li><code>Agent_subtype</code> should be easy to fill in, we've been copy-pasting the damn key all throughout this guide!</li>
+<li>The next &quot;true&quot; is a boolean as to whether or not the character is immortal. Unless you specifically want your legendary lord to perma-splat when they die, leave this true like with normal vanilla Legendary Lords.</li>
+</ul>
+<p>I'll post a few versions of what the final result might look like, using examples from my mod.</p>
+<pre><code class="language-lua">    function storm_script()
+        if cm:is_new_game() then
+            cm:spawn_character_to_pool(&quot;talons_of_tzeentch&quot;, &quot;names_name_19880600&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, 18, true, &quot;general&quot;, &quot;chs_prometheus&quot;, true, &quot;&quot;);
+        end;
+    end
+</code></pre>
+<pre><code class="language-lua">        function storm_script()
+        if cm:is_new_game() then
+            cm:spawn_character_to_pool(&quot;blades_of_khorne&quot;, &quot;names_name_515043905&quot;, &quot;names_name_769371438&quot;, &quot;&quot;, &quot;&quot;, 18, true, &quot;general&quot;, &quot;chs_styrbjorn&quot;, true, &quot;&quot;);
+        end;
+    end
+</code></pre>
+<p>Note that if you're adding multiple lords, you can just have multiple of those cm lines, the game doesn't mind, ex.</p>
+<pre><code class="language-lua">    function storm_script()
+        if cm:is_new_game() then
+            cm:spawn_character_to_pool(&quot;blades_of_khorne&quot;, &quot;names_name_19880603&quot;, &quot;names_name_19880604&quot;, &quot;&quot;, &quot;&quot;, 18, true, &quot;general&quot;, &quot;chs_atropos&quot;, true, &quot;&quot;);
+            cm:spawn_character_to_pool(&quot;talons_of_tzeentch&quot;, &quot;names_name_19880601&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, 18, true, &quot;general&quot;, &quot;chs_saenathra&quot;, true, &quot;&quot;);
+        end;
+    end
+</code></pre>
+<hr />
+<p><strong>Spawning Part 2 - Asspossessed</strong></p>
+<p>I want to reiterate what I mentioned above - DO NOT DO THIS unless you have to, specifically, if you are making a new playable faction with a custom lord. Startpos.esf mods cannot function alongside each other, only one will work - so making a startpos mod means your mod will never be compatible with say, Crynsos's Faction Unlocker, or any mod that changes how many slots major cities have, etc.</p>
+<p>A full guide for making a new faction in AssKit is outside of the scope of this guide and will be explained in more detail when I post the Faction Creation guide, but as an oversimplified note; the notable parts of the lord that NEED to be done in Assembly Kit are: land_units, main_units, agent_subtypes, character_skill_node_sets, in that order. You can use dummy entries for all of them, it's possible to edit them in RPFM (as we did earlier in the guide), but the game will not let you finish a start_pos_character without the first three defined and for some dumbass reason, the skill node set HAS to be startposed for the faction leader or they can never access their skills/items ingame.</p>
+<p>You'll also need to fill out a number of other tables (ex. start_pos_characters, start_pos_generals, mercenaries, etc). but again, that's outside the scope of the guide.</p>
+<a class="header" href="#the-next-step" id="the-next-step"><h4>The Next Step</h4></a>
+<p>Custom skills, ancillaries, effects, etc. are an extremely widespread topic overall so they are not covered in this guide, however I do have a guide for them! If you <a href="(./chapter_1_cryswar_3.html">follow this link</a> I explain them all.</p>
+<a class="header" href="#credits-and-links" id="credits-and-links"><h4>Credits and Links</h4></a>
+<p>I could not possibly have come as far as I have as a modder without the excellent people at the <a href="https://steamcommunity.com/linkfilter/?url=https://discord.gg/xs6DMbn">C&amp;C Modding Discord</a>. I cannot recommend it highly enough; while you won't ALWAYS get an answer, I've found it to be by far the best place to get help and interact with other modders. Plus you get to bug Vandy for scripting help!</p>
+<p>thesniperdevil has a series of Steam guides about scripting, touching on various subjects such as listeners, but <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1312347007">this specific guide</a> was my intro to basic scripting and he explains script folder design better than I could so I wanted to link and credit it again here.</p>
+<p>Special thanks to Vandy and Mixu in particular for the times they've helped me break through roadblocks in modding in the past! Mixu was the reason I could figure out the game's weird hatred for female lords and get Saenathra working properly as a result, Vandy is just like the #1 guy in the C&amp;C discord in terms of how crazy much he helps people all the time.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_1_cryswar_1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_1_cryswar_3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="chapter_1_cryswar_1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="chapter_1_cryswar_3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
