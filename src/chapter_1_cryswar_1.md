@@ -243,7 +243,7 @@ This is on many levels a deeply subjective and heavily mod reliant subject so I 
 - AP damage is a weird subject that not even CA seems to know exactly what to do with, given that they've been slowly buffing a number of duelist characters to have a much more AP heavy profile. As a general rule of thumb, if the unit doesn't have a good reason to be AP heavy, don't make them too AP heavy by default; almost all weapons have a healthy balance of AP or not, 99 ap damage and 1 normal can be a fun gimmick but if all your units look like that and have no downsides, they're probably OP.
 - Balance is friggin' hard, and you shouldn't feel bad if you aren't sure about it initially! I'm by no means an expert myself, just try testing stuff and see how it feels in practice. Some ideas work out great, others don't.
 
-#### Closing Notes
+#### Closing Note
 
 This is my first TWW2 guide and I am under no illusions about myself being a flawless master of my craft - I am sure there are parts of this guide that will be confusing for newcomers where I accidentally used unnecessary lingo or forgot to explain what the heck to do. Please, let me know! Nicely if possible, I would greatly appreciate that part, but I am eager to improve the guide and constructive criticism is greatly appreciated.
 
@@ -257,6 +257,7 @@ I linked it above, but [Rusted Pack File Manager][rpfm] is incredibly valuable t
 
 [sebidee]: https://steamcommunity.com/linkfilter/?url=http://www.twcenter.net/forums/showthread.php?749888-Sebidee-s-Complete-Guide-to-Warhammer-Unit-Modding
 [rpfm]: https://steamcommunity.com/linkfilter/?url=https://github.com/Frodo45127/rpfm/releases
+
 [unit_card]: (./chapter_1_3.md)
 
 [c&c]: https://steamcommunity.com/linkfilter/?url=https://discord.gg/vtRPChd
