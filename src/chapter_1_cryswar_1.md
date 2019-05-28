@@ -125,6 +125,11 @@ Note that if you make a custom unit set (using the **unit_sets** table), you can
 ---
 **units_to_groupings_military_permissions**
 
+This table is quite simple and basically just tells the game "yes, this is a Chaos unit and should be accessible to factions using the Chaos military group". You'll need other tables to actually recruit the unit in campaign for example, this is just a prerequisite.
+
+--
+**variants**
+
 This table is pretty simple; aside from starting to attach variants together (more on that soon) it also lets you scale your units up or down as desired. "Scale" lets you change the side of non-mounted entities as desired, while "Scale Variation" is how much randomization there is within a unit, often 0.05 in vanilla so not everyone is exactly the same height.
 
 Note that the actual physical height of the unit, for purposes of being hit by artillery etc, is defined in battle_entities, NOT here, this is just visual.
@@ -255,9 +260,9 @@ I highly, highly, HIGHLY recommend the [C&C Modding Discord][c&c]; there are a l
 
 I linked it above, but [Rusted Pack File Manager][rpfm] is incredibly valuable to all modding I do and I cannot recommend it highly enough, especially over the aging PFM that older guides often recommend. Nothing against PFM, it has its uses, but in general RPFM is just better on almost every level.
 
-[sebidee]: https://steamcommunity.com/linkfilter/?url=http://www.twcenter.net/forums/showthread.php?749888-Sebidee-s-Complete-Guide-to-Warhammer-Unit-Modding
-[rpfm]: https://steamcommunity.com/linkfilter/?url=https://github.com/Frodo45127/rpfm/releases
+[sebidee]: http://www.twcenter.net/forums/showthread.php?749888-Sebidee-s-Complete-Guide-to-Warhammer-Unit-Modding
+[rpfm]: https://github.com/Frodo45127/rpfm/releases
 
 [unit_card]: (./chapter_1_3.md)
 
-[c&c]: https://steamcommunity.com/linkfilter/?url=https://discord.gg/vtRPChd
+[c&c]: https://discord.gg/vtRPChd

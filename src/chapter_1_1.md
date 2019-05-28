@@ -1,10 +1,10 @@
 # Mod Troubleshooting Guide
 
 This is a troubleshooting guide for mod users in TW: Warhammer 2. The generic pointers should be valid for all recent TW games.
-- Your neighbourhood Cataph
+\- Your neighbourhood Cataph
 
 
-#### Managing Mods
+## Managing Mods
 
 So, you have subscribed to mods on the workshop. You now open CA's current mod manager (hereby called **George II**) and - they don't work. We called it George II cause it's the new launcher. He's new in town, prettier than George, but he's still not good at what he should be doing and forgets to make mods work. We're sorry but George II needs some time.
 
@@ -36,7 +36,7 @@ Which, incidentally, is this:
 ! # $ % & ' ( ) + , - ; = @ 0-9 a-z [ ] ^ _ ` { } ~
 Where "!" wins over "a".
 
-#### Common Troubleshooting
+## Common Troubleshooting
 
 In an efficient mod, at least half of the reported issues are down to user error or what is technically called launcher f***-up. We’re going to try and cut that amount down for the greater good.
 
@@ -76,12 +76,12 @@ __And not to do:__
 3. **Freeze on start**: try again.
 4. **DLC not found**: I don’t know the specifics but 1.8.6 should fix that from .4. If it doesn’t, Detect installs again. Past that, report to Kaedrin with what he needs or rollback to the .2.
 
-#### APPENDIX: Trimming the Mod List
+## APPENDIX: Trimming the Mod List
 
 You should always keep in mind that even if the mod list is technically sound there is always a **background mod limit of unknown entity**. Long story short, beyond 40 mods you’re potentially flirting with disaster because risk of incompatibility increases and the game may simply throw more random problems and crashes, or just plain balance issues. At 70ish, you surely have something wrong going on somewhere.
 As a rule of thumb, try not to overload it. No, don’t assemble and publish a bunch of mods, that kind of thing is terribly dangerous and bad for a variety of reasons. We’ll go more in-depth about this another time.
 
-#### Finding the culprit
+### Finding the culprit
 
 The other problem with large mod lists is this: bad, I got a crash; worse, which one of the N mods I have is the culprit?
 
@@ -96,7 +96,7 @@ One of the things you should try upon encountering a reproducible crash is to to
 It’s patient work but the modder will appreciate it. 
 Remember: a happy modder is a happy user.
 
-#### APPENDIX: Scripts
+## APPENDIX: Scripts
 
 Scripts are being increasingly used by mods. Scripters are getting smarter by the day to maintain compatibility, but some mods still require frameworks like CMF or UIMF (we’ll read about them later). 
 
@@ -117,8 +117,8 @@ What do?
 In most cases, it’s just a botched download (see Launcher error 3). Other times it may be trickier and require you to start trimming the mod list to find the culprit. When/if you report the issue to modders, remember to provide as much info as humanly possible because finding a script break can turn ugly and complicated. 
 Please also consider using [this debugger mod][debug] and sending the resulting log, generated in Steam\steamapps\common\Total War WARHAMMER II. Specific scripty mods may come with additional instructions.
 
-#### APPENDIX: [Community Modding Framework (CMF)][cmf]
-#### CURRENTLY NEEDS MAINTENANCE, AS OF 7 MAY
+## APPENDIX: [Community Modding Framework (CMF)][cmf]
+## CURRENTLY NEEDS MAINTENANCE, AS OF 7 MAY
 
 CMF is basically a community-driven dock where all ships come to do whatever ships do in ports. In other words, **it is a required framework that allows high layers of compatibility between a bunch of mods**. It used to be pretty mandatory before new opportunities arose, but it’s still required for some mods out there. A bunch of problems are caused by not having CMF, or by a botched download of the latter. 
 
@@ -126,7 +126,7 @@ So, what to do:
 1. If it’s a required mod, do grab it.
 2. ALWAYS keep CMF right at the bottom of the mod list if you are using KMM. Always.
 
-#### APPENDIX: [UI Modding Framework][uimf]
+## APPENDIX: [UI Modding Framework][uimf]
 
 Pretty much the same reasoning, this mod was a breakthrough that allowed UI mods via scripting, and there are zero reasons not to have it around just in case one of your mods is actually using it or starts doing it.
 This framework may be required by scripty mods that do pretty nifty stuff including new UI panels and such.
