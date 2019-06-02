@@ -6,3 +6,6 @@ title = "Modding Resources"
 
 [build]
 build-dir = "./docs"
+
+[output.html]
+default-theme = "rust" 

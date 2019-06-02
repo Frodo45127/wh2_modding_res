@@ -208,10 +208,10 @@ Special thanks to Vandy and Mixu in particular for the times they've helped me b
 [previous_guide]: (./chapter_1_cryswar_1.md)
 [next_guide]: (./chapter_1_cryswar_3.md)
 
-[rpfm]: https://steamcommunity.com/linkfilter/?url=https://github.com/Frodo45127/rpfm/releases
-[npp]: https://steamcommunity.com/linkfilter/?url=https://notepad-plus-plus.org/
+[rpfm]: https://github.com/Frodo45127/rpfm/releases
+[npp]: https://notepad-plus-plus.org/
 
 [marth_thing]: https://steamcommunity.com/sharedfiles/filedetails/?id=1194811468
 [tsd]: https://steamcommunity.com/sharedfiles/filedetails/?id=1312347007
 
-[c&c]: https://steamcommunity.com/linkfilter/?url=https://discord.gg/xs6DMbn
+[c&c]: https://discord.gg/xs6DMbn

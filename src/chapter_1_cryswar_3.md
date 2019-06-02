@@ -359,6 +359,6 @@ Yes, I'm shilling another guide, deal with it. Seriously though, abilities and p
 
 
 
-[rpfm]: https://steamcommunity.com/linkfilter/?url=https://github.com/Frodo45127/rpfm/releases
+[rpfm]: https://github.com/Frodo45127/rpfm/releases
 
 [next_guide]: (./chapter_1_cryswar_4.md)
