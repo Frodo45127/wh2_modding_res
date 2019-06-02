@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Localisation - Modding Resources</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.1.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.2.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.3.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.4.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html" class="active"><strong aria-hidden="true">1.5.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.6.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.7.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.8.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.9.</strong> Creating and Editing Abilities</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_foreword.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.1.9.</strong> Commands, Interfaces &amp; Listeners</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra.html"><strong aria-hidden="true">4.3.</strong> Battle Map Extras</a></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Modding Resources</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#localisation" id="localisation"><h1>Localisation</h1></a>
+<a class="header" href="#by-vandy" id="by-vandy"><h2>By Vandy</h2></a>
+<p>Hello and welcome! Look no further for a simple tutorial to create custom text in <em>Total War!</em></p>
+<p><strong><em>PLEASE NOTE:</em></strong> <em>This tutorial assume baskc knowledge of PackFiles, the modding tools available, and other basic nomenclature regarding modding.</em></p>
+<p>Firstly, yes - obviously, custom text is possible, otherwise I wouldn’t have typed these words into this internet. Text in-game is known as localisation, and consists of basically all text you see - from the Help Pages, to building names, to mission text, to subtitles in quest battles - all of these are localisable text, meaning we can edit or add text.</p>
+<p>There are two ways to edit and add text, and I'll show them both in turn. First off, we're gonna go through adding it via the Assembly Kit. For Warhammer 2, the functionality to export localisation is disabled for the retail kit, but we can reenable it. We're going to cover that first, if you're not using Warhammer 2 you can safely ignore the next section.</p>
+<a class="header" href="#warhammer-ii-localisation-fix" id="warhammer-ii-localisation-fix"><h4>Warhammer II Localisation Fix</h4></a>
+<p>First things first, get <a href="files/TExc_LocalisableFields.xml">this file</a>. Take it, and move it to: <code>steam/steamapps/common/Total War WARHAMMER II/assembly_kit/raw_data/db</code>, overwrite the existing file.</p>
+<p>That will <em>enable</em> localisation. There's a small and slightly annoying thing that must be done to get around it. When you edit a localisable field, you'll get a small little exclamation to the left of the text like this:</p>
+<p><img src="images/chapter_1_vandy_2/01.png" alt="test" /></p>
+<p>If that exclamation is there, any changes won't be exported. To filter out all unchanged text, press the checkbox marked <code>Only Display Records Without Text State</code> in the top right.</p>
+<p><img src="images/chapter_1_vandy_2/02.png" alt="test" /></p>
+<p>Now that we have only our edited cells, highlight all of them - ONLY the localisation spots - and press the <code>For Editing/Approval</code> button on the top right, which is right next to the checkbox we just used.</p>
+<p><img src="images/chapter_1_vandy_2/03.png" alt="test" /></p>
+<p>After doing so, they should vanish from the filter for <code>Only Display Records Without Text State</code>, and will export properly! And that's all!</p>
+<a class="header" href="#ak-localisation" id="ak-localisation"><h4>AK Localisation</h4></a>
+<p>Making new localisation in the Assembly Kit is remarkably simple. All you have to do is find the columns with the localisation you want to add, fill in the text, apply your changes. After using <code>Export -&gt; Export Changes to Binary</code>, close DaVE and open up BoB. Within BoB, use the <code>Retail Pack</code> option, and boom, your localisation files are done!</p>
+<p>One BIG thing to note here: just like exporting db in the Assembly Kit, it has <em>all</em> records within that .loc file, not just the ones you've edited. This is real bad for compatibility, so you should know how to directly edit the .loc file. Read on!</p>
+<a class="header" href="#packfile-localisation" id="packfile-localisation"><h4>PackFile Localisation</h4></a>
+<p>You can either copy over a .loc file, thieved from either a CA retail pack or something exported from AK like above, or create a new one from scratch. The former can be done either with the <code>Add -&gt; Add from Packfile</code> action in RPFM, or just &quot;Add File&quot;, whereas created a new one can be done with the <code>Create -&gt; Create Loc</code> action. However you do it, you'll get something like the following picture, with three columns: <code>Key</code>, <code>Text</code>, and <code>It Doesn't Really Matter, Just Set It To True</code>.</p>
+<p><img src="images/chapter_1_vandy_2/04.png" alt="test" /></p>
+<p>With some understanding of how AK Localisation works, this is rather simple. First thing's first - the <code>Text</code> column is the text that shows up in-game. That's all I'm gonna say about it for now, though I'll go over some extra things we can do with localisation later on.</p>
+<p>The <code>Key</code> is the important part. It is composed of three separate parts - the <strong>table</strong>, the <strong>column</strong> within the table, and the <strong>key of the db object</strong>.</p>
+<p>We can see in the image above, all of them start with <code>effect_bundles</code>, which is a reference to the db table.</p>
+<p>After that, all of them have either <code>localised_text</code> or <code>localised_description</code>. These are the two columns we can see in the Assembly Kit for the effect_bundles table. Some tables have only one localisable field, some have many - just check the Assembly Kit or existing .loc files for what those are and what they're used for.</p>
+<p>The last one is the <em>db</em> key. For example, if we look up <code>wh_main_payload_disaster_flood_region</code> in the effect_bundles table in the Assembly Kit, we can see it's an actual key used in that table:</p>
+<p><img src="images/chapter_1_vandy_2/05.png" alt="test" /></p>
+<p>That's all there really is to localisation! You can add new rows in a .loc file, set the <code>Key</code> properly and the <code>Text</code> will show up.</p>
+<p>When doing PackFile Localisation, you need to keep a handful of things in mind:</p>
+<ul>
+<li>The <strong>name</strong> of your .loc file needs to be <em>different</em> than the vanilla .loc file, and a <em>higher alphanumerical priority</em>. If the vanilla .loc file is called <code>effect_bundles__.loc</code>, call yours something like <code>!mod_name_effect_bundles.loc</code>. You can really call it whatever, like <code>!yay_I_made_a_mod.loc</code>.</li>
+<li>You can divide the .loc files up by table, like they are in vanilla - or you can have them all in one big .loc file. It's up to you!</li>
+<li>The .loc files need to be in the folder structure <code>./pack/text/db</code>.</li>
+</ul>
+<a class="header" href="#excelling-at-localisation" id="excelling-at-localisation"><h4>Excelling at Localisation</h4></a>
+<p>If you have Excel, or another data program, it's incredibly easy to automate localisation. I used to type every single loc key, until one day I decided to start concatenating, and it's reduced time spent <em>tremendously</em>. Continuing with the same example above, I would set up a new worksheet with the following:</p>
+<p><img src="images/chapter_1_vandy_2/06.png" alt="test" /></p>
+<p>Column A, the table key, Column B the db column key. Column C will be filled out with db keys (normally, copied from RPFM or the AK).</p>
+<p><img src="images/chapter_1_vandy_2/07.png" alt="test" /></p>
+<p>In Column D, I set up a concatenation formula to combine columns A, B, and C.</p>
+<p><img src="images/chapter_1_vandy_2/08.png" alt="test" /></p>
+<p><img src="images/chapter_1_vandy_2/09.png" alt="test" /></p>
+<p><img src="images/chapter_1_vandy_2/10.png" alt="test" /></p>
+<p>At that point, copy the D2 function, and paste it for the rest of the rows.</p>
+<p><img src="images/chapter_1_vandy_2/11.png" alt="test" /></p>
+<p>And that's it. Copy the stuff you want to export, and paste it into a .loc file within RPFM.</p>
+<a class="header" href="#common-pitfalls" id="common-pitfalls"><h4>Common Pitfalls</h4></a>
+<p>It doesn't work! Here are some common mistakes with localisation:</p>
+<ul>
+<li><strong>Misnomer</strong>: Double, triple, and double check your spelling.</li>
+<li><strong>Underscore</strong>: Make sure every bit of a loc key is split by an underscore. There should be one between table and column, and another between column and key.</li>
+<li><strong>The Final Frontier</strong>: Make sure there are no spaces in the loc key.</li>
+<li><strong>Who Knows?</strong>: Sometimes it just doesn't work. If nothing else, try remaking it from scratch.</li>
+</ul>
+<a class="header" href="#localisation-options" id="localisation-options"><h4>Localisation Options</h4></a>
+<p>There are a couple of cool things we can put in the localised text, such as colored text, or images. I'll go over the most common ones here:</p>
+<p><strong><strong>VALUE</strong></strong></p>
+<p>You'll see in the <code>effects</code> table <code>%+n</code>. This is a wildcard that replaces itself with whatever the value in the <code>value</code> column is, when that effect is linked to an effect bundle or building or skill or what-have-you. So if the effect's text is something like &quot;This increases something by %+n&quot;, and the value in <code>effect_bundle_to_effects</code> is 5, it'll read &quot;This increases something by 5&quot;.</p>
+<p><strong><strong>COLOURS</strong></strong></p>
+<p>If you'd like to make coloured text, you can wrap text with <code>[[col:col_key]] %text% [[/col]]</code>. You can find the keys in the table <code>ui_colours</code>. I don't believe it's possible to setup new colours, but I haven't tried.</p>
+<p><strong><strong>TAGGED IMAGES</strong></strong></p>
+<p>You can make little cute images within a localised text. For exmaple, there are icons often in help pages before keywords. All you have to do is use the following tags: <code>[[img:img_key]][[/img]]</code>. You can find the keys in the table <code>ui_tagged_images</code>. You <strong>can</strong> make new images!</p>
+<p><strong><strong>PARAGRAPHS</strong></strong></p>
+<p>You can make a line break with <code>\n</code>. Use it sparingly, it won't work in most locations, but works fine for things like missions, events, loading screen quotes. I recommend checking vanilla application before using it.</p>
+<p><strong><strong>UI TEXT REPLACEMENTS</strong></strong></p>
+<p>UI Text Replacements (uitr, henceforth) are awesome lil' buggers to help you from typing the same thing over and over again. You can refer to a uitr with the tag <code>{{tr:tr_key}}</code>. You can find keys with the table <code>ui_text_replacements</code>. New ones are doable! Just make a new key in the table, and make a new row in a .loc file.</p>
+<p>One great application is to prevent typing the same thing over and over again, and instead refer to the same text replacement. You can define one and refer to it within various different localised fields.</p>
+<p>A <em>greater</em> application is to allow the same text to show differently between different factions. For instance, the text for money shows up as 'Treasury' for most factions, and 'Dark Magic' for Vampire Counts, in WH2.</p>
+<p><img src="images/chapter_1_vandy_2/12.png" alt="test" /></p>
+<p>There's an extra <em>suffix</em> to some uitr loc keys, which can refer to <em>subcultures</em>. In this above example, the treasury header text changes for Beastmen/Chaos/Vampire Counts, and it's read automatically. All you have to do is add a new row in the db file and the .loc file!</p>
+<p><img src="images/chapter_1_vandy_2/13.png" alt="test" /></p>
+<a class="header" href="#summary" id="summary"><h4>Summary</h4></a>
+<p>Get out there and get localising. I don't have much more to say here.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_1_4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_1_cryswar_1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="chapter_1_4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="chapter_1_cryswar_1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

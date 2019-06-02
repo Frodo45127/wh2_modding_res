@@ -9,6 +9,7 @@
     - [Tolerant Tables](./chapter_1_2.md)
     - [Unit Card Guide](./chapter_1_3.md)
     - [Building Buildings](./chapter_1_4.md)
+    - [Localisation](./chapter_1_vandy_2.md)
     - [Creating Custom Units](./chapter_1_cryswar_1.md)
     - [Custom Legendary Lord](./chapter_1_cryswar_2.md)
     - [Custom Skills, Items, and Effects](./chapter_1_cryswar_3.md)

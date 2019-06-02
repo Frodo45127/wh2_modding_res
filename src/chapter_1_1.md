@@ -1,4 +1,5 @@
 # Mod Troubleshooting Guide
+## By Cataph
 
 This is a troubleshooting guide for mod users in TW: Warhammer 2. The generic pointers should be valid for all recent TW games.
 \- Your neighbourhood Cataph

@@ -59,4 +59,4 @@ With that, you can test our map ingame. Just hit export, what until it finishes,
 [Nogo region 2]: images/4_1-03.png
 [Deployment]: images/4_1-04.png
 [AI 1]: images/4_1-05.png
-[AI 2]: images/4_1-06.pngs
+[AI 2]: images/4_1-06.png

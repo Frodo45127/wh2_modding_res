@@ -1,4 +1,5 @@
 # Tolerant Tables
+## By Cataph
 
 #### What's a tolerant table?
 

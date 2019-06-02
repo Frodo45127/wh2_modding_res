@@ -1,4 +1,5 @@
 # Creating a Custom Legendary Lord
+## By Cryswar
 
 #### Setup
 
