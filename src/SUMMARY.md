@@ -5,6 +5,9 @@
 [TO DO](./to_do.md)
 
 - [Tools & Resources](./chapter_1_0.md)
+    - [Self-Testing Multiplayer (Battle & Campaign)](./chapter_1_norse_1.md)
+    - [Custom Portraits and Portholes](./chapter_1_marth_1.md)
+    - [Custom Settlement Skins](./chapter_1_maruka_1.md)
     - [Mod Troubleshooting Guide](./chapter_1_1.md)
     - [Tolerant Tables](./chapter_1_2.md)
     - [Unit Card Guide](./chapter_1_3.md)
@@ -30,5 +33,6 @@
 - [Battle Maps](./chapter_4_0.md)
     - [Land Battle Maps](./chapter_4_1.md)
     - [Siege Battle Maps](./chapter_4_2.md)
-    - [Battle Map Extras](./chapter_4_extra.md)
+    - [Glossary & Extras](./chapter_4_extra_0.md)
+        - [Custom Vistas](./chapter_4_extra_1.md)
 - [Etc](./etc.md)

@@ -7,25 +7,7 @@ Hello and welcome! Look no further for a simple tutorial to create custom text i
 
 Firstly, yes - obviously, custom text is possible, otherwise I wouldn’t have typed these words into this internet. Text in-game is known as localisation, and consists of basically all text you see - from the Help Pages, to building names, to mission text, to subtitles in quest battles - all of these are localisable text, meaning we can edit or add text.
 
-There are two ways to edit and add text, and I'll show them both in turn. First off, we're gonna go through adding it via the Assembly Kit. For Warhammer 2, the functionality to export localisation is disabled for the retail kit, but we can reenable it. We're going to cover that first, if you're not using Warhammer 2 you can safely ignore the next section.
-
-#### Warhammer II Localisation Fix
-
-First things first, get [this file][loc_fix]. Take it, and move it to: `steam/steamapps/common/Total War WARHAMMER II/assembly_kit/raw_data/db`, overwrite the existing file.
-
-That will *enable* localisation. There's a small and slightly annoying thing that must be done to get around it. When you edit a localisable field, you'll get a small little exclamation to the left of the text like this:
-
-![test][img1]
-
-If that exclamation is there, any changes won't be exported. To filter out all unchanged text, press the checkbox marked `Only Display Records Without Text State` in the top right.
-
-![test][img2]
-
-Now that we have only our edited cells, highlight all of them - ONLY the localisation spots - and press the `For Editing/Approval` button on the top right, which is right next to the checkbox we just used.
-
-![test][img3]
-
-After doing so, they should vanish from the filter for `Only Display Records Without Text State`, and will export properly! And that's all!
+There are two ways to edit and add text, and I'll show them both in turn. While the PackFile editing method is probably the one most will use - and the one I recommend - we'll go over both. Assembly Kit Localisation is good to know just for visualization, and it will help me teach your how to use it in the PackFile, so please read on!
 
 #### AK Localisation
 
@@ -33,9 +15,13 @@ Making new localisation in the Assembly Kit is remarkably simple. All you have t
 
 One BIG thing to note here: just like exporting db in the Assembly Kit, it has *all* records within that .loc file, not just the ones you've edited. This is real bad for compatibility, so you should know how to directly edit the .loc file. Read on!
 
+***WARHAMMER II USERS:*** *At the date of this publication (July 3, 2019), the Localisation feature of the retail AK for WH2 is disabled. To enable it (which is really easy), check out the bottom section, way down below..*
+
 #### PackFile Localisation
 
-You can either copy over a .loc file, thieved from either a CA retail pack or something exported from AK like above, or create a new one from scratch. The former can be done either with the `Add -> Add from Packfile` action in RPFM, or just "Add File", whereas created a new one can be done with the `Create -> Create Loc` action. However you do it, you'll get something like the following picture, with three columns: `Key`, `Text`, and `It Doesn't Really Matter, Just Set It To True`.
+You can either copy over a .loc file, thieved from either a CA retail pack or something exported from AK like above, or create a new one from scratch. The former can be done either with the `Add -> Add from Packfile` action in RPFM, or just "Add File", whereas created a new one can be done with the `Create -> Create Loc` action. Make sure the path for the .loc file is in `.pack/text/db/`.
+
+However you do it, you'll get something like the following picture, with three columns: `Key`, `Text`, and `It Doesn't Really Matter, Just Set It To True`.
 
 ![test][img4]
 
@@ -53,13 +39,23 @@ The last one is the *db* key. For example, if we look up `wh_main_payload_disast
 
 ![test][img5]
 
+For the case of the flood_region effect bundle, we can see it broken down into the three parts. 
+
+First, there's the table name: **effect_bundles_**
+
+Then, there's the column name: **localised_text_**
+
+Then, the key: **wh_main_payload_disaster_flood_region**
+
+The three of those link up to make `effect_bundles_localised_text_wh_main_payload_disaster_flood_region`, which links to the text "Flooding" within the effect_bundles__.loc file!
+
 That's all there really is to localisation! You can add new rows in a .loc file, set the `Key` properly and the `Text` will show up.
 
 When doing PackFile Localisation, you need to keep a handful of things in mind:
 
 - The **name** of your .loc file needs to be *different* than the vanilla .loc file, and a *higher alphanumerical priority*. If the vanilla .loc file is called `effect_bundles__.loc`, call yours something like `!mod_name_effect_bundles.loc`. You can really call it whatever, like `!yay_I_made_a_mod.loc`.
 - You can divide the .loc files up by table, like they are in vanilla - or you can have them all in one big .loc file. It's up to you!
-- The .loc files need to be in the folder structure `./pack/text/db`.
+- The .loc files *need* to be in the folder structure `./pack/text/db`.
 
 #### Excelling at Localisation
 
@@ -92,6 +88,7 @@ It doesn't work! Here are some common mistakes with localisation:
 - **Misnomer**: Double, triple, and double check your spelling.
 - **Underscore**: Make sure every bit of a loc key is split by an underscore. There should be one between table and column, and another between column and key.
 - **The Final Frontier**: Make sure there are no spaces in the loc key.
+- **Combo keys**: common case localizing building_culture_variants, you have to include any culture/subculture/faction key you have in the building's line, in that order, whenever present. Analogous to how UITR work (below).
 - **Who Knows?**: Sometimes it just doesn't work. If nothing else, try remaking it from scratch.
 
 #### Localisation Options
@@ -106,6 +103,8 @@ You'll see in the `effects` table `%+n`. This is a wildcard that replaces itself
 
 If you'd like to make coloured text, you can wrap text with `[[col:col_key]] %text% [[/col]]`. You can find the keys in the table `ui_colours`. I don't believe it's possible to setup new colours, but I haven't tried.
 
+I am told there is also used, somewhere, the following format: `[[rgba:91:30:0:255]] text [[/rgba:91:30:0:255]]`, for **r**ed **g**reen **b**lue **a**lpha. If you find this works, please confirm with me!
+
 **__TAGGED IMAGES__**
 
 You can make little cute images within a localised text. For exmaple, there are icons often in help pages before keywords. All you have to do is use the following tags: `[[img:img_key]][[/img]]`. You can find the keys in the table `ui_tagged_images`. You **can** make new images!
@@ -113,6 +112,8 @@ You can make little cute images within a localised text. For exmaple, there are 
 **__PARAGRAPHS__**
 
 You can make a line break with `\n`. Use it sparingly, it won't work in most locations, but works fine for things like missions, events, loading screen quotes. I recommend checking vanilla application before using it.
+
+There is also a CA shorthand for creaking line breaks on UI components, `||`. I'm not perfectly familiar with when this should or shouldn't be used, but I've seen it for things such as: occupation options, frontend text, loading screen quotes, and most commonly, UI localisations. Test as you wish to see it work or not, and check with vanilla.
 
 **__UI TEXT REPLACEMENTS__**
 
@@ -127,6 +128,24 @@ A *greater* application is to allow the same text to show differently between di
 There's an extra *suffix* to some uitr loc keys, which can refer to *subcultures*. In this above example, the treasury header text changes for Beastmen/Chaos/Vampire Counts, and it's read automatically. All you have to do is add a new row in the db file and the .loc file!
 
 ![test][img13]
+
+#### Addendum: Warhammer II Assembly Kit Localisation
+
+First things first, get [this file][loc_fix]. Take it, and move it to: `steam/steamapps/common/Total War WARHAMMER II/assembly_kit/raw_data/db`, overwrite the existing file.
+
+That will *enable* localisation. There's a small and slightly annoying thing that must be done to get around it. When you edit a localisable field, you'll get a small little exclamation to the left of the text like this:
+
+![test][img1]
+
+If that exclamation is there, any changes won't be exported. To filter out all unchanged text, press the checkbox marked `Only Display Records Without Text State` in the top right.
+
+![test][img2]
+
+Now that we have only our edited cells, highlight all of them - ONLY the localisation spots - and press the `For Editing/Approval` button on the top right, which is right next to the checkbox we just used.
+
+![test][img3]
+
+After doing so, they should vanish from the filter for `Only Display Records Without Text State`, and will export properly! And that's all!
 
 #### Summary
 

@@ -1,5 +1,13 @@
 # Battle Map Extras
 
+In this section, you'll find some tutorials that don't fit with the flow of the prior. Also, enjoy a glossary!
+
+#### Extra Tutorials
+
+- [Custom Vistas by Maruka](./chapter_4_extra_1.md)
+
+#### Glossary
+
 Here it goes extra stuff that's good to know about Terry. So... here we go:
 
 - The stuff you put outside the map **doesn't have his height relative to 0**. Instead, their *0* is the height of the terrain in the place you put them. For example, put a building at 30 height. If the ground it's at 60 in that exact place, then once the map loads **you'll find a floating building at 90 height**. This can only be seen ingame, not in Terry.
