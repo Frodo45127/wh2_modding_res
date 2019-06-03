@@ -43,6 +43,8 @@ With some understanding of how AK Localisation works, this is rather simple. Fir
 
 The `Key` is the important part. It is composed of three separate parts - the **table**, the **column** within the table, and the **key of the db object**.
 
+`tablename_columname_key`
+
 We can see in the image above, all of them start with `effect_bundles`, which is a reference to the db table.
 
 After that, all of them have either `localised_text` or `localised_description`. These are the two columns we can see in the Assembly Kit for the effect_bundles table. Some tables have only one localisable field, some have many - just check the Assembly Kit or existing .loc files for what those are and what they're used for.

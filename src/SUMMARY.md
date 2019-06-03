@@ -26,7 +26,7 @@
         - [Scopes & Stuff](./chapter_3_1_6.md)
         - [Functions, Arguments & Parameters (Also, Returns)](./chapter_3_1_7.md)
         - [Commands, Interfaces & Listeners](./chapter_3_1_8.md)
-    - [Listeners](./chapter_3_2.md)
+        - [Primitive CA Types](./chapter_3_1_9.md)
 - [Battle Maps](./chapter_4_0.md)
     - [Land Battle Maps](./chapter_4_1.md)
     - [Siege Battle Maps](./chapter_4_2.md)
