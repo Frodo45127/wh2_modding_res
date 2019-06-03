@@ -3,7 +3,7 @@
 
 Hello and welcome! Look no further for a simple tutorial to create custom text in *Total War!*
 
-***PLEASE NOTE:*** *This tutorial assume baskc knowledge of PackFiles, the modding tools available, and other basic nomenclature regarding modding.*
+***PLEASE NOTE:*** *This tutorial assume basic knowledge of PackFiles, the modding tools available, and other basic nomenclature regarding modding.*
 
 Firstly, yes - obviously, custom text is possible, otherwise I wouldn’t have typed these words into this internet. Text in-game is known as localisation, and consists of basically all text you see - from the Help Pages, to building names, to mission text, to subtitles in quest battles - all of these are localisable text, meaning we can edit or add text.
 
