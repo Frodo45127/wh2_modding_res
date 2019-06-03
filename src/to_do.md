@@ -21,6 +21,7 @@
 - Campaign Groups
 - Using the Assembly Kit
 - UI Modding
+- Pooled Resources
 
 ### DB Overview
 
