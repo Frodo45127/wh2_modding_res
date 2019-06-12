@@ -32,10 +32,10 @@ At this point, I'd like to quickly cover how CA loads and runs script mods for m
 * **Battle (excluding quest-battles)**: script/battle/mod
 * **Frontend**: script/frontend/mod
 
-And lastly, there's one path that is available during all game modes, and loads before any of the other paths (so if you load campaign, and have a script in the following directory, it will be loaded before any in the script/campaign/mod directory). I must warn, though, that this directory should only be used if you're being very smart about what's within, making sure it's all game-mode-agnostic, or making sure you're checking for the game-mode within
+And lastly, there's one path that is available during all game modes, and loads before any of the other paths (so if you load campaign, and have a script in the following directory, it will be loaded before any in the script/campaign/mod directory). I must warn, though, that this directory should only be used if you're being very smart about what's within, making sure it's all game-mode-agnostic, or making sure you're checking for the game-mode within - you can't call the campaign_manager while in frontend, for instance!
 * **Lib**: script/_lib/mod
 
-Within each of these directories (barring the battle one), if you have a function named the same thing as the .lua file (like testing_init from our last example), it will be automatically called. We'll talk more about what this means, and some alternatives to this method that I prefer, but for now we'll stick with it. Remember, if the **function name** matches the **file name** of the script, then it'll be run, except when it's in the /battle directory.
+Within each of these directories (barring the battle one), if you have a function named the same thing as the .lua file (like testing_init from our last example), it will be automatically called at an appropriate time. We'll talk more about what this means, and some alternatives to this method that I prefer, but for now we'll stick with it. Remember, if the **function name** matches the **file name** of the script, then it'll be run, except when it's in the /battle directory.
 
 #### Challenge
 

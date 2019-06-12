@@ -1,234 +1,167 @@
-# Variables & Types
+# Expressions & Operators
 
-*NOTE: I recommend you have the Devtool Console handy to mess around with some of the stuff covered here.*
+As we've seen, Lua is made up of `chunks` and `statements`. Statements can contain variables, and all variables have a type, though it can change at any point.
 
-Following the concept of chunks and statements, the next most important subject to cover is variables, and types.
+**Expressions** are the section of a statement that, essentially, tell Lua *what to do*. They come in a billion different shapes and sizes. For now, we'll cover all the basics you'll need, and some basics you really don't need but I'll hand it to you anyway, and we'll go back and review some older stuff. Here we go!
 
-**Variable**: A custom-made keyword that can be used to represent a value
-**Type**: The sort of value that is in a variable. Lua types include: boolean, string, number, table, nil, function. There are more, but we won't need them.
+#### Math Operators
 
-But before going deeper into a definition, let's look at an example:
-
-```lua
-a = 10
-b = 5
-c = a + b
-```
-
-We can see that each of those letters in the chunk above is a **variable**, which are each assigned a **value**. In this case, variable **a** is assigned the value **10**, variable **b** is assigned the value **5**, and the variable **c** is assigned the **value of a plus the value of b**. This instance (c = a + b) works a lot like algebra - you aren't making "c = ab", but you're adding the value of a (10) to the value of b (5), to get the result of **15**.
-
-The coolest thing about variables is their dynamism. They can be assigned to any type, change to any type, and they can infinitely change values. Let's take the above code, and mess with it a little bit.
-
-*NOTE: From this point on, you'll see → after out() calls. This is to specify what text is actually output.*
+Sweet. This is what all of those quizzes in grade school trained you for. We have the big four from algebra - addition, subtraction, multiplication, and division.
 
 ```lua
-a = 10
-b = 5
-c = a + b
-
-out(a) → 10
-out(b) → 5
-out(c) → 15
-
-a = 25
-out(a) → 25
-
-out(c) → 15
-
-c = a + b
-out(c) → 30
+    out(2 + 3) → 5
+    out(5 - 1) → 4
+    out(16 * 3) → 48
+    out(9 / 3) → 3
 ```
 
-I wanted to point out an important thing with this example. If a variable is assigned to the values of some other variables (c = a + b), it will do the calculation and assignment the **moment** that the statement is called. If either variable (a or b) is changed after the assignment statement, the assigned variable's (c) value (15) won't change. It takes the *variable's value*, not the *variable itself*.
-
-So, we see here that variables can be numbers, which is one of the primary types in Lua.
-
-**Number**: *any* numerical value, within a specific number range (a much bigger number than needs to be worried about)
-
-As we saw above, we can perform some basic arithmetic on numbers. 
-
-```lua
-a = 5
-b = 2 - 0.34
-c = a + b
-d = c * 2
-e = d / 3
-
-out(c) → 7.56
-out(d) → 15.12
-out(e) → 5.04
-```
-
-**String**: *any* alphanumerical value, within quotation marks ("" or ''). Similar to numbers, size *does not matter*, Lua can handle millions of characters within a string.
-
-Like arithmetic for numbers, one can concatenate strings (along with many other stuffs!) to combine several, using the `..` operator.
-
-```lua
-	a = “This “; b = “is “; c = “an “; d = “example.”
-	out(a .. b .. c .. d) → This is an example.
-```
-
-*NOTE: Yes, you can have several statements on the same line in Lua! The semi-colons are not necessary, I added them for extra readability.*
-
-While on the subject, you can concat (cool-kid for concatenate) string literals and variables.
-
-```lua
-    a = "example"
-    out("This is an " .. a) → This is an example
-```
-
-**Boolean**: a `true` or `false` value. 
-
-```lua
-    a = false
-    out(a) → false
-    out(a == false) → true
-```
-
-The above probably looks a little weird, but that's because we're learning a new operator! The `==` operator checks for *equality*, whereas the `=` operator *assigns a value*. The final statement above reads "output the result of a == false". Since `a` DOES equal false, it prints "true".
-
-It's very important to note that any variable can be *treated* as a boolean, such as when using the "if something then" statement, or by comparing it to a boolean. If a non-boolean variable is treated as a boolean, it will be converted to `false` if the value is `nil` or `false`; otherwise, it will be converted to `true`.
-
-```lua
-    a = 0
-    b = nil
-    out(a) → 0
-    out(a == false) → false 
-    out(b == false) → true
-```
-
-In this case, `a` does NOT equal `false`, because it has a value to it that isn't `false` or `nil`. By the same card, `b` DOES equal `false`.
-
-You're probably asking by now, what IS nil? I've mentioned it a number of times already, you're probably ready to lear about it. Here we go!
-
-**Nil**: the absence of data.
-
-If one were to try to print a *non-existent* variable, the result would be `nil`. That's because there **is** no data for that variable.
-
-```lua
-    out(a) → nil
-    a = 5
-    out(a) → 5
-```
-
-Nil is a good way to check whether or not something exists, and we'll, towards the bottom of this lesson, talk about how to type-check this data in our scripts to see if variables are NOT nil, and thus exist.
-
-Nil is also a good way to clear away variables that you don't want to use anymore. There's a more realistic way of doing it, and this probably won't be necessary for most of what you will be doing, but I like to give a full knowledge.
-
-```lua
-    a = 5
-    out(a) → 5
-    a = nil -- Memory deallocated, bye "a"!
-    out(a) → nil
-```
-
-Lastly, it's important to note that `nil` is not the same as `null`, though they look quick similar. We'll cover that soon-ish, when we get into more CA script interfaces (like FACTION_SCRIPT_INTERFACE that we saw a few lessons ago).
-
-**Function**: a definition for a chunk that can be called at any point, after being defined.
-
-There are two types of functions - an anonymous function, and a named function. An anonymous function has no name (clearly), so it cannot be called further on in the script. We use anonymous functions relatively frequently, but our focus now will be on named functions, which are functions assigned to a variable.
+We can also use a `-` to *negate* a value, or, in simple terms, turn a positive number into a negative and vice versa.
 
 ```lua
     a = 10
-    example = out
-    example(a) → 10
+    b = -20
+    out( -a ) → -10
+    out( -b ) → 20
 ```
 
-Yes, that's valid! You can actually assign a variable to a function like, it's pretty cool! We have syntactic sugar for assigning a variable to a function, however, and it's more common to see script like that:
+We also have a couple other fun math things. We can raise numbers to any power, using an exponential expression. 
 
 ```lua
-    function example(text)
-        out(text)
-    end
-
-    example("Testing!") → Testing!
-
-    example("A Cooler Test!") → A Cooler Test!
+    a = 2
+    b = 4
+    c = 3
+    out( a^a ) → 4
+    out( b^c ) → 64
+    out( 64^0.5 ) → 8 -- getting the square root of a number!
 ```
 
-As an added bonus, we're getting a quick sneak peak at one of the upcoming tutorials: parameters and arguments, for functions. In the above function, "text" is a parameter for `example()`, which is then passed along to `out` and triggers that function within the chunk.
-
-**Table**: a collection of more than one piece of data.
-
-There are several types of tables, which we'll cover later on. I'd like to first look at the *array* version of tables, the simplest and most common.
+We can also use some modulo math. It's a way of dividing two numbers that gives you the amount *remaining*, and it's a great way to read if a number is a *multiple* of another.
 
 ```lua
-    a = 5
-    b = 10
-    c = 17
+    out(8 % 2) → 0 -- 8/2 = 4, and divides evenly, so nothing is remaining!
+    out(7 % 2) → 1 -- 7/2. "6/2" divides evenly, so we subtract 6 from 7, and get "1" as the remainder!
+    out(8 % 3) → 2 -- 8/3. "6/3" divides evenly, so we subtract 6 from 8, and get "2" as the remainder.
+```
 
-    table = {
-        a,
-        b,
-        c
-    } -- assign the three *values* of the variables to the table
+As said, it's a great way to read if a number is a multiple of another. If a modulo expression returns "0", that means it divided evenly, and is therefore a multiple of the number divided by.
+
+And that's math!
+
+#### Comparison Operators
+
+This sounds a lot more complicated than "math", eh? It's not that complicated - we're comparing how two variables relate to one another, using expressions we've all seen before. The list of comparison operators are as follows:
+
+* < -- "less than"
+* \> -- "greater than"
+* <= -- "less than or equal to"
+* \>= "greater than or equal to"
+* == "equal to"
+* ~= "not equal to"
+
+All of these expressions result in a boolean value.
+
+```lua
+    a = 10
+    b = 7 + 3
+    out(a == b) → true -- they ARE equal!
+    out(a ~= b) → false -- they ARE NOT not equal (weird, I know)!
+
+    c = 8
+    d = 7
     
-    out(table[1]) → 5 -- Lua tables start at index 1!
-    out(table[2]) → 10
-    out(table[3]) → 17
-    out(table[4]) → nil -- doesn't exist!
+    out(c > d) → true -- 8 is greater than 7
+    out(c < d) → false -- 8 is NOT less than 7
 ```
 
-Arrays are numbered automatically, so it really reads "the first index of table is 5, the second index of table is 10", and so on. You *access* those indexes by using the `\[num\]` operator, which we'll look further at in the next tables tutorial later on. The reason this works, however, is because Lua is automatically numbering these values, giving them a *key*. When you make an array like that, Lua reads it more like the following:
+It's important to note that Lua will consider different types to be different values. A string and a number will always be different. Lua will throw an error if you attempt to compare - using less-than or greater-than - any two separate types. Lua will not throw an error for "==" and "~=", and if they are separate types, they will always be inequal.
 
 ```lua
-    a = 5
-    b = 10
-    c = 17
-
-    table = {
-        [1] = a,
-        [2] = b,
-        [3] = c
-    }
+    a = 15
+    b = "15"
+    out(a == b) → false -- they are different types!
+    out(a >= b) → error (attempt to compare number with string)
 ```
 
-The other major type of tables is a **map**, which works by manually assigning the key of a value instead of letting Lua automatically number them, like in arrays.
+Do note that you can compare strings using greater or less than, but it compares the alphanumerical order of the first character. “0” is less than every number or letter, whereas “a” is greater than every number and less than every letter, and “z” is greater than every number or letter. Again, not really important, but you came here to read me ramble on about random stuff.
+
+And that ends our comparison operators!
+
+#### Logical Operators
+
+Next up are our logical operators! We have three operators to concern ourselves with here - **and**, **or**, and **not**. 
+
+*Not*, as a logical operator, is pretty simple and super handy. It basically converts the value to the right of it into a boolean, and reverses it. Any value other than `nil` or `false` will be converted into `false`; `nil` or `false` will be converted to `true`. Let's take a look:
 
 ```lua
-    a = 5
-    b = 10
-    c = 15
+    a = true
+    b = nil
+    out(not b) → true -- prints a double negative - not false, so true
+    out(not a) → false -- reverses the value of "true"
 
-    table = {
-        ["five"] = a,
-        ["ten"] = b,
-        ["fifteen"] = c
-    }
-
-    out(table["five"]) → 5
-    out(table["ten"]) → 10
-    out(table["fifteen"]) → 15
+    c = 100
+    out(c) → 100
+    out(not not c) → true -- c is a number, "not c" would become "false", and "not false" would become "true"
 ```
 
-Maps will come into some great use pretty soon, but for now I just wanted to introduce you to how they look.
+The operators **and** and **or** are the hearts of a lot of logic in Lua. "If this and this, then do this". 
 
-For now, you've done well, and I haven't even challenged you yet!
+```lua
+    a = 15
+    b = false
+    if a == 15 and not b then -- "if a is equal to the number fifteen, and "not b" returns true, then ... "
+        out("It does the thing!") -- " ... print the text! "
+    end
+```
+
+You'll practically always see these two used in this way, for *conditional statements* like that - if these conditions work out, then do this other thing.
+
+#### Homeless Operators
+
+I don't really have a category for these two operators, but they're incredibly important.
+
+First off, we have **concatenation**, which we've seen before. It's a way to add two strings together, and make them into one happy family, using a simple pair of dots.
+
+```lua
+    a = "Hello"
+    b = "World!"
+    out(a .. " " .. b) → Hello World!
+```
+
+A couple of notes real quick - I have the blank space in a string in the middle, to make sure it doesn't print "HelloWorld!". Also, I like to add spaces on either side of my concatenation operator, but that's personal taste, this would also be valid:
+
+```lua
+    out(a.." "..b) → Hello World!
+```
+
+And lastly, we have one more operator, and this time for the table type. The character `#` can be used to read the number of entries within an array. It's pretty awesome, let me show you:
+
+```lua
+    table = {"this", "is", "an", "example", "array"}
+    out(#table) → 5 -- there are five strings within the table!
+```
+
+Please note that you really shouldn't use the `#` operator if the table is not definitely an array. I'll show you why using it on maps might mess something up:
+
+```lua
+    table = {
+        [1] = "test",
+        [2] = "example",
+        [5] = "boom",
+        [7000] = "woo",
+        [3] = "argh"
+    }
+
+    out(#table) → 7000
+```
+
+In technicalities, it's doing that because it's reading the *highest index in that table*, or the highest numerical key. Those are assigned automatically, in order, for arrays; in maps, there's no such guarantee.
 
 #### Challenge 1
 
-Mess with everything in this tutorial using the Devtool Console. Try to grasp the different native types of Lua, and make sure you understand the difference between the *assignment* operator and the *equality* operator. There's not really a good challenge to do here, but I do seriously suggest you just mess around with the stuff here. Try some different things like concatenating strings, adding numbers, messing with basic functions, stuff like that. Have fun!
+As before, go to repl.it and mess with everything. 
 
-#### Type-Checking
+Some suggestions on what to try:
 
-And before we say goodbye, let's look at a few more CA functions. These ones can type-check for us, seeing if a variable is, for instance, a string.
-
-The list is as follows:
-- is_nil(variable)
-- is_string(variable)
-- is_number(variable)
-- is_boolean(variable)
-- is_function(variable)
-- is_table(variable)
-
-```lua
-    a = 5
-    b = nil
-    c = {1, 2, 3, 5, 70}
-    function d() end
-
-    out(is_number(a)) → true    
-    out(is_nil(b)) → true
-    out(is_table(c)) → true
-    out(is_function(d)) → true
-```
+* Make an array out of various strings, concatenate them together using `table[1]` and so on.
+* Apply arithmetic to a series of 3 or more numbers
+* Compare the length of two separate tables
