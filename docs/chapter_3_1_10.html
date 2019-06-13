@@ -1,0 +1,439 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Tables and Loops - Modding Resources</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_foreword.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console/Repl.it</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.1.9.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.1.10.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html" class="active"><strong aria-hidden="true">3.1.11.</strong> Tables and Loops</a></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.1.12.</strong> Object-Oriented Programming</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.1.13.</strong> Debugging</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.2.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Modding Resources</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#tables-and-loops" id="tables-and-loops"><h1>Tables and Loops</h1></a>
+<p>Alright, here we go - tables, and loops. We've covered tables in a good depth so far, but this should get you to full comfort. We'll also talk about loops, and iterating through tables, and using maps. It'll be cool. Let's start with arrays and looping.</p>
+<a class="header" href="#arrays-and-looping" id="arrays-and-looping"><h4>Arrays and Looping</h4></a>
+<p>Arrays, for those who don't recall, are tables with incremental indexes starting at <code>1</code>. Lua automatically assigns values to an index, not the Lua-author. An example would be:</p>
+<pre><code class="language-lua">    local example_array = {5, 4, 3, 2, 1}
+
+    out(example_array[1]) → 5
+    out(example_array[5]) → 1
+
+</code></pre>
+<p>Arrays are always numbered incrementally. It's easy enough to assign new values to existing arrays - and, after all, that's 90% of their usefulness.</p>
+<pre><code class="language-lua">    local example_array = {5, 4, 3, 2, 1}
+
+    out(example_array[1]) → 5
+    out(example_array[5]) → 1
+
+    out(example_array[6]) → nil -- doesn't exist!
+
+    example_array[6] = 20
+    out(example_array[6]) → 20
+</code></pre>
+<p>Say you don't know how many indexes there currently are in an array; say you've edited it a bunch of times, and there's no easy way to read how many indexes there are (which is the norm). You can add on to the end of an array using the following:</p>
+<pre><code class="language-lua">    local example_array = {5, 4, 3, 2, 1}
+
+    out(example_array[1]) → 5
+    out(example_array[5]) → 1
+
+    out(example_array[6]) → nil -- doesn't exist!
+
+    -- some stuff that randomizes the array, woo hoo
+
+    example_array[#example_array + 1] = 20 -- #example_array would be the current number of indexes; +1 is incrementing it, assigning '20' to an unused index
+    out(example_array[#example_array]) = 20 -- now #example_array is one higher than the previous statement, due to the assignment of '20'!
+</code></pre>
+<p>Remember that the # operator returns the <em>number of indexes in that array</em>, and that it <em>should not be used with maps</em>.</p>
+<p>With that remembered, let's look at a loop!</p>
+<pre><code class="language-lua">    local example_array = {5, 4, 3, 2, 1}
+
+    for i = 1, #example_array do
+        out(example_array[i]) → 5, 4, 3, 2, 1
+    end
+</code></pre>
+<p>And that's really it! The keyword <code>for</code> is hyper important, and allows us to loop over various indexes in an array. <code>for</code> defines a local variable - in this case, <code>i</code>, though it can be WHATEVER - to a minimum value, and a maximum value. In this instance, the <strong>minimum</strong> value of <code>i</code> is <em>1</em>, while the <strong>maximum</strong> value of <code>i</code> is <em>5</em>. And then, it runs the <code>for</code> chunk <strong><em>once for each value of <code>i</code></em></strong>. That means, it runs <code>out(example_array[i])</code> once with i == 1, then once with i == 2, with i == 3, i == 4, and i == 5.</p>
+<p>Loops for arrays like this are super useful, as I've hinted at. But how does this matter for Total War, you might be asking? Well, look no further! List interfaces!</p>
+<p>Remember the script interface chapter, we saw something called a <code>CHARACTER_LIST_SCRIPT_INTERFACE</code>? List interfaces are common, and they're a cool type of array that we can kinda use just like the above one, but differently. Since it's an <em>object</em>, not just an <em>array</em>, we have to do a couple of different things. I'll show you, then we'll talk, kay?</p>
+<pre><code class="language-lua">    local faction_name = cm:get_local_faction()
+    local faction = cm:get_faction(faction_name)
+
+    local character_list = faction:character_list()
+    for i = 0, character_list:num_items() - 1 do
+        local character = character_list:item_at(i)
+        -- check stuff about the character
+    end
+</code></pre>
+<p>There are THREE important distinctions to make here.</p>
+<p>First off - the <em>minimum</em> is <code>0</code>, NOT <code>1</code>, and the maximum has to be the <em>number of items in that list minus one</em>. That's because these lists are defined in C++, where indexes start at 0, unlike Lua where indexes start at 1.</p>
+<p>Secondly - the maximum can't be defined as <code>#character_list</code>, because it's not an array! <code>character_list:num_items()</code> returns the total number of items in that array, and there's a <code>num_items()</code> method for every list interface.</p>
+<p>Thirdly - you can't use <code>character_list[i]</code> to read the index. IT'S NOT AN ARRAY! <code>character_list:item_at(i)</code> grabs the item at the index in the array; there's an <code>item_at()</code> method for every list interface.</p>
+<p>Arrays are really common in the CA script interfaces, and having a healthy grasp of them will allow you to do much more with your scripts.</p>
+<a class="header" href="#maps-and-looping" id="maps-and-looping"><h4>Maps and Looping</h4></a>
+<p>While maps aren't used in CA script interfaces, like arrays kinda are, they're still really vital and can allow some super ease of scripting.</p>
+<p>Reminder for what maps are: they're tables <em>with user-defined indexes</em>.</p>
+<pre><code class="language-lua">
+    local example_map = {
+        [&quot;first&quot;] = 1,
+        [&quot;second&quot;] = 5,
+        [&quot;third&quot;] = 10
+    }
+
+    out(example_map[&quot;first&quot;]) → 1
+</code></pre>
+<p>Looping in maps is pretty similar to arrays, though you have to define <em>two</em> local variables, instead of just one.</p>
+<pre><code class="language-lua">
+    local example_map = {
+        [&quot;first&quot;] = 1,
+        [&quot;second&quot;] = 5,
+        [&quot;third&quot;] = 10
+    }
+
+    for key, value in pairs(example_map) do
+        out(value) → 1, 5, 10
+    end
+</code></pre>
+<p>As before, we define the local variables with <code>for</code>. Those local variables are <code>key</code> and <code>value</code> - though, just like <code>i</code> in the above example, those variables can be named whatever you'd like. Using <code>key</code> and <code>value</code> is simply convention, same with <code>i</code>.</p>
+<p>Using the keyword <code>in</code> is syntax here, it's necessary between the two variables, and the pairs() function call. The function <code>pairs</code> basically defines that you want to iterate through the table (provided as a parameter to <code>pairs</code>). It doesn't require understanding - just know that, to iterate through a map, use the above.</p>
+<p>Now, where's the usefulness? There's a LOAD.</p>
+<p>For one, a map loop is <em>quicker</em> than an array loop, and easier to write using Excel</p>
+<pre><code class="language-lua">    -- you
+    local lame_units = {&quot;wh_dlc02_vmp_cav_blood_knights_0&quot;, &quot;wh_dlc04_vmp_veh_corpse_cart_0&quot;, &quot;wh_dlc04_vmp_veh_corpse_cart_1&quot;, &quot;wh_dlc04_vmp_veh_corpse_cart_2&quot;, &quot;wh_main_vmp_inf_crypt_ghouls&quot;, &quot;wh_main_vmp_mon_crypt_horrors&quot;, &quot;wh_main_vmp_mon_vargheists&quot;, &quot;wh_main_vmp_mon_varghulf&quot;, &quot;wh_main_vmp_mon_varghulf&quot;}
+
+    for i = 1, #lame_units do
+        cm:add_event_restricted_unit_record_for_faction(lame_units[i], &quot;wh2_dlc11_vmp_the_barrow_legion&quot;)
+    end
+
+    -- the guy she told you not to worry about
+    local kill_units = {
+        [&quot;wh_dlc02_vmp_cav_blood_knights_0&quot;] = true,
+        [&quot;wh_dlc04_vmp_veh_corpse_cart_0&quot;] = true,
+        [&quot;wh_dlc04_vmp_veh_corpse_cart_1&quot;] = true,
+        [&quot;wh_dlc04_vmp_veh_corpse_cart_2&quot;] = true,
+        [&quot;wh_main_vmp_inf_crypt_ghouls&quot;] = true,
+        [&quot;wh_main_vmp_mon_crypt_horrors&quot;] = true,
+        [&quot;wh_main_vmp_mon_vargheists&quot;] = true,
+        [&quot;wh_main_vmp_mon_varghulf&quot;] = true,
+        [&quot;wh_main_vmp_veh_black_coach&quot;] = true
+    }
+
+    for unit, _ in pairs(kill_units) do
+        cm:add_event_restricted_unit_record_for_faction(unit, &quot;wh2_dlc11_vmp_the_barrow_legion&quot;)
+    end
+</code></pre>
+<p>For another, it allows you to iterate through a <em>lot</em> of data at once, with real ease. (the following is a further example from the Return of the Lichemaster mod!)</p>
+<pre><code class="language-lua">
+    local subtypes = {
+        [&quot;AK_hobo_nameless&quot;] = {
+            [&quot;forename&quot;] = &quot;names_name_666777891&quot;,
+            [&quot;family_name&quot;] = &quot;names_name_666777892&quot;,
+            [&quot;clan_name&quot;] = &quot;&quot;,
+            [&quot;other_name&quot;] = &quot;&quot;, 
+            [&quot;age&quot;] = 50, 
+            [&quot;is_male&quot;] = true, 
+            [&quot;agent_type&quot;] = &quot;general&quot;,
+            [&quot;agent_subtype&quot;] = &quot;AK_hobo_nameless&quot;,
+            [&quot;is_immortal&quot;] = true, 
+            [&quot;art_set_id&quot;] = &quot;AK_hobo_nameless&quot;
+        },
+        [&quot;AK_hobo_draesca&quot;] = {
+            [&quot;forename&quot;] = &quot;names_name_666777893&quot;,
+            [&quot;family_name&quot;] = &quot;names_name_666777894&quot;,
+            [&quot;clan_name&quot;] = &quot;&quot;,
+            [&quot;other_name&quot;] = &quot;&quot;, 
+            [&quot;age&quot;] = 50, 
+            [&quot;is_male&quot;] = true, 
+            [&quot;agent_type&quot;] = &quot;general&quot;,
+            [&quot;agent_subtype&quot;] = &quot;AK_hobo_draesca&quot;,
+            [&quot;is_immortal&quot;] = true, 
+            [&quot;art_set_id&quot;] = &quot;AK_hobo_draesca&quot;,
+            [&quot;ancillary1&quot;] = &quot;AK_hobo_draesca_helmet&quot;
+        },
+        [&quot;AK_hobo_priestess&quot;] = {
+            [&quot;forename&quot;] = &quot;names_name_666777895&quot;,
+            [&quot;family_name&quot;] = &quot;names_name_666777896&quot;,
+            [&quot;clan_name&quot;] = &quot;&quot;,
+            [&quot;other_name&quot;] = &quot;&quot;, 
+            [&quot;age&quot;] = 50, 
+            [&quot;is_male&quot;] = true, 
+            [&quot;agent_type&quot;] = &quot;general&quot;,
+            [&quot;agent_subtype&quot;] = &quot;AK_hobo_priestess&quot;,
+            [&quot;is_immortal&quot;] = true, 
+            [&quot;art_set_id&quot;] = &quot;AK_hobo_priestess&quot;,
+            [&quot;ancillary1&quot;] = &quot;AK_hobo_priestess_trickster&quot;,
+            [&quot;ancillary2&quot;] = &quot;AK_hobo_priestess_charms&quot;
+        }
+    }
+
+    for key, subtype_data in pairs(subtypes) do
+        cm:spawn_character_to_pool(
+            &quot;wh2_dlc11_vmp_the_barrow_legion&quot;,
+            subtype_data.forename,
+            subtype_data.family_name,
+            subtype_data.clan_name,
+            subtype_data.other_name,
+            subtype_data.age,
+            subtype_data.is_male,
+            subtype_data.agent_type,
+            subtype_data.agent_subtype,
+            subtype_data.is_immortal,
+            subtype_data.art_set_id
+        )
+    end
+
+</code></pre>
+<p>Yep! You can have tables within tables, maps within maps, loops within loops.</p>
+<p>And yes, you can access an index using <code>table.index_key</code>, if that index is a <em>string</em>. You obviously can't do that with a number. That syntax is really common - using <code>table[&quot;index_key&quot;]</code> to define an index's value, and then accessing that using <code>table.index_key</code>, though you can use them interchangeably; they're literally the exact same thing, no functional difference.</p>
+<a class="header" href="#other-loops" id="other-loops"><h4>Other Loops</h4></a>
+<p>There are a couple other ways to loop, that don't involve tables.</p>
+<p>The most common other one - especially in the Total War context - is a <code>while</code> loop. For instance, we can see the following example in the wh_main_chs_chaos_start.lua file:</p>
+<pre><code class="language-lua">    local x = desired_spawn_point[1];
+    local y = desired_spawn_point[2];
+    local valid = false
+    
+    while not valid do
+        if is_valid_spawn_point(x, y) then
+            valid = true;
+        else
+            x = x + 1;
+            y = y + 1;
+        end;
+    end;
+</code></pre>
+<p>In this instance, the <code>while</code> chunk is run once entirely through, continuously, until &quot;not valid&quot; returns <em>false</em> - aka, until <code>valid</code> is <code>true</code>.</p>
+<p>Don't be frivolous with your use of <code>while</code> loops - they should last no more than, like, 0.05s. Using them causes the rest of the Lua environment to come to a screeching halt, as basically nothing else can happen during a while loop.</p>
+<p>Similarly, you can use a <code>repeat</code> loop, which is the same functionally - runs until a condition is met - except a <code>repeat</code> loop will always run AT LEAST once, whereas a <code>while</code> loop won't run at all if the condition isn't met. Let's spy another CA example, this time in wh2_dlc11_treasure_maps.lua:</p>
+<pre><code class="language-lua">    repeat
+        random_number = cm:random_number(#level);
+        ancillary = level[random_number];
+    until(context:faction():ancillary_exists(ancillary) == false)
+</code></pre>
+<p>Which is loud-person talk for &quot;go through random numbers until we find an ancillary in this array which doesn't exist in this faction&quot;.</p>
+<p>Again, repeat is pretty performance-heavy, as it holds up basically everything else. Don't do big repeat loops, please. Please. PLEASE.</p>
+<p>Or, do. I don't really care.</p>
+<a class="header" href="#ca-loops-and-timing" id="ca-loops-and-timing"><h4>CA Loops and Timing</h4></a>
+<p>There are some CA-defined methods to do a repeated function, or to delay a function, which do <em>not</em> hold up the entire environment like the above two loops. These callbacks are super helpful for repeated constant operation; for instance, I used a repeat_callback recently to print out the camera coordinates every half a second, so I could work on a custom cutscene. There was absolutely no performance drop, because Lua is beautiful.</p>
+<p>The two types are <em>callback</em> and, spoiler alert, <em>repeat_callback</em>. The former simply delays a function by a time; the latter delays a function by that time, and repeats that same delay and function over and over again.</p>
+<pre><code class="language-lua">    cm:callback(function()
+        -- run this chunk ONCE after five seconds
+    end,
+    5)
+
+    cm:repeat_callback(function()
+        -- run this chunk every five seconds
+    end,
+    5)
+</code></pre>
+<p>For the campaign manager, these two functions are wrapped and the final parameter is in <em>seconds</em>. However, for battle and frontend, these would be milliseconds.</p>
+<pre><code class="language-lua">
+    -- BATTLE
+    bm:callback(function()
+        -- run this chunk ONCE after five seconds
+    end,
+    5000)
+
+    bm:repeat_callback(function()
+        -- run this chunk every five seconds
+    end,
+    5000)
+
+    -- FRONTEND
+    local timer_obj = get_tm()
+    timer_obj:callback(function()
+        -- run this chunk ONCE after five seconds
+    end,
+    5000)
+
+    timer_obj:repeat_callback(function()
+        -- run this chunk every five seconds
+    end,
+    5000)
+</code></pre>
+<p>There are lots of uses for these; namely, waiting for some UI to load, putting a timer on a quest battle for deployments, disabling/reenabling event feeds of a certain type, cutscene timing, and much else!</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_3_1_9.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_3_1_11.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="chapter_3_1_9.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="chapter_3_1_11.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
