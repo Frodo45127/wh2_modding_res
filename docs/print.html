@@ -2979,7 +2979,7 @@ end,
 <a class="header" href="#siege-battle-maps" id="siege-battle-maps"><h1>Siege Battle Maps</h1></a>
 <p>Siege maps are.... complex beasts. They're the most detailed, time-consuming, and memorable battlemaps you can play in a Total War game, yet they're so complex people often fails to get their fully potential realised. So today, we're going to <strong>learn how to make a proper siege map</strong>. With proper walls, AI support,... So if the AI doesn't work as you want, you can no longer say it's just the AI's fault!</p>
 <p>Before we begin, a little warning: this tutorial is on the <strong><em>advanced side,</em></strong> and it's quite technical. I'll try to explain all the stuff hard to understand, but this assumes you have at least learnt how to do basic things in Terry, like painting the map, placing buildings, etc... And that you have some basic knowledge on how to edit DB Tables with RPFM. If not, go watch another tutorial that cover the basics, then come back when you can move around Terry.</p>
-<p><img src="images/siege_battle_map_tutorial/aquitaine.png" alt="Aquitaine, in all his glory" /></p>
+<p><img src="images/siege_battle_map_tutorial/aquitaine.jpg" alt="Aquitaine, in all his glory" /></p>
 <a class="header" href="#requirements" id="requirements"><h2>Requirements</h2></a>
 <p>First, we need a few tools and resources to make a proper siege battle map:</p>
 <ul>
@@ -3050,7 +3050,7 @@ end,
 <li><strong><em><code>Minor</code></em></strong>: Normal capture zones. Don't appear on the minimap.</li>
 <li><strong><em><code>Mayor</code></em></strong>: Capture zones that show up in the minimap and in the top of the screen, as unique capture points.</li>
 </ul>
-<p><img src="images/siege_battle_map_tutorial/capture_point.png" alt="Capture Point" />
+<p><img src="images/siege_battle_map_tutorial/capture_point.jpg" alt="Capture Point" />
 And there are multiple capture points, but for the sake of simplicity, gates should be <code>Minor/Gate only</code>, towers should be <code>Minor/Tower only</code> and VP should be <code>Major/Victory Plaza</code>.</p>
 <p>Now we can export it again, and test it. Many things will still be broken, but you can use this test to <strong>ensure your <code>Capture Zones</code> are setted up correctly</strong>. The VP should have an special icon and appear on the map, and you should be able to hold the gate and towers! But.... the towers will not shoot. Time to fix the last broken thing in the walls, the towers.</p>
 <p>Towers are.... well, you know the drill. Copy them from the example map, then put them into your map, replacing the dummy towers, and remember to assign them their <code>Capture Zones</code>. You'll see some <strong><em>white arrows</em></strong> coming out of the tower. Those are the <code>Projectile Emitters</code>. Same thing as with the rest, we cannot create then, and these require tinkering with the layer files of the map to set them up. A complex mess. So just copy the example towers, then move the emitters around until you have them where you want. That's all.</p>

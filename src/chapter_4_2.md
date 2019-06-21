@@ -164,11 +164,11 @@ There is one last thing to do. With all the stuff until now, you can play your m
 Hope this guide has prove itself useful to you, and have fun (and suffer) making Siege Battle Maps!
 
 
-[Aquitaine]: images/siege_battle_map_tutorial/aquitaine.png
+[Aquitaine]: images/siege_battle_map_tutorial/aquitaine.jpg
 [Curved Walls]: images/siege_battle_map_tutorial/curved_walls.png
 [The Wall]: images/siege_battle_map_tutorial/the_wall.jpg
 [Missaligned Wall]: images/siege_battle_map_tutorial/misaligned_wall.png
-[Capture Point]: images/siege_battle_map_tutorial/capture_point.png
+[Capture Point]: images/siege_battle_map_tutorial/capture_point.jpg
 [Siege Graph]: images/siege_battle_map_tutorial/siege_graph.png
 [Atop The Walls]: images/siege_battle_map_tutorial/atop_the_walls.jpg
 
