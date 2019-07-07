@@ -17,6 +17,7 @@
     - [Custom Legendary Lord](./chapter_1_cryswar_2.md)
     - [Custom Skills, Items, and Effects](./chapter_1_cryswar_3.md)
     - [Creating and Editing Abilities](./chapter_1_cryswar_4.md)
+    - [Creating a New Faction](./chapter_1_cryswar_5.md)
 - [Database Editing](./chapter_2_0.md)
 - [Lua](./chapter_3_0.md)
     - [Essential Setup](./chapter_3_1_0.md)
