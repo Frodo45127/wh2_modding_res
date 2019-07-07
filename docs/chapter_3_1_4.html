@@ -4,6 +4,8 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Expressions &amp; Operators - Modding Resources</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,9 +32,12 @@
 
         
     </head>
-    <body class="light">
+    <body class="rust">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">var path_to_root = "";</script>
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
@@ -53,8 +58,8 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = 'light'; }
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
         </script>
@@ -72,7 +77,10 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html" class="active"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html" class="active"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -89,8 +97,8 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -102,12 +110,13 @@
                             
                         </div>
 
-                        <h1 class="menu-title">Modding Resources</h1> 
+                        <h1 class="menu-title">Modding Resources</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -136,10 +145,10 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#expressions--operators" id="expressions--operators"><h1>Expressions &amp; Operators</h1></a>
+                        <h1><a class="header" href="#expressions--operators" id="expressions--operators">Expressions &amp; Operators</a></h1>
 <p>As we've seen, Lua is made up of <code>chunks</code> and <code>statements</code>. Statements can contain variables, and all variables have a type, though it can change at any point.</p>
 <p><strong>Expressions</strong> are the section of a statement that, essentially, tell Lua <em>what to do</em>. They come in a billion different shapes and sizes. For now, we'll cover all the basics you'll need, and some basics you really don't need but I'll hand it to you anyway, and we'll go back and review some older stuff. Here we go!</p>
-<a class="header" href="#math-operators" id="math-operators"><h4>Math Operators</h4></a>
+<h4><a class="header" href="#math-operators" id="math-operators">Math Operators</a></h4>
 <p>Sweet. This is what all of those quizzes in grade school trained you for. We have the big four from algebra - addition, subtraction, multiplication, and division.</p>
 <pre><code class="language-lua">    out(2 + 3) → 5
     out(5 - 1) → 4
@@ -152,7 +161,7 @@
     out( -a ) → -10
     out( -b ) → 20
 </code></pre>
-<p>We also have a couple other fun math things. We can raise numbers to any power, using an exponential expression.</p>
+<p>We also have a couple other fun math things. We can raise numbers to any power, using an exponential expression. </p>
 <pre><code class="language-lua">    a = 2
     b = 4
     c = 3
@@ -167,7 +176,7 @@
 </code></pre>
 <p>As said, it's a great way to read if a number is a multiple of another. If a modulo expression returns &quot;0&quot;, that means it divided evenly, and is therefore a multiple of the number divided by.</p>
 <p>And that's math!</p>
-<a class="header" href="#comparison-operators" id="comparison-operators"><h4>Comparison Operators</h4></a>
+<h4><a class="header" href="#comparison-operators" id="comparison-operators">Comparison Operators</a></h4>
 <p>This sounds a lot more complicated than &quot;math&quot;, eh? It's not that complicated - we're comparing how two variables relate to one another, using expressions we've all seen before. The list of comparison operators are as follows:</p>
 <ul>
 <li>&lt; -- &quot;less than&quot;</li>
@@ -197,8 +206,8 @@
 </code></pre>
 <p>Do note that you can compare strings using greater or less than, but it compares the alphanumerical order of the first character. “0” is less than every number or letter, whereas “a” is greater than every number and less than every letter, and “z” is greater than every number or letter. Again, not really important, but you came here to read me ramble on about random stuff.</p>
 <p>And that ends our comparison operators!</p>
-<a class="header" href="#logical-operators" id="logical-operators"><h4>Logical Operators</h4></a>
-<p>Next up are our logical operators! We have three operators to concern ourselves with here - <strong>and</strong>, <strong>or</strong>, and <strong>not</strong>.</p>
+<h4><a class="header" href="#logical-operators" id="logical-operators">Logical Operators</a></h4>
+<p>Next up are our logical operators! We have three operators to concern ourselves with here - <strong>and</strong>, <strong>or</strong>, and <strong>not</strong>. </p>
 <p><em>Not</em>, as a logical operator, is pretty simple and super handy. It basically converts the value to the right of it into a boolean, and reverses it. Any value other than <code>nil</code> or <code>false</code> will be converted into <code>false</code>; <code>nil</code> or <code>false</code> will be converted to <code>true</code>. Let's take a look:</p>
 <pre><code class="language-lua">    a = true
     b = nil
@@ -209,7 +218,7 @@
     out(c) → 100
     out(not not c) → true -- c is a number, &quot;not c&quot; would become &quot;false&quot;, and &quot;not false&quot; would become &quot;true&quot;
 </code></pre>
-<p>The operators <strong>and</strong> and <strong>or</strong> are the hearts of a lot of logic in Lua. &quot;If this and this, then do this&quot;.</p>
+<p>The operators <strong>and</strong> and <strong>or</strong> are the hearts of a lot of logic in Lua. &quot;If this and this, then do this&quot;. </p>
 <pre><code class="language-lua">    a = 15
     b = false
     if a == 15 and not b then -- &quot;if a is equal to the number fifteen, and &quot;not b&quot; returns true, then ... &quot;
@@ -217,7 +226,7 @@
     end
 </code></pre>
 <p>You'll practically always see these two used in this way, for <em>conditional statements</em> like that - if these conditions work out, then do this other thing.</p>
-<a class="header" href="#homeless-operators" id="homeless-operators"><h4>Homeless Operators</h4></a>
+<h4><a class="header" href="#homeless-operators" id="homeless-operators">Homeless Operators</a></h4>
 <p>I don't really have a category for these two operators, but they're incredibly important.</p>
 <p>First off, we have <strong>concatenation</strong>, which we've seen before. It's a way to add two strings together, and make them into one happy family, using a simple pair of dots.</p>
 <pre><code class="language-lua">    a = &quot;Hello&quot;
@@ -243,8 +252,8 @@
     out(#table) → 7000
 </code></pre>
 <p>In technicalities, it's doing that because it's reading the <em>highest index in that table</em>, or the highest numerical key. Those are assigned automatically, in order, for arrays; in maps, there's no such guarantee.</p>
-<a class="header" href="#challenge-1" id="challenge-1"><h4>Challenge 1</h4></a>
-<p>As before, go to repl.it and mess with everything.</p>
+<h4><a class="header" href="#challenge-1" id="challenge-1">Challenge 1</a></h4>
+<p>As before, go to repl.it and mess with everything. </p>
 <p>Some suggestions on what to try:</p>
 <ul>
 <li>Make an array out of various strings, concatenate them together using <code>table[1]</code> and so on.</li>

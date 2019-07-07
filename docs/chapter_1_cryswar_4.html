@@ -4,6 +4,8 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Creating and Editing Abilities - Modding Resources</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,9 +32,12 @@
 
         
     </head>
-    <body class="light">
+    <body class="rust">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">var path_to_root = "";</script>
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
@@ -53,8 +58,8 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = 'light'; }
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
         </script>
@@ -72,7 +77,10 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html" class="active"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html" class="active"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -89,8 +97,8 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -102,12 +110,13 @@
                             
                         </div>
 
-                        <h1 class="menu-title">Modding Resources</h1> 
+                        <h1 class="menu-title">Modding Resources</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -136,11 +145,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#creating-and-editing-abilities" id="creating-and-editing-abilities"><h1>Creating and Editing Abilities</h1></a>
-<a class="header" href="#by-cryswar" id="by-cryswar"><h2>By Cryswar</h2></a>
-<a class="header" href="#preface" id="preface"><h3>Preface</h3></a>
+                        <h1><a class="header" href="#creating-and-editing-abilities" id="creating-and-editing-abilities">Creating and Editing Abilities</a></h1>
+<h2><a class="header" href="#by-cryswar" id="by-cryswar">By Cryswar</a></h2>
+<h3><a class="header" href="#preface" id="preface">Preface</a></h3>
 <p>As with every one of my guides, we will be using <a href="https://github.com/Frodo45127/rpfm/releases">RPFM</a> as much as possible. Since abilities are a relatively complex subject and I've explained the basics a few times already in previous guides, I will assume you already know how the basics of importing and editing tables works.</p>
-<a class="header" href="#overview" id="overview"><h3>Overview</h3></a>
+<h3><a class="header" href="#overview" id="overview">Overview</a></h3>
 <p>Fist of all, let's define what an <strong>ability</strong> isn't; it is NOT a skill, character skills are a very different subject. I will not refer to abilities as skills in this guide and I recommend you learn not to do so as well.</p>
 <p>So what is an ability? Spells, augments, many passives, vortexes, summons (including army abilities like Tomb King's Ushabti summon), etc. Despite some similarities and functional overlap, they are NOT predefined attributes like Stalk, Vanguard, etc.</p>
 <p>As a general rule of thumb, abilities have a very similar initial setup - you setup mostly frontend stuff in unit_abilities, linking them to the unit_special_abilities entry which covers most of the simple numbers (recharge, initial cooldown, range, etc) and details of the actual ability, and link to the relevant vortex, projectile, phase, etc. as needed depending on spell type.</p>
@@ -170,13 +179,13 @@
 <li><strong>Initial Recharge</strong> starts the spell on that amount of cooldown. Most abilities start at 0, but army abilities (Black Ark calldowns, Ushabti summons, etc) bug out BADLY if you have them at 0 so you should at least have a short initial cooldown (ICD) on them.</li>
 <li><strong>Activated Projectile</strong> is how you actually call the projectile for spells like Fireball and Shem's Burning Gaze, and is left completely blank if your spell doesn't create projectiles.</li>
 <li><strong>Target Friends/Enemies/Ground</strong> are simple - what can you target with the spell? If the spell doesn't have a target per se and just goes off when you hit the button, you can leave these all unchecked.</li>
-<li><strong>Target Intercept Range</strong> is how close to the target you have to be to successfully cast the spell.</li>
+<li><strong>Target Intercept Range</strong> is how close to the target you have to be to successfully cast the spell. </li>
 <li><strong>Assume Specific Behavior</strong> is VERY rarely used but that's how stuff like Bretonnia's Lance Formation works; this tells the unit &quot;ok go into wedge formation&quot; or whatever.</li>
 <li><strong>Wind Up Time</strong> is how long it takes your caster to jerk off before actually casting the damn ability.</li>
 <li><strong>Passive</strong> is... passive? idk what else to say</li>
 <li><strong>Unique ID</strong> should be unique, no surprise there.</li>
 <li><strong>Bombardment</strong>, similar to the Projectile field, links the spell to a bombardment type - think Piercing Bolts of Burning, Wraithstorm, Doombolt, that kind of thing. When the big boom comes from above instead of the caster.</li>
-<li><strong>Spawned Unit</strong> is... self explanatory, link it to a land_unit key.</li>
+<li><strong>Spawned Unit</strong> is... self explanatory, link it to a land_unit key. </li>
 <li><strong>Mana Cost</strong> is the cost of the ability in Winds of Magic, most non-spells have a 0 here.</li>
 <li><strong>Min Range</strong> is how far away from the caster you have to start the spell.</li>
 <li><strong>Targeting/Passive/Active AOEs</strong> are all best plagiarized from a similar vanilla spell.</li>
@@ -218,7 +227,7 @@
 <p>As one final note - projectiles are complicated. Like, really complicated. I HIGHLY recommend just copying the closest vanilla row and then editing a few things as needed.</p>
 <ul>
 <li><strong>Category</strong> tells the game what kind of projectile this is; arrow, grenade, fireball, etc. Use the vanilla categories.</li>
-<li><strong>Shot Type</strong> is similar and generally lines up with Category; a Musket category projectile is almost always gonna be a small_arm_default shot type. Ushabti ROR is one of the few exceptions,
+<li><strong>Shot Type</strong> is similar and generally lines up with Category; a Musket category projectile is almost always gonna be a small_arm_default shot type. Ushabti ROR is one of the few exceptions, 
 an arrow that explodes into an artillery canister</li>
 <li><strong>Explosion Type</strong> links to the projectiles_explosions table and tells the game what the explosion is like. To use the last section's example again, the Ushabti ROR projectile spawns the wh2_dlc09_tmb_ushabti_bolt_ror projectile explosion when it, uh, explodes.</li>
 <li><strong>Spin Type</strong> is usually none, but projectiles with really funky looks, like Vindictive Glare, Gaze of Nagash, Shem's Burning Gaze, etc. definitely have a spin.</li>
@@ -296,7 +305,7 @@ an arrow that explodes into an artillery canister</li>
 <p><strong>special_ability_groups_to_unit_abilities_junctions</strong></p>
 <p>This table is almost exclusively used to assign new spells to a Lore. Great if you're adding new spells. You can also define your own special ability groups to create new lores (ex. Lore of Tzeentch) but in my experience it's buggy as hell.</p>
 <hr />
-<a class="header" href="#actually-getting-your-ability-in-game" id="actually-getting-your-ability-in-game"><h3>Actually Getting Your Ability In-game</h3></a>
+<h3><a class="header" href="#actually-getting-your-ability-in-game" id="actually-getting-your-ability-in-game">Actually Getting Your Ability In-game</a></h3>
 <p>There are a number of ways to do this which I will cover below. As a general rule of thumb, you use an <strong>effect</strong> to attach the ability to a unit, but army abilities and other mechanics get a little weirder.</p>
 <hr />
 <p><strong>land_units_to_unit_abilities</strong></p>
@@ -320,7 +329,7 @@ an arrow that explodes into an artillery canister</li>
 <p><strong>Ancillaries</strong></p>
 <p>You know how the Fay Enchantress can call down a ghetto Comet of Casadora from her item? That's an ancillary-granted ability. You know how that one Tomb Kings lord gives a banner that gives Frenzy to all Ushabti units? That's also an ancillary granted ability!</p>
 <p>Actually very simple to do ingame - you make the effect as usual and attach it to the ability as desired (can add the ability to the lord only (Chalice of Potions) or if desired give it to a unit set (Lahmizash's Ushabti Frenzy), then use the <strong>ancillary_to_effects</strong> table to make it kick in whenever the ancillary is equipped.</p>
-<a class="header" href="#credits-and-links" id="credits-and-links"><h3>Credits and Links</h3></a>
+<h3><a class="header" href="#credits-and-links" id="credits-and-links">Credits and Links</a></h3>
 <p>I could not possibly have come as far as I have as a modder without the excellent people at the <a href="https://discord.gg/xs6DMbn">C&amp;C Modding Discord</a>. I cannot recommend it highly enough; while you won't ALWAYS get an answer, I've found it to be by far the best place to get help and interact with other modders. Plus you get to bug Vandy for scripting help!</p>
 
                     </main>

@@ -4,6 +4,8 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Tables and Loops - Modding Resources</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,9 +32,12 @@
 
         
     </head>
-    <body class="light">
+    <body class="rust">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">var path_to_root = "";</script>
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
@@ -53,8 +58,8 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = 'light'; }
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
         </script>
@@ -72,7 +77,10 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html" class="active"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html" class="active"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -89,8 +97,8 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -102,12 +110,13 @@
                             
                         </div>
 
-                        <h1 class="menu-title">Modding Resources</h1> 
+                        <h1 class="menu-title">Modding Resources</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -136,9 +145,9 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#tables-and-loops" id="tables-and-loops"><h1>Tables and Loops</h1></a>
+                        <h1><a class="header" href="#tables-and-loops" id="tables-and-loops">Tables and Loops</a></h1>
 <p>Alright, here we go - tables, and loops. We've covered tables in a good depth so far, but this should get you to full comfort. We'll also talk about loops, and iterating through tables, and using maps. It'll be cool. Let's start with arrays and looping.</p>
-<a class="header" href="#arrays-and-looping" id="arrays-and-looping"><h4>Arrays and Looping</h4></a>
+<h4><a class="header" href="#arrays-and-looping" id="arrays-and-looping">Arrays and Looping</a></h4>
 <p>Arrays, for those who don't recall, are tables with incremental indexes starting at <code>1</code>. Lua automatically assigns values to an index, not the Lua-author. An example would be:</p>
 <pre><code class="language-lua">    local example_array = {5, 4, 3, 2, 1}
 
@@ -170,7 +179,7 @@
     example_array[#example_array + 1] = 20 -- #example_array would be the current number of indexes; +1 is incrementing it, assigning '20' to an unused index
     out(example_array[#example_array]) = 20 -- now #example_array is one higher than the previous statement, due to the assignment of '20'!
 </code></pre>
-<p>Remember that the # operator returns the <em>number of indexes in that array</em>, and that it <em>should not be used with maps</em>.</p>
+<p>Remember that the # operator returns the <em>number of indexes in that array</em>, and that it <em>should not be used with maps</em>. </p>
 <p>With that remembered, let's look at a loop!</p>
 <pre><code class="language-lua">    local example_array = {5, 4, 3, 2, 1}
 
@@ -178,7 +187,7 @@
         out(example_array[i]) → 5, 4, 3, 2, 1
     end
 </code></pre>
-<p>And that's really it! The keyword <code>for</code> is hyper important, and allows us to loop over various indexes in an array. <code>for</code> defines a local variable - in this case, <code>i</code>, though it can be WHATEVER - to a minimum value, and a maximum value. In this instance, the <strong>minimum</strong> value of <code>i</code> is <em>1</em>, while the <strong>maximum</strong> value of <code>i</code> is <em>5</em>. And then, it runs the <code>for</code> chunk <strong><em>once for each value of <code>i</code></em></strong>. That means, it runs <code>out(example_array[i])</code> once with i == 1, then once with i == 2, with i == 3, i == 4, and i == 5.</p>
+<p>And that's really it! The keyword <code>for</code> is hyper important, and allows us to loop over various indexes in an array. <code>for</code> defines a local variable - in this case, <code>i</code>, though it can be WHATEVER - to a minimum value, and a maximum value. In this instance, the <strong>minimum</strong> value of <code>i</code> is <em>1</em>, while the <strong>maximum</strong> value of <code>i</code> is <em>5</em>. And then, it runs the <code>for</code> chunk <em><strong>once for each value of <code>i</code></strong></em>. That means, it runs <code>out(example_array[i])</code> once with i == 1, then once with i == 2, with i == 3, i == 4, and i == 5.</p>
 <p>Loops for arrays like this are super useful, as I've hinted at. But how does this matter for Total War, you might be asking? Well, look no further! List interfaces!</p>
 <p>Remember the script interface chapter, we saw something called a <code>CHARACTER_LIST_SCRIPT_INTERFACE</code>? List interfaces are common, and they're a cool type of array that we can kinda use just like the above one, but differently. Since it's an <em>object</em>, not just an <em>array</em>, we have to do a couple of different things. I'll show you, then we'll talk, kay?</p>
 <pre><code class="language-lua">    local faction_name = cm:get_local_faction()
@@ -190,12 +199,12 @@
         -- check stuff about the character
     end
 </code></pre>
-<p>There are THREE important distinctions to make here.</p>
+<p>There are THREE important distinctions to make here. </p>
 <p>First off - the <em>minimum</em> is <code>0</code>, NOT <code>1</code>, and the maximum has to be the <em>number of items in that list minus one</em>. That's because these lists are defined in C++, where indexes start at 0, unlike Lua where indexes start at 1.</p>
 <p>Secondly - the maximum can't be defined as <code>#character_list</code>, because it's not an array! <code>character_list:num_items()</code> returns the total number of items in that array, and there's a <code>num_items()</code> method for every list interface.</p>
 <p>Thirdly - you can't use <code>character_list[i]</code> to read the index. IT'S NOT AN ARRAY! <code>character_list:item_at(i)</code> grabs the item at the index in the array; there's an <code>item_at()</code> method for every list interface.</p>
 <p>Arrays are really common in the CA script interfaces, and having a healthy grasp of them will allow you to do much more with your scripts.</p>
-<a class="header" href="#maps-and-looping" id="maps-and-looping"><h4>Maps and Looping</h4></a>
+<h4><a class="header" href="#maps-and-looping" id="maps-and-looping">Maps and Looping</a></h4>
 <p>While maps aren't used in CA script interfaces, like arrays kinda are, they're still really vital and can allow some super ease of scripting.</p>
 <p>Reminder for what maps are: they're tables <em>with user-defined indexes</em>.</p>
 <pre><code class="language-lua">
@@ -221,7 +230,7 @@
 </code></pre>
 <p>As before, we define the local variables with <code>for</code>. Those local variables are <code>key</code> and <code>value</code> - though, just like <code>i</code> in the above example, those variables can be named whatever you'd like. Using <code>key</code> and <code>value</code> is simply convention, same with <code>i</code>.</p>
 <p>Using the keyword <code>in</code> is syntax here, it's necessary between the two variables, and the pairs() function call. The function <code>pairs</code> basically defines that you want to iterate through the table (provided as a parameter to <code>pairs</code>). It doesn't require understanding - just know that, to iterate through a map, use the above.</p>
-<p>Now, where's the usefulness? There's a LOAD.</p>
+<p>Now, where's the usefulness? There's a LOAD. </p>
 <p>For one, a map loop is <em>quicker</em> than an array loop, and easier to write using Excel</p>
 <pre><code class="language-lua">    -- you
     local lame_units = {&quot;wh_dlc02_vmp_cav_blood_knights_0&quot;, &quot;wh_dlc04_vmp_veh_corpse_cart_0&quot;, &quot;wh_dlc04_vmp_veh_corpse_cart_1&quot;, &quot;wh_dlc04_vmp_veh_corpse_cart_2&quot;, &quot;wh_main_vmp_inf_crypt_ghouls&quot;, &quot;wh_main_vmp_mon_crypt_horrors&quot;, &quot;wh_main_vmp_mon_vargheists&quot;, &quot;wh_main_vmp_mon_varghulf&quot;, &quot;wh_main_vmp_mon_varghulf&quot;}
@@ -310,34 +319,34 @@
 </code></pre>
 <p>Yep! You can have tables within tables, maps within maps, loops within loops.</p>
 <p>And yes, you can access an index using <code>table.index_key</code>, if that index is a <em>string</em>. You obviously can't do that with a number. That syntax is really common - using <code>table[&quot;index_key&quot;]</code> to define an index's value, and then accessing that using <code>table.index_key</code>, though you can use them interchangeably; they're literally the exact same thing, no functional difference.</p>
-<a class="header" href="#other-loops" id="other-loops"><h4>Other Loops</h4></a>
+<h4><a class="header" href="#other-loops" id="other-loops">Other Loops</a></h4>
 <p>There are a couple other ways to loop, that don't involve tables.</p>
 <p>The most common other one - especially in the Total War context - is a <code>while</code> loop. For instance, we can see the following example in the wh_main_chs_chaos_start.lua file:</p>
-<pre><code class="language-lua">    local x = desired_spawn_point[1];
-    local y = desired_spawn_point[2];
-    local valid = false
-    
-    while not valid do
-        if is_valid_spawn_point(x, y) then
-            valid = true;
-        else
-            x = x + 1;
-            y = y + 1;
-        end;
-    end;
+<pre><code class="language-lua">	local x = desired_spawn_point[1];
+	local y = desired_spawn_point[2];
+	local valid = false
+	
+	while not valid do
+		if is_valid_spawn_point(x, y) then
+			valid = true;
+		else
+			x = x + 1;
+			y = y + 1;
+		end;
+	end;
 </code></pre>
 <p>In this instance, the <code>while</code> chunk is run once entirely through, continuously, until &quot;not valid&quot; returns <em>false</em> - aka, until <code>valid</code> is <code>true</code>.</p>
 <p>Don't be frivolous with your use of <code>while</code> loops - they should last no more than, like, 0.05s. Using them causes the rest of the Lua environment to come to a screeching halt, as basically nothing else can happen during a while loop.</p>
 <p>Similarly, you can use a <code>repeat</code> loop, which is the same functionally - runs until a condition is met - except a <code>repeat</code> loop will always run AT LEAST once, whereas a <code>while</code> loop won't run at all if the condition isn't met. Let's spy another CA example, this time in wh2_dlc11_treasure_maps.lua:</p>
-<pre><code class="language-lua">    repeat
-        random_number = cm:random_number(#level);
-        ancillary = level[random_number];
+<pre><code class="language-lua">	repeat
+		random_number = cm:random_number(#level);
+		ancillary = level[random_number];
     until(context:faction():ancillary_exists(ancillary) == false)
 </code></pre>
 <p>Which is loud-person talk for &quot;go through random numbers until we find an ancillary in this array which doesn't exist in this faction&quot;.</p>
 <p>Again, repeat is pretty performance-heavy, as it holds up basically everything else. Don't do big repeat loops, please. Please. PLEASE.</p>
 <p>Or, do. I don't really care.</p>
-<a class="header" href="#ca-loops-and-timing" id="ca-loops-and-timing"><h4>CA Loops and Timing</h4></a>
+<h4><a class="header" href="#ca-loops-and-timing" id="ca-loops-and-timing">CA Loops and Timing</a></h4>
 <p>There are some CA-defined methods to do a repeated function, or to delay a function, which do <em>not</em> hold up the entire environment like the above two loops. These callbacks are super helpful for repeated constant operation; for instance, I used a repeat_callback recently to print out the camera coordinates every half a second, so I could work on a custom cutscene. There was absolutely no performance drop, because Lua is beautiful.</p>
 <p>The two types are <em>callback</em> and, spoiler alert, <em>repeat_callback</em>. The former simply delays a function by a time; the latter delays a function by that time, and repeats that same delay and function over and over again.</p>
 <pre><code class="language-lua">    cm:callback(function()

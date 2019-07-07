@@ -4,6 +4,8 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Advanced Conditionals - Modding Resources</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,9 +32,12 @@
 
         
     </head>
-    <body class="light">
+    <body class="rust">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">var path_to_root = "";</script>
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
@@ -53,8 +58,8 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = 'light'; }
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
         </script>
@@ -72,7 +77,10 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html" class="active"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html" class="active"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -89,8 +97,8 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -102,12 +110,13 @@
                             
                         </div>
 
-                        <h1 class="menu-title">Modding Resources</h1> 
+                        <h1 class="menu-title">Modding Resources</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -136,10 +145,10 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#advanced-conditionals" id="advanced-conditionals"><h1>Advanced Conditionals</h1></a>
-<a class="header" href="#by-drunkflamingo" id="by-drunkflamingo"><h2>By DrunkFlamingo</h2></a>
+                        <h1><a class="header" href="#advanced-conditionals" id="advanced-conditionals">Advanced Conditionals</a></h1>
+<h2><a class="header" href="#by-drunkflamingo" id="by-drunkflamingo">By DrunkFlamingo</a></h2>
 <p>I'm guest writing this to clear up some common confusions and problems I see with people writing conditional statements. As Vandy made clear, conditionals are what your script is built with, but as you work more with Lua you'll begin to see that tables are what makes the language work. Combining the two is the key to writing better script.</p>
-<a class="header" href="#a-quick-refresher" id="a-quick-refresher"><h4>A Quick Refresher</h4></a>
+<h4><a class="header" href="#a-quick-refresher" id="a-quick-refresher">A Quick Refresher</a></h4>
 <p>A <strong>conditional statement</strong> is any statement of Lua that is either true or false. For our purposes, conditionals tend to look like this:</p>
 <pre><code class="language-lua">    return context:faction():name() == &quot;wh_main_emp_empire&quot;
 </code></pre>
@@ -153,7 +162,7 @@
 <li>singling out lord types</li>
 <li>singling out specific regions</li>
 </ol>
-<a class="header" href="#using-tables-and-loops-to-match-many-things" id="using-tables-and-loops-to-match-many-things"><h4>Using Tables and Loops to match many things</h4></a>
+<h4><a class="header" href="#using-tables-and-loops-to-match-many-things" id="using-tables-and-loops-to-match-many-things">Using Tables and Loops to match many things</a></h4>
 <p>Let's take a pretty simple example. Imagine we have a scripted mechanic. This mechanic only applies to human players, and it is initiated by calling the function &quot;my_mechanic&quot; and giving it the faction key we want the mechanic to happen for.</p>
 <p>A huge mistake I see in a lot of new scripters code is stuff like this:</p>
 <pre><code class="language-lua">    if cm:get_faction(&quot;wh_main_emp_empire&quot;):is_human() then
@@ -164,11 +173,11 @@
         -- this goes on for quite a while
     end
 </code></pre>
-<p>This is bad for a few reasons. Its bad for performance, but that doesn't matter as much as the fact that it requires a crapton of typing on your part. You've written 5 lines for only two factions! To get every good guy playable that's gonna be more than 30 lines. It also means if you want to check whether factions have a mechanic, you can't reuse any of this code. Finally, it means your code is a pain for other people to read.</p>
+<p>This is bad for a few reasons. Its bad for performance, but that doesn't matter as much as the fact that it requires a crapton of typing on your part. You've written 5 lines for only two factions! To get every good guy playable that's gonna be more than 30 lines. It also means if you want to check whether factions have a mechanic, you can't reuse any of this code. Finally, it means your code is a pain for other people to read. </p>
 <p>So how do we solve this? The simplest and best way is to use a table to check them. In this scenario, we're going to first introduce one that CA defines for us.</p>
 <pre><code class="language-lua">    local humans = cm:get_human_factions()
 </code></pre>
-<p>This returns a list of the humans in the game. That sounds much better, but let's write our code.</p>
+<p>This returns a list of the humans in the game. That sounds much better, but let's write our code. </p>
 <pre><code class="language-lua">    for i = 1, #humans do
         local current_human = humans[i]
 
@@ -192,7 +201,7 @@
 <p>We will start with what that table looks like:</p>
 <pre><code class="language-lua">    local my_mechanic_factions = {}
 </code></pre>
-<p>local my_mechanic_factions = {}
+<p>local my_mechanic_factions = {} 
 So what data do we need in this table? Probably the faction keys. When I said table, you might have wanted to try something like this:</p>
 <pre><code class="language-lua">    local my_mechanic_factions = {
         &quot;wh_main_emp_empire&quot;,
@@ -212,7 +221,7 @@ So what data do we need in this table? Probably the faction keys. When I said ta
     end
 </code></pre>
 <p>That's much better than before. It saves us a lot of typing to add more factions, but it isn't very efficient. If we add, lets say, 25 factions to our mechanic list, then we're looping 25 times in a single player game and 50 times in a coop game. It probably won't be too noticeable, but we can do better.</p>
-<a class="header" href="#the-right-answer" id="the-right-answer"><h4>The Right Answer</h4></a>
+<h4><a class="header" href="#the-right-answer" id="the-right-answer">The Right Answer</a></h4>
 <p>Instead of using an array table (one that is a list of items with integer keys; if you use Kailua you'll know this as a vector), lets try using a <strong>map</strong> table (one that associates a key and a value which we set explicitly) instead. These kinds of tables are extremely powerful when writing conditionals, so lets see why.</p>
 <pre><code class="language-lua">    local my_mechanic_factions = {
         [&quot;wh_main_emp_empire&quot;] = true,
@@ -228,7 +237,7 @@ So what data do we need in this table? Probably the faction keys. When I said ta
         end
     end
 </code></pre>
-<p>And there we go, finally something efficient, small, easy to modify, and easy to read. If the faction isn't in our table, then the &quot;if&quot; statement will be nil, which doesn't proceed. If the faction is there, we will proceed and fire off the mechanic. Now, no matter how many factions we want our mechanic to use, we'll only be looping once in a single player game, and twice in an MP game. For a mechanic which launches once or twice, that's the ideal number.</p>
+<p>And there we go, finally something efficient, small, easy to modify, and easy to read. If the faction isn't in our table, then the &quot;if&quot; statement will be nil, which doesn't proceed. If the faction is there, we will proceed and fire off the mechanic. Now, no matter how many factions we want our mechanic to use, we'll only be looping once in a single player game, and twice in an MP game. For a mechanic which launches once or twice, that's the ideal number. </p>
 <p>We can also reuse this code elsewhere. Now, if we want to check whether a faction fits a mechanic or not at any time, it's only a single check away. We could even formalize this into a function:</p>
 <pre><code class="language-lua">    function does_faction_have_my_mechanic(faction_key)
         return (my_mechanic_factions[faction_key] and cm:get_faction(faction_key):is_human() 

@@ -4,6 +4,8 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Siege Battle Maps - Modding Resources</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,9 +32,12 @@
 
         
     </head>
-    <body class="light">
+    <body class="rust">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">var path_to_root = "";</script>
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
@@ -53,8 +58,8 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = 'light'; }
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
         </script>
@@ -72,7 +77,10 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html" class="active"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html" class="active"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -89,8 +97,8 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -102,12 +110,13 @@
                             
                         </div>
 
-                        <h1 class="menu-title">Modding Resources</h1> 
+                        <h1 class="menu-title">Modding Resources</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -136,11 +145,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#siege-battle-maps" id="siege-battle-maps"><h1>Siege Battle Maps</h1></a>
+                        <h1><a class="header" href="#siege-battle-maps" id="siege-battle-maps">Siege Battle Maps</a></h1>
 <p>Siege maps are.... complex beasts. They're the most detailed, time-consuming, and memorable battlemaps you can play in a Total War game, yet they're so complex people often fails to get their fully potential realised. So today, we're going to <strong>learn how to make a proper siege map</strong>. With proper walls, AI support,... So if the AI doesn't work as you want, you can no longer say it's just the AI's fault!</p>
-<p>Before we begin, a little warning: this tutorial is on the <strong><em>advanced side,</em></strong> and it's quite technical. I'll try to explain all the stuff hard to understand, but this assumes you have at least learnt how to do basic things in Terry, like painting the map, placing buildings, etc... And that you have some basic knowledge on how to edit DB Tables with RPFM. If not, go watch another tutorial that cover the basics, then come back when you can move around Terry.</p>
+<p>Before we begin, a little warning: this tutorial is on the <em><strong>advanced side,</strong></em> and it's quite technical. I'll try to explain all the stuff hard to understand, but this assumes you have at least learnt how to do basic things in Terry, like painting the map, placing buildings, etc... And that you have some basic knowledge on how to edit DB Tables with RPFM. If not, go watch another tutorial that cover the basics, then come back when you can move around Terry.</p>
 <p><img src="images/siege_battle_map_tutorial/aquitaine.jpg" alt="Aquitaine, in all his glory" /></p>
-<a class="header" href="#requirements" id="requirements"><h2>Requirements</h2></a>
+<h2><a class="header" href="#requirements" id="requirements">Requirements</a></h2>
 <p>First, we need a few tools and resources to make a proper siege battle map:</p>
 <ul>
 <li><strong><code>Assembly Kit</code></strong>: You can install it from Steam. We'll use Terry, one of the included tools in the Assembly Kit to make the map.</li>
@@ -149,7 +158,7 @@
 <li><strong><code>Siege Map DB Stuff</code></strong>: You can get it from <a href="files/siege_tutorial_db_stuff.pack">here</a>. It's an already pre-configured PackFile with some stuff we'll use in the tutorial.</li>
 <li><strong><code>Aquitaine, Home of the Lace Tower</code></strong>: You can get it from <a href="files/omelette_du_fromage.7z">here</a>. These are the source files of the Aquitaine's Custom Map from Warhammer 2, to serve as an example of a fully working SiegeAI, because otherwise people seem unable to make the SiegeAI work.....</li>
 </ul>
-<p>Once we have these tools and resources, we can start talking about making maps! Next, let's get clear the <strong><em>technical requirements of a Siege Battle Map</em></strong>. First, for it to just <em>work</em> we need:</p>
+<p>Once we have these tools and resources, we can start talking about making maps! Next, let's get clear the <em><strong>technical requirements of a Siege Battle Map</strong></em>. First, for it to just <em>work</em> we need:</p>
 <ul>
 <li><strong>Two Deployment Zones</strong>. One for the attacker, one for the defender.</li>
 <li><strong>One Additive Deployment Region</strong> inside of each deployment zone.</li>
@@ -167,19 +176,19 @@
 </ul>
 <p>And if you want to do like me, and go beyond that, there's still the possibility of adding custom buildings, custom towers, particular gimmicks..... but that's outside the scope of this tutorial, so we're going to keep it simple, and just focus on those requirements.</p>
 <p>And now we're going to go through the five phases of siege mapmaking.</p>
-<a class="header" href="#phase-1-the-funny-part" id="phase-1-the-funny-part"><h3>Phase 1: the funny part.</h3></a>
-<p>To begin, create a new map in Terry, name it whatever you want, and.... start building it. Place your buildings, change your terrain... just make the map you want. But you need to keep some things in mind:</p>
+<h3><a class="header" href="#phase-1-the-funny-part" id="phase-1-the-funny-part">Phase 1: the funny part.</a></h3>
+<p>To begin, create a new map in Terry, name it whatever you want, and.... start building it. Place your buildings, change your terrain... just make the map you want. But you need to keep some things in mind: </p>
 <ul>
-<li>First, <strong><em>MAKE STREETS WIDE ENOUGH</em></strong>. The number one problem of siege maps is street width. People tend to make them too narrow, then they're too narrow to be able to deploy units properly, and the map is a nightmare to fight on. This is the biggest thing you have to take into account: don't make narrow streets. Make them at least big enough you can fit one and a half ultra-sized infantry units, on wide formation. Less than that will give you big problems in playability.</li>
-<li>Second, <strong><em>USE WALL BUILDINGS, NOT WALL PROPS</em></strong>. A building have logic and collision. A prop doesn't have logic nor collision. When placing your walls, use always the walls from the <code>Buildings</code> section, never from the <code>Props</code> section.</li>
-<li>Third, <strong><em>keep your city/castle/town layout simple</em></strong>. The more complex it gets (very long and zigzagging streets, narrow streets,... ) the harder it gets for the AI to both, defend it and attack it effectively. Also, the harder it gets for your CPU to get the pathfinding for the units working, which means more CPU load.</li>
-<li>Fourth, <strong><em>don't make curved walls!</em></strong> As we're going to see in a later point, walls need a special, very precise set-up to work. So don't make your map planning on having working curved walls. You can have fake unusable curved walls, but not real ones.</li>
+<li>First, <em><strong>MAKE STREETS WIDE ENOUGH</strong></em>. The number one problem of siege maps is street width. People tend to make them too narrow, then they're too narrow to be able to deploy units properly, and the map is a nightmare to fight on. This is the biggest thing you have to take into account: don't make narrow streets. Make them at least big enough you can fit one and a half ultra-sized infantry units, on wide formation. Less than that will give you big problems in playability.</li>
+<li>Second, <em><strong>USE WALL BUILDINGS, NOT WALL PROPS</strong></em>. A building have logic and collision. A prop doesn't have logic nor collision. When placing your walls, use always the walls from the <code>Buildings</code> section, never from the <code>Props</code> section.</li>
+<li>Third, <em><strong>keep your city/castle/town layout simple</strong></em>. The more complex it gets (very long and zigzagging streets, narrow streets,... ) the harder it gets for the AI to both, defend it and attack it effectively. Also, the harder it gets for your CPU to get the pathfinding for the units working, which means more CPU load.</li>
+<li>Fourth, <em><strong>don't make curved walls!</strong></em> As we're going to see in a later point, walls need a special, very precise set-up to work. So don't make your map planning on having working curved walls. You can have fake unusable curved walls, but not real ones.</li>
 </ul>
 <p><img src="images/siege_battle_map_tutorial/curved_walls.png" alt="Curved Walls" /></p>
 <p>With those points in mind, create your map. Once you have put down your buildings, painted your map, and had fun, it's time for the serious business.</p>
-<a class="header" href="#phase-2-trust-me-im-an-engineer" id="phase-2-trust-me-im-an-engineer"><h3>Phase 2: Trust me, I'm an Engineer.</h3></a>
+<h3><a class="header" href="#phase-2-trust-me-im-an-engineer" id="phase-2-trust-me-im-an-engineer">Phase 2: Trust me, I'm an Engineer.</a></h3>
 <p>Now we are going to make the map playable, which means finishing the first of the two requirements list. First, the deployment zones.</p>
-<p><strong><em>Deployment Zones</em></strong> control where a specific alliance or player can deploy his units at the start of the battle. It's simple: make one around the place you want the attacker to deploy, and the same for the defender. Each defender zone you create will automatically have an <strong><code>additive</code> region</strong> inside it. You can create different regions within a deployment zone:</p>
+<p><em><strong>Deployment Zones</strong></em> control where a specific alliance or player can deploy his units at the start of the battle. It's simple: make one around the place you want the attacker to deploy, and the same for the defender. Each defender zone you create will automatically have an <strong><code>additive</code> region</strong> inside it. You can create different regions within a deployment zone:</p>
 <ul>
 <li><strong><code>Additive</code></strong>: The units of his alliance can deploy inside it.</li>
 <li><strong><code>Subtractive</code></strong>: The units of his alliance cannot inside it.</li>
@@ -195,49 +204,49 @@
 <p>Also, you need to place some <code>Deployment AI Hints</code> to tell the AI for good places to deploy inside their normal/vanguard deployment zone. Just draw a few of them in single lines (no more that two vertex, or the AI will ignore them).</p>
 <p>Next, <strong>the walls</strong>. A good siege needs a good wall. Everybody knows that. Everybody. Walls are the first basic obstacle the attacker has to pass. So we have to make one.</p>
 <p><img src="images/siege_battle_map_tutorial/the_wall.jpg" alt="The Wall" /></p>
-<p>Walls are special buildings with special logic, and such they need to be placed in a special way. For this task I recommend you enabling <strong><em><code>Grid Snapping</code></em></strong> and <strong><em><code>Show Building Collision Outlines</code></em></strong> settings in Terry. <code>Grid Snapping</code> will make sure your buildings are placed at fixed intervals when placing or moving them (not <code>0.324-&gt;0.325-&gt;0.326</code>, but <code>0-&gt;1-&gt;2</code>). <code>Show Building Collision Outlines</code> will make the collision line of your walls (that pink border you may see around each piece of wall) appear, which is very helpful to find moved/misaligned walls.</p>
+<p>Walls are special buildings with special logic, and such they need to be placed in a special way. For this task I recommend you enabling <em><strong><code>Grid Snapping</code></strong></em> and <em><strong><code>Show Building Collision Outlines</code></strong></em> settings in Terry. <code>Grid Snapping</code> will make sure your buildings are placed at fixed intervals when placing or moving them (not <code>0.324-&gt;0.325-&gt;0.326</code>, but <code>0-&gt;1-&gt;2</code>). <code>Show Building Collision Outlines</code> will make the collision line of your walls (that pink border you may see around each piece of wall) appear, which is very helpful to find moved/misaligned walls.</p>
 <p>Walls need to placed one after another, with perfect precision. And I mean <strong>PERFECT PRECISION</strong>. A <code>0.001</code> of difference between wall pieces will break their connection, causing problems with units trying to scale/garrison them. Walls usually are made with a fixed size (for example, they're <code>20x20</code> in Warhammer), so if you put a wall on (<code>x:50, y:0, z:10</code>) the next one has to be in (<code>x:70, y:0, z:10</code>) to work. Perfectly connected, as all things should be. And knowing that, just place them forming you great wall. Same happens for even more special walls, like Corners, Gates and Towers. Just align them properly, and you're done.</p>
 <p><img src="images/siege_battle_map_tutorial/misaligned_wall.png" alt="Missaligned Wall" /></p>
-<p>With that, you should be able to load your wonderful map as a land battle, start the battle and... <strong>it'll barely work</strong>. The gates will be unusable. The towers will not shoot. The walls will not be garrisonable. The AI will behave erratically. Then you cry. Then you realize <strong>you still have work to do</strong>.</p>
-<a class="header" href="#phase-3-why-u-not-work" id="phase-3-why-u-not-work"><h3>Phase 3: WHY U NOT WORK????</h3></a>
+<p>With that, you should be able to load your wonderful map as a land battle, start the battle and... <strong>it'll barely work</strong>. The gates will be unusable. The towers will not shoot. The walls will not be garrisonable. The AI will behave erratically. Then you cry. Then you realize <strong>you still have work to do</strong>. </p>
+<h3><a class="header" href="#phase-3-why-u-not-work" id="phase-3-why-u-not-work">Phase 3: WHY U NOT WORK????</a></h3>
 <p>Now it's time for the second hardest part. To make your map work. Take a coffee, or a cup of tea the british ones, and relax. You'll need it.</p>
-<p>First, we're going to make the walls work. As I said before, walls are special buildings. They have logic, but that logic <strong>doesn't work</strong> <strong><em>as is</em></strong>. That logic only works when the building it's put inside a <code>Battlefield Zone</code>. A <code>Battlefield Zone</code> is what makes your units able to get in formation atop the walls. But the thing is.... Terry cannot make <code>Battlefield Zones</code>. It's one of the many things disabled in the Terry modders have. But where there is a problem, there is a... workaround. We cannot create new <code>BattleField Zones</code>, but we can copy/paste the ones that we already have. Just get one from the prefab_repo map from the assets, and copy/paste/tweak it to fit around your wall section (one each big section, not one each wall piece!). We'll leave out how to create new ones from scratch for now. Otherwise many of you would run away at this point...</p>
+<p>First, we're going to make the walls work. As I said before, walls are special buildings. They have logic, but that logic <strong>doesn't work</strong> <em><strong>as is</strong></em>. That logic only works when the building it's put inside a <code>Battlefield Zone</code>. A <code>Battlefield Zone</code> is what makes your units able to get in formation atop the walls. But the thing is.... Terry cannot make <code>Battlefield Zones</code>. It's one of the many things disabled in the Terry modders have. But where there is a problem, there is a... workaround. We cannot create new <code>BattleField Zones</code>, but we can copy/paste the ones that we already have. Just get one from the prefab_repo map from the assets, and copy/paste/tweak it to fit around your wall section (one each big section, not one each wall piece!). We'll leave out how to create new ones from scratch for now. Otherwise many of you would run away at this point...</p>
 <p>Once you get the <code>Battlefield Zones</code> you need for your walls, you can load your map in-game and lo and behold! Your units <strong>can now get in formation atop the walls!</strong></p>
 <p><img src="images/siege_battle_map_tutorial/atop_the_walls.jpg" alt="Atop the walls" /></p>
 <p>Next, let's fix the gates and towers, shall we? Gates and Towers are another special type of buildings. They have a certain behaviour, but <strong>only for the player it controls them</strong>. So, to make them controllable, we need to make a <code>Capture Zone</code> for each tower and gate. And with <em>make</em> I mean <em>Copy/Paste/Tweak from the prefab_repo map</em>. Same problem as with the <code>Battlefield Zones</code>: <strong>we cannot do them in Terry</strong>. Once you got your <code>Capture Zone</code> where you want it, give it a name (select it in the entity list and click <code>F2</code> to rename it), then select the building you want it to control and, under <code>Capture Location</code>, select your <code>Capture Zone</code>. Repeat with all your gates and towers. Also, you want to let at least one capture zone to act as <em>Victory point</em> of your siege map. Put it where you want.</p>
 <p>Once you got them all, let's tweak the Capture Zones. The capture zones can be of two types:</p>
 <ul>
-<li><strong><em><code>Minor</code></em></strong>: Normal capture zones. Don't appear on the minimap.</li>
-<li><strong><em><code>Mayor</code></em></strong>: Capture zones that show up in the minimap and in the top of the screen, as unique capture points.</li>
+<li><em><strong><code>Minor</code></strong></em>: Normal capture zones. Don't appear on the minimap.</li>
+<li><em><strong><code>Mayor</code></strong></em>: Capture zones that show up in the minimap and in the top of the screen, as unique capture points.</li>
 </ul>
 <p><img src="images/siege_battle_map_tutorial/capture_point.jpg" alt="Capture Point" />
 And there are multiple capture points, but for the sake of simplicity, gates should be <code>Minor/Gate only</code>, towers should be <code>Minor/Tower only</code> and VP should be <code>Major/Victory Plaza</code>.</p>
 <p>Now we can export it again, and test it. Many things will still be broken, but you can use this test to <strong>ensure your <code>Capture Zones</code> are setted up correctly</strong>. The VP should have an special icon and appear on the map, and you should be able to hold the gate and towers! But.... the towers will not shoot. Time to fix the last broken thing in the walls, the towers.</p>
-<p>Towers are.... well, you know the drill. Copy them from the prefab_repo map, then put them into your map, replacing the dummy towers, and remember to assign them their <code>Capture Zones</code>. You'll see some <strong><em>white arrows</em></strong> coming out of the tower. Those are the <code>Projectile Emitters</code>. Same thing as with the rest, we cannot create then, and these require tinkering with the layer files of the map to set them up. A complex mess. So just copy the towers from the prefab_repo map, then move the emitters around until you have them where you want. That's all.</p>
-<p>Export your map, load it in-game, and the entire walls, with gates and towers should be working (except siege towers, those will still be broken). That ends the second hardest part. Now it comes the first one: <strong><em><code>SiegeAI</code></em></strong>.</p>
-<a class="header" href="#phase-4-every-time-i-export-the-gods-toss-the-coin-in-the-air" id="phase-4-every-time-i-export-the-gods-toss-the-coin-in-the-air"><h3>Phase 4: Every time I export, the gods toss the coin in the air.</h3></a>
+<p>Towers are.... well, you know the drill. Copy them from the prefab_repo map, then put them into your map, replacing the dummy towers, and remember to assign them their <code>Capture Zones</code>. You'll see some <em><strong>white arrows</strong></em> coming out of the tower. Those are the <code>Projectile Emitters</code>. Same thing as with the rest, we cannot create then, and these require tinkering with the layer files of the map to set them up. A complex mess. So just copy the towers from the prefab_repo map, then move the emitters around until you have them where you want. That's all. </p>
+<p>Export your map, load it in-game, and the entire walls, with gates and towers should be working (except siege towers, those will still be broken). That ends the second hardest part. Now it comes the first one: <em><strong><code>SiegeAI</code></strong></em>.</p>
+<h3><a class="header" href="#phase-4-every-time-i-export-the-gods-toss-the-coin-in-the-air" id="phase-4-every-time-i-export-the-gods-toss-the-coin-in-the-air">Phase 4: Every time I export, the gods toss the coin in the air.</a></h3>
 <p>Siege and Unfortified Battle Maps use a system called <code>SiegeAI</code> to get the AI to understand the layout of a map. The system is basically a layout of nodes and links. Like <strong>an overlay over the map</strong> that the AI can understand. Here is where Kazad usually stops working due to complexity overload. And here is where a lot of people start getting angry because a bad set-up of this system <strong>can and will crash your game</strong>. And again, we have no direct access to it, like most of this stuff. So we have to copy the pre-made pieces of the system, then paste them into the map and tweak it. Yay!!!!! (irony mode off).</p>
 <p><img src="images/siege_battle_map_tutorial/siege_graph.png" alt="Siege Graph" /></p>
-<p>First, let's explain the parts of the <code>SiegeAI</code> System. The system consist of <code>Nodes</code> (for the AI to recognize important places to defend) and <code>Edges</code> (links between those places).</p>
+<p>First, let's explain the parts of the <code>SiegeAI</code> System. The system consist of <code>Nodes</code> (for the AI to recognize important places to defend) and <code>Edges</code> (links between those places). </p>
 <p><code>Nodes</code> are usually composed by the node itself (pink) and a linked boundary (dark pink). The node is what the units will recognize and use to move, the boundary is used to define the logical borders of the node. The different types of nodes are:</p>
 <ul>
-<li><strong><em><code>Area Node</code></em></strong>: Where the AI will deploy his units. Also, these areas are going to be actively defended by them. Use them for gates, victory points, capture points, and whatever place you want the AI to keep and eye upon. Also, the more of these nodes, the less the AI will blob up in big nodes.</li>
-<li><strong><em><code>Intersection Node</code></em></strong>: for intersections you don't want the AI to actively protect.</li>
-<li><strong><em><code>Wall Area Node</code></em></strong>: No idea. I suspect that it's to make the AI see special places as walls, but... Haven't been able to get it working.</li>
-<li><strong><em><code>Entry Node</code></em></strong>: For open entrances on unfortified maps.</li>
-<li><strong><em><code>Firing Node</code></em></strong>: No idea. Only on Warhammer 2. We tried to use it multiple times and we only got crashes with it.</li>
+<li><em><strong><code>Area Node</code></strong></em>: Where the AI will deploy his units. Also, these areas are going to be actively defended by them. Use them for gates, victory points, capture points, and whatever place you want the AI to keep and eye upon. Also, the more of these nodes, the less the AI will blob up in big nodes.</li>
+<li><em><strong><code>Intersection Node</code></strong></em>: for intersections you don't want the AI to actively protect.</li>
+<li><em><strong><code>Wall Area Node</code></strong></em>: No idea. I suspect that it's to make the AI see special places as walls, but... Haven't been able to get it working.</li>
+<li><em><strong><code>Entry Node</code></strong></em>: For open entrances on unfortified maps.</li>
+<li><em><strong><code>Firing Node</code></strong></em>: No idea. Only on Warhammer 2. We tried to use it multiple times and we only got crashes with it.</li>
 </ul>
 <p>Those are the nodes, now the edges:</p>
 <ul>
-<li><strong><em><code>Street Edge</code></em></strong>: What you're going to use to connect intersections/areas. It has one edge (pink) and two boundaries (dark pink), one on each side.</li>
-<li><strong><em><code>Area Connection Edge</code></em></strong>: Don't really know his use, but it looks and works similar to the street edge.</li>
-<li><strong><em><code>Wall Edge</code></em></strong>: Just a line. Draw it from one end of the wall section (and by section I mean the entire wall line, not just each little wall piece), around the middle of the wall. This will make the AI see the wall and use it for both, attacking and defending.</li>
-<li><strong><em><code>Palisade Edge</code></em></strong>: To make the AI see palisades it can garrison. I guess. Never got this working though, as there are no palisades in Warhammer.</li>
+<li><em><strong><code>Street Edge</code></strong></em>: What you're going to use to connect intersections/areas. It has one edge (pink) and two boundaries (dark pink), one on each side.</li>
+<li><em><strong><code>Area Connection Edge</code></strong></em>: Don't really know his use, but it looks and works similar to the street edge. </li>
+<li><em><strong><code>Wall Edge</code></strong></em>: Just a line. Draw it from one end of the wall section (and by section I mean the entire wall line, not just each little wall piece), around the middle of the wall. This will make the AI see the wall and use it for both, attacking and defending.</li>
+<li><em><strong><code>Palisade Edge</code></strong></em>: To make the AI see palisades it can garrison. I guess. Never got this working though, as there are no palisades in Warhammer.</li>
 </ul>
 <p>Also, there are two AI Hints you'll need to make these maps work:</p>
 <ul>
-<li><strong><em><code>Fort Link</code></em></strong>: This one is used to '<em>join</em>' your Wall Edges so, in the end, your Wall Edges + Fort Links form a closed perimeter. We don't have access to it, but with some dark magic we can use it.</li>
-<li><strong><em><code>Fort Perimeter</code></em></strong>: This makes the entire SiegeAI system work, and your map <strong><em>will hard-crash if you don't have it</em></strong>. It's also the culprit of most of the AI problems in a Siege. This is another thing we don't have access too, and this one is tricky, because if Terry sees it, it'll turn it into a useless defensive area when exporting.</li>
+<li><em><strong><code>Fort Link</code></strong></em>: This one is used to '<em>join</em>' your Wall Edges so, in the end, your Wall Edges + Fort Links form a closed perimeter. We don't have access to it, but with some dark magic we can use it.</li>
+<li><em><strong><code>Fort Perimeter</code></strong></em>: This makes the entire SiegeAI system work, and your map <em><strong>will hard-crash if you don't have it</strong></em>. It's also the culprit of most of the AI problems in a Siege. This is another thing we don't have access too, and this one is tricky, because if Terry sees it, it'll turn it into a useless defensive area when exporting.</li>
 </ul>
 <p>Now, what do we do with this stuff?. Simple:</p>
 <ul>
@@ -246,7 +255,7 @@ And there are multiple capture points, but for the sake of simplicity, gates sho
 <li><strong>Use Street Edges to connect all your Area/Intersection Nodes</strong>. To connect an Edge with a Node, just make sure the Edge (pink) intersects with the Node (pink) and both boundaries of the Edge (dark pink) intersects with the Node's boundary (dark pink). Like cables, blue to blue, red to red. For no-exit streets, you can leave the the end of the Edge corresponding to the closed end of the street open.</li>
 <li><strong>Draw a Wall Edge from the beginning of the first Wall</strong>, to the end of the Last Wall. Usually, there should be one Wall Edge per wall section, but for some reason in Warhammer 1/2 only the first Wall Edge is used by the AI. The rest are ignored.</li>
 <li><strong>Draw a Fort Link closing both ends of the Wall Edge</strong>. You just need to make their ends intersect.</li>
-<li>And now the tricky one: <strong><em>draw a <code>Defensive Hill AI Hint</code> (yes, you read right) around your entire City/Castle</em></strong>. This will be our <code>Fort Perimeter</code>, so make sure you set it up right. Not too far from the walls, not too close to the walls. Around 20 units away from the wall is ok.</li>
+<li>And now the tricky one: <em><strong>draw a <code>Defensive Hill AI Hint</code> (yes, you read right) around your entire City/Castle</strong></em>. This will be our <code>Fort Perimeter</code>, so make sure you set it up right. Not too far from the walls, not too close to the walls. Around 20 units away from the wall is ok.</li>
 </ul>
 <p>Now export your map BUT DON'T START PLAYING YET. If you try to play it, you'll immediately see two problems:</p>
 <ul>
@@ -254,7 +263,7 @@ And there are multiple capture points, but for the sake of simplicity, gates sho
 <li>Your map will crash when trying to play it.</li>
 </ul>
 <p>Thankfully, those are the last two problems we need to fix.</p>
-<a class="header" href="#phase-5-and-lo-and-behold-my-grace-in-all-his-plenitude" id="phase-5-and-lo-and-behold-my-grace-in-all-his-plenitude"><h3>Phase 5: And lo and behold, my grace in all his plenitude.</h3></a>
+<h3><a class="header" href="#phase-5-and-lo-and-behold-my-grace-in-all-his-plenitude" id="phase-5-and-lo-and-behold-my-grace-in-all-his-plenitude">Phase 5: And lo and behold, my grace in all his plenitude.</a></h3>
 <p>You can close Terry. You'll only need RPFM for these two. First let's fix the easy one, the <code>Fort Perimeter</code>. You just need to open your map's PackFile (it should be in your game's /data folder) in RPFM, go to <code>Special Stuff/Warhammer 2</code> and hit <code>Patch SiegeAI</code>. That's all. Your map should no longer crash. Magic.</p>
 <p>Next, the <em>make it show up as a Siege Battle Map</em> thing. It's really, REALLY simple, but the last time I did this tutorial people had problems understanding the fact that, if a file is called <code>rename_this</code> <strong>you have to rename it!</strong>* So, like they say in my town, listen carefully, or I'll cut off your balls.</p>
 <ul>

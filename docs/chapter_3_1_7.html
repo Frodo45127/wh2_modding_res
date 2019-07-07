@@ -4,6 +4,8 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Commands, Interfaces &amp; Listeners - Modding Resources</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,9 +32,12 @@
 
         
     </head>
-    <body class="light">
+    <body class="rust">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">var path_to_root = "";</script>
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
@@ -53,8 +58,8 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = 'light'; }
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
         </script>
@@ -72,7 +77,10 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html" class="active"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html" class="active"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -89,8 +97,8 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -102,12 +110,13 @@
                             
                         </div>
 
-                        <h1 class="menu-title">Modding Resources</h1> 
+                        <h1 class="menu-title">Modding Resources</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -136,15 +145,15 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#commands-interfaces--listeners" id="commands-interfaces--listeners"><h1>Commands, Interfaces &amp; Listeners</h1></a>
+                        <h1><a class="header" href="#commands-interfaces--listeners" id="commands-interfaces--listeners">Commands, Interfaces &amp; Listeners</a></h1>
 <p>For today's lesson, the subject is three-fold: <strong>commands</strong>, <strong>interfaces</strong>, and <strong>listeners</strong>. The three of these are our introduction to messing with the game itself, and making real change. Every worthwhile Lua mod on the market has these in it! Anything else just concatenates strings or applies arithmetic or some nonsense.</p>
-<a class="header" href="#commands" id="commands"><h4>Commands</h4></a>
+<h4><a class="header" href="#commands" id="commands">Commands</a></h4>
 <p>A command, at its bearest-bones, is a <em>CA-defined Lua function</em> that does stuff that we can't see. They function (hah) identically to the functions we've already covered; some have parameters, some have return values, they all do stuff. Whenever we use commands, we're treating them like <em>function calls</em>; they're a statement. Commands are used to communicate between the Lua environment and the actual Total War Engine - the base C++ code that defines the majority of the game.</p>
 <p>Through these commands, we can script a whole lot of stuff! From character spawns, to new effects applied to characters and factions and armies, to quest battles, to unlocking rites, and so on.</p>
 <p>In big part, commands make or break what can be done with scripts. Commands are the driving force of most any script. At this point, though, you might be asking - &quot;how the HECK do I find out what the commands are?&quot; And that, my friend, is why you're reading this lesson. Or maybe you got lost when you were just trying to find funny videos about cats. Either way, next paragraph!</p>
 <p>So, once more in the <a href="./chapter_1.html">&quot;Tools &amp; Resources&quot;</a> page on this site, there's a section within called &quot;Scripting Resources&quot;. We'll look at, first, the &quot;Scripting Doc (CM Functions)&quot; file. Open it up!</p>
 <p>Now, before we go on, one thing MUST be covered. <strong>EVERY command in this document needs to have a prefix of <code>cm:</code>.</strong> Those two letters stand for &quot;campaign_manager&quot;, and it's the big object that holds most all information we could want within the campaign game-mode.</p>
-<p><strong><em>NOTE:</em></strong> <em>The campaign manager is ONLY usable in the campaign game-mode!</em></p>
+<p><em><strong>NOTE:</strong></em> <em>The campaign manager is ONLY usable in the campaign game-mode!</em></p>
 <p>In this document, let's take a look at two example commands to breakdown.</p>
 <pre><code class="language-lua">    Command: 	transfer_region_to_faction	
     Description: 	Transfer a region ownership to a faction.	
@@ -188,7 +197,7 @@
 <p><em>NOTE: <code>WHATEVER</code> is a beautiful keyword in Kailua that lets you not define the type of a value, instead of saying &quot;return a number&quot; it says &quot;return literally whatever&quot;</em></p>
 <p>Some functions in the ca_types files have a <code>--&gt;</code> to their end; on the right side of that arrow is the return value. Easy enough to read!</p>
 <p>And that's my explanation of CA commands! Hope you had as much fun as I did.</p>
-<a class="header" href="#interfaces" id="interfaces"><h4>Interfaces</h4></a>
+<h4><a class="header" href="#interfaces" id="interfaces">Interfaces</a></h4>
 <p>Similar to commands, script interfaces are a way to access some game data with some Lua. We looked at them previously - in the second lesson, we used a <code>FACTION_SCRIPT_INTERFACE</code>, which we got by using the command <code>cm:get_faction(&quot;faction_key&quot;)</code>.</p>
 <p>Script interfaces are objects that we can apply some functions <em>to</em> (functions applied to an object are known as methods, but we'll talk about that terminology later). For example, let's build up something small:</p>
 <pre><code class="language-lua">    local faction_name = &quot;wh2_main_hef_eataine&quot;
@@ -229,7 +238,7 @@ Return: bool
 <p>But I do not recommend doing something like this, until you're very comfortable with the language. I do it very, very, very rarely, only when it makes perfect sense to do it, and that's lie-talk for &quot;when I'm tired and it makes perfect sense to my tired brain&quot;.</p>
 <p>Script interfaces are stupidly, stupidly powerful, and using all these smartly allows you to make some serious change within the game, and to read a lot more details, from &quot;how many units are in this army&quot; to &quot;what level is this character&quot; to &quot;how many armies were in the last battle?&quot; But, above all, these interfaces are used <em>best</em> and <em>most powerfully</em> when used in conjunction with listeners and events.</p>
 <p>What are listeners and events? Ah, well...</p>
-<a class="header" href="#listeners-and-events" id="listeners-and-events"><h4>Listeners and Events</h4></a>
+<h4><a class="header" href="#listeners-and-events" id="listeners-and-events">Listeners and Events</a></h4>
 <p>A listener is an important script command that, simply, waits for something to happen - or, listens for something to happen - in the game, and then triggers something else. Using a listener, we can listen for an event such as the creation of an army, the occupation of a city, or even a battle, and then we use the information from that situation, check for something specific, and run our code if the event matches our criteria. For example: we may be looking for Mannfred to occupy Altdorf. In this case we'd have to use a listener to &quot;listen&quot; for a city being occupied, but we don't want to listen for just any city being occupied. In our example, we have to listen for Altdorf being occupied, and for Mannfred doing the occupying. The listener will listen for every single time a city is occupied, and once those two conditions are met - <em>Mannfred</em> occupying <em>Altdorf</em>... <strong>Clue</strong>, anyone? - then our listener will trigger some code. In layman's code, our listener will <em>do a thing!</em></p>
 <p>Overall, it is a very valuable connection between Lua and game data, and any scripter should understand the in's and out's of a listener.</p>
 <p>Let's break down the basics of a listener. Here is it, at its most basic form:</p>
@@ -249,50 +258,50 @@ Return: bool
 <li>function: This is the &quot;callback&quot; function, which only runs if the conditional boolean returns as true. Can be whatever valid function you want! Note that it MUST have the format of <code>function(context) --[[ do stuff ]] end,</code></li>
 <li>boolean2: This is the &quot;persistence&quot; boolean. If it is set to true, the listener will continue listening. If it is set to false, the listener will be removed from the game data.</li>
 </ul>
-<a class="header" href="#ca-events" id="ca-events"><h3>CA Events</h3></a>
+<h3><a class="header" href="#ca-events" id="ca-events">CA Events</a></h3>
 <p>Let's talk more in detail about the Events I mentioned.</p>
 <p>As previously clarified, Events are predefined objects that are used exclusively in tandem with Listeners. A full list of Events, and all of their methods, and all of the interfaces, can be found <a href="files/scripting_doc.html">here</a>. Let's go over how to use this document!</p>
 <p>At the top of the document is a long list of Events, each clickable to divert to another part of the document. Each of these Events have specific usage. It should be noted here that documentation on some events is rather light, ie. when to use certain ones versus others, but a lot can be found out by looking at vanilla scripts or other mods.</p>
 <p>I want to start a new function after the player takes over Altdorf. After searching the term &quot;Occu&quot;, the event &quot;GarrisonOccupiedEvent&quot; is highlighted. This looks promising! After clicking, the available functions are &quot;garrison_residence&quot; and &quot;character&quot;, which seem to be the region that was occupied, and the character that led the assault, in order.</p>
-<a class="header" href="#conditional-coding" id="conditional-coding"><h3>Conditional Coding</h3></a>
+<h3><a class="header" href="#conditional-coding" id="conditional-coding">Conditional Coding</a></h3>
 <p>Remember &quot;boolean1&quot; from up above? If that is set to true/false, it's not really effective code. We can replace that true/false with a function that returns a true/false value, and that way we can actually check the event, see if a specific thing happened in that event, and then spit out a boolean to trigger the callback function.</p>
-<pre><code class="language-lua">    function(context)
-        return context:[thing we want to check]
+<pre><code class="language-lua">	function(context)
+		return context:[thing we want to check]
     end,
 </code></pre>
 <p>In essence, the above is the foundation for what all effective conditional functions in a listener should be. Context, in the context of listeners, is an object which contains all the data that occurred within the Event. But let's back up. Remember on the document, we found <code>GarrisonOccupiedEvent</code>? Let's go back to it and click it again. We see two options, as mentioned before - &quot;garrison_residence&quot; and &quot;character&quot;. As our intention is to find a specific region being occupied - Altdorf - we need to use that former path.</p>
 <p>At this point, our WIP code looks like the following:</p>
-<pre><code class="language-lua">    function(context)
-        return context:garrison_residence()
+<pre><code class="language-lua">	function(context)
+		return context:garrison_residence()
     end,
 </code></pre>
 <p>For the conditional function, you always want to start with &quot;return context:&quot;, and the next method can only be one of the methods that is accessible by that Event - which is where this document comes SO in handy. For other examples, click around the different Events listed at the top. Each &quot;Function&quot; underneath each Event after clicking it is a valid method for the context of that Event. The &quot;RegionSelected&quot; event only has access to a &quot;region&quot; function, which means the only valid method is to use &quot;context:region()&quot;. &quot;DilemmaChoiceMadeEvent&quot;, however, has access to &quot;faction&quot;, &quot;choice&quot;, &quot;campaign_model&quot;, and &quot;dilemma&quot;, so those four are all valid methods.</p>
-<p><strong><em>NOTE: Yes, you have to add &quot;()&quot; to the end of the function's name.</em></strong></p>
+<p><em><strong>NOTE: Yes, you have to add &quot;()&quot; to the end of the function's name.</strong></em></p>
 <p>Back to our example - you'll see the garrison_residence has <code>GARRISON_RESIDENCE_SCRIPT_INTERFACE</code> beneath it. Looking in the &quot;GARRISON_RESIDENCE_SCRIPT_INTERFACE&quot;, I don't see a &quot;key&quot; or &quot;name&quot;. Matter of fact, the most likely path is &quot;region()&quot;. That brings our code to...</p>
-<pre><code class="language-lua">    function(context)
-        return context:garrison_residence():region()
+<pre><code class="language-lua">	function(context)
+		return context:garrison_residence():region()
     end,
 </code></pre>
 <p>After checking the <code>REGION_SCRIPT_INTERFACE</code>, we finally see the &quot;name&quot; method, which allows us to fully check our context. Our line of code is finally built to:</p>
-<pre><code class="language-lua">    function(context)
-        return context:garrison_residence():region():name() == &quot;wh_main_reikland_altdorf&quot;
+<pre><code class="language-lua">	function(context)
+		return context:garrison_residence():region():name() == &quot;wh_main_reikland_altdorf&quot;
     end,
 </code></pre>
 <p>But that's not all! All this does is to check if the Altdorf region is being occupied, but it says nothing about Mannfred! We'll go back to the very beginning - find the GarrisonOccupiedEvent on the document, and return to its functions, which were garrison_residence() and character(). We want to build an &quot;and&quot; sentence for our conditional, so that it only triggers the function when Altdorf is occupied <strong>AND</strong> when it's occupied by Mannfred. Let's try to plot our trajectory a little. We should try to find a script_interface that allows us to reference an agent_subtype key, which is the cleanest and most mod-friendly way to search for Mannfred. Looking at <code>CHARACTER_SCRIPT_INTERFACE</code>, I see two functions - character_subtype() and character_subtype_key(). The latter is used to return a string - ie., it doesn't check for a specific subtype key, but it will tell us what the characters subtype key is. We need to <em>check</em> for a specific subtype key, &quot;vmp_mannfred_von_carstein&quot;.</p>
-<pre><code class="language-lua">    function(context)
-        return context:garrison_residence():region():name() == &quot;wh_main_reikland_altdorf&quot; and context:character():character_subtype(&quot;vmp_mannfred_von_carstein&quot;)
+<pre><code class="language-lua">	function(context)
+		return context:garrison_residence():region():name() == &quot;wh_main_reikland_altdorf&quot; and context:character():character_subtype(&quot;vmp_mannfred_von_carstein&quot;)
     end,
 </code></pre>
 <p>Note here that the first line of context, that ends in &quot;:name()&quot;, needs to have an equal-to check because we don't want to return the <em>name</em> of the region, but we want to return a value of true or false if the name of the region is equal to the string we define - &quot;wh_main_reikland_altdorf&quot;. We can read this as &quot;return true if the region's name is Altdorf, and if the character is Mannfred; else, return false.&quot;</p>
 <p>A strong conditional function is very important to writing good listeners, as listeners can be very performance-heavy if there are many triggering at once, and the more that are whittled away via a strong conditional, the better performance will be. Be mindful of your conditionals!</p>
-<a class="header" href="#callback-functions" id="callback-functions"><h3>Callback Functions</h3></a>
+<h3><a class="header" href="#callback-functions" id="callback-functions">Callback Functions</a></h3>
 <p>At this point in the walkthrough, we have about 60% of our listener completed! It's not bad, let's take a quick look at what we actually have written:</p>
 <pre><code class="language-lua">core:add_listener(
-    &quot;MannfredOccupiesAltdorf&quot;,
-    &quot;GarrisonOccupiedEvent&quot;,
-    function(context)
-        return context:garrison_residence():region():name() == &quot;wh_main_reikland_altdorf&quot; and context:character():character_subtype(&quot;vmp_mannfred_von_carstein&quot;)
-    end,
+	&quot;MannfredOccupiesAltdorf&quot;,
+	&quot;GarrisonOccupiedEvent&quot;,
+	function(context)
+		return context:garrison_residence():region():name() == &quot;wh_main_reikland_altdorf&quot; and context:character():character_subtype(&quot;vmp_mannfred_von_carstein&quot;)
+	end,
     function(context)
         -- code to execute
     end,
@@ -301,11 +310,11 @@ Return: bool
 </code></pre>
 <p>I'd like to point out a couple quick notes. To start off - yes, your listener_name can be anything you want, as long as it's a string. You need a comma after <em>every argument</em> in the command, of which there are five that are detailed way at the top - listener_name, name, conditional boolean, callback, and persistence boolean. The code above is written the way it is because that's a common application of it, and allows it to be easily read, but realistically this can all be written on one line.</p>
 <p>Alright, so we are on the function to execute block, known as the callback function. Here, we have much more freedom than the conditional function, as we can do whatever is needed with this block. For instance, we can have a callback function that triggers an event (like a dilemma or a message), or grants a unit/experience/ancillary, or unlocks something like a Rite or a Legendary Lord. For our instance, I want to just give Mannfred's army a new unit and a new effect bundle.</p>
-<p><strong><em>NOTE: For our sake, we're going to assume the new unit and new effect bundle are already defined.</em></strong></p>
+<p><em><strong>NOTE: For our sake, we're going to assume the new unit and new effect bundle are already defined.</strong></em></p>
 <p>Looking up in our <a href="files/scripting.txt">commands document</a>, I see a grant_unit_to_character to command. Checking vanilla usage, I see it takes two args - a char_lookup_str and a unit_key string. The unit_key string - which refers to the main_units_tables - is, in our situation, <code>tutorial_big_bat</code>. To find a char_lookup_str, we have to first find the character's cqi.</p>
 <p><em>For more information on char_lookup_str and cqi, go to <a href="chapter_3_1_9.html">the CA types page</a></em></p>
 <p>Thankfully for us, we can go back to where we were before and use the context of the Event to find all the info from before. Looking at the <code>CHARACTER_SCRIPT_INTERFACE</code>, we see a direct link to cqi, with the method &quot;command_queue_index()&quot;. For this, we define our local values as such:</p>
-<pre><code class="language-lua">    local char_cqi = context:character():command_queue_index()
+<pre><code class="language-lua">	local char_cqi = context:character():command_queue_index()
     local char_lookup_str = cm:char_lookup_str(char_cqi)
 </code></pre>
 <p>With this, we find the CQI first of the character, and then apply that to find the character's lookup string, which is the type needed for grant_unit_to_character.</p>
@@ -316,32 +325,32 @@ Return: bool
 <p>Alright, now we have all we need to build our callback function! Let's mush it all together real quickly.</p>
 <pre><code class="language-lua">function(context)
 
-    local char_cqi = context:character():command_queue_index()
-    local char_lookup_str = cm:char_lookup_str(char_cqi)
-    local mf_cqi = context:character():military_force():command_queue_index()
-    
-    cm:grant_unit_to_character(char_lookup_str, &quot;tutorial_big_bat&quot;)
-    cm:apply_effect_bundle_to_force(&quot;tutorial_free_hair&quot;, mf_cqi, 5)
+	local char_cqi = context:character():command_queue_index()
+	local char_lookup_str = cm:char_lookup_str(char_cqi)
+	local mf_cqi = context:character():military_force():command_queue_index()
+	
+	cm:grant_unit_to_character(char_lookup_str, &quot;tutorial_big_bat&quot;)
+	cm:apply_effect_bundle_to_force(&quot;tutorial_free_hair&quot;, mf_cqi, 5)
 
 end,
 </code></pre>
 <p>And that's a quick walkthrough on how to assemble your callback function! Please note, you can have whatever you want here, and there's nothing saying you <em>must</em> restrict yourself to the context of the event. As an example, I can do the same thing without context, like so:</p>
 <pre><code class="language-lua">function(context)
 
-    local mannfred_faction = cm:get_faction(&quot;wh_main_vmp_vampire_counts&quot;)
-    local mannfred = mannfred_faction:faction_leader()
-    
-    local char_cqi = mannfred:cqi()	
-    local char_lookup_str = cm:char_lookup_str(char_cqi)
-    local mf_cqi = mannfred:military_force():command_queue_index()
-    
-    cm:grant_unit_to_character(char_lookup_str, &quot;tutorial_big_bat&quot;)
-    cm:apply_effect_bundle_to_force(&quot;tutorial_free_hair&quot;, mf_cqi, 5)
+	local mannfred_faction = cm:get_faction(&quot;wh_main_vmp_vampire_counts&quot;)
+	local mannfred = mannfred_faction:faction_leader()
+	
+	local char_cqi = mannfred:cqi()	
+	local char_lookup_str = cm:char_lookup_str(char_cqi)
+	local mf_cqi = mannfred:military_force():command_queue_index()
+	
+	cm:grant_unit_to_character(char_lookup_str, &quot;tutorial_big_bat&quot;)
+	cm:apply_effect_bundle_to_force(&quot;tutorial_free_hair&quot;, mf_cqi, 5)
 
 end,
 </code></pre>
 <p>This takes a little bit longer than using context, but it is a solution to applying commands to objects that aren't involved in the context. So if, for example, you wanted to give all Vampire factions - aside from Mannfred's own - an <code>effect_bundle</code> that increases their diplomatic relations with Mannfred after he conquers Altdorf, you can. The world is your oyster when it comes to listeners.</p>
-<a class="header" href="#persistence" id="persistence"><h3>Persistence</h3></a>
+<h3><a class="header" href="#persistence" id="persistence">Persistence</a></h3>
 <p>One last thing, and it's gonna be much quicker than the last two. The final boolean - persistence - can be set to true, or false. True means that the listener will fire more than once; false means that, once the entire code is run through, the listener is removed from the game state and won't be called again. This only gives two options - once, or infinite. There is a third option, by using core:remove_listener(&quot;listener_name&quot;). At whichever point this code is called, the listener with the matching &quot;listener_name&quot; is removed from the game state, and won't be called again. A remove_listener statement like this can be used after enabling a counter that listens for the listener firing five times, or to cancel the listener if the turn is beyond 100, or much else.</p>
 <p>Keep in mind that, to &quot;fire&quot;, only the conditional needs to return true. If there's more if statements in your callback function, and they fail, but your persistence is set to false, the listener will remove itself.</p>
 <pre><code class="language-lua">core:add_listener(
@@ -357,7 +366,7 @@ end,
 )
 </code></pre>
 <p>So this listener will cancel after one use if &quot;GarrisonOccupiedEvent&quot; is triggered, regardless of whether or not &quot;this is done&quot; returns as true or false.</p>
-<a class="header" href="#summary" id="summary"><h3>Summary</h3></a>
+<h3><a class="header" href="#summary" id="summary">Summary</a></h3>
 <p>Overall, there's a lot of power to understanding these big three, and it takes your Lua knowledge from &quot;adding and multiplying numbers&quot; to &quot;affecting the game in a real, and personable way&quot;. Make sure this stuff is good and mastered, and if you ever find confusion, come back and reread this stuff.</p>
 
                     </main>

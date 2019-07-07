@@ -4,6 +4,8 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Converting to Markdown - Modding Resources</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,9 +32,12 @@
 
         
     </head>
-    <body class="light">
+    <body class="rust">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">var path_to_root = "";</script>
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
@@ -53,8 +58,8 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = 'light'; }
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
         </script>
@@ -72,7 +77,10 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html" class="active">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html" class="active">Converting to Markdown</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -89,8 +97,8 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -102,12 +110,13 @@
                             
                         </div>
 
-                        <h1 class="menu-title">Modding Resources</h1> 
+                        <h1 class="menu-title">Modding Resources</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -136,18 +145,18 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#converting-to-markdown" id="converting-to-markdown"><h1>Converting to Markdown</h1></a>
-<a class="header" href="#markdown-conversion" id="markdown-conversion"><h3>Markdown Conversion</h3></a>
+                        <h1><a class="header" href="#converting-to-markdown" id="converting-to-markdown">Converting to Markdown</a></h1>
+<h3><a class="header" href="#markdown-conversion" id="markdown-conversion">Markdown Conversion</a></h3>
 <p>This page is intended as a very quick guide on how to convert your tutorial into the language used here, markdown. Markdown is super simple and made to be incredibly simple.</p>
-<a class="header" href="#standard-text" id="standard-text"><h4>Standard Text</h4></a>
+<h4><a class="header" href="#standard-text" id="standard-text">Standard Text</a></h4>
 <p>These three are the backbone of any good tutorial.</p>
 <p>Italics - *text*</p>
 <p><em>this is an example</em></p>
 <p>Bold - **text**</p>
 <p><strong>this is an example</strong></p>
 <p>Italics &amp; Bold - ***text***</p>
-<p><strong><em>this is an example</em></strong></p>
-<a class="header" href="#blockquotes" id="blockquotes"><h4>Blockquotes</h4></a>
+<p><em><strong>this is an example</strong></em></p>
+<h4><a class="header" href="#blockquotes" id="blockquotes">Blockquotes</a></h4>
 <p>Blockquotes are a great way of showing specific code or db stuffs. All you have to do is put a &quot;&gt;&quot; preceding a paragraph.</p>
 <blockquote>
 <p>This is a blockquote.</p>
@@ -159,15 +168,11 @@
 <blockquote>
 <p>You can also make nestled blockquotes.</p>
 <blockquote>
-<p>Like this.</p>
-<blockquote>
-<blockquote>
-<p>And, this.</p>
+<p>Like this.
+&gt;&gt; And, this.</p>
 </blockquote>
 </blockquote>
-</blockquote>
-</blockquote>
-<a class="header" href="#lists" id="lists"><h4>Lists</h4></a>
+<h4><a class="header" href="#lists" id="lists">Lists</a></h4>
 <p>Super simple, like the rest of this language. To make a nice bulleted list, use &quot;-&quot; prior to the item, with a line break in between.</p>
 <ul>
 <li>Example list.</li>
@@ -186,7 +191,7 @@ You can also randomly not use a bullet to say something.</li>
 I think you get the example by now.</li>
 <li>One more, for good measure.</li>
 </ol>
-<a class="header" href="#codeblocks" id="codeblocks"><h4>Codeblocks</h4></a>
+<h4><a class="header" href="#codeblocks" id="codeblocks">Codeblocks</a></h4>
 <p>For any written code, you can use a single backtick/grave (`) on both sides of the text in order to write code inline. Kinda like <code>this</code>.</p>
 <p>If you want to make blocks of code, you can use three of the above, on both sides of the text.</p>
 <pre><code class="language-lua">local example = &quot;text&quot;
@@ -198,12 +203,12 @@ end
 do_stuff()
 </code></pre>
 <p>To get the syntax highlight, I typed <code>lua</code> after the three backticks.</p>
-<a class="header" href="#line-breaks" id="line-breaks"><h4>Line Breaks</h4></a>
+<h4><a class="header" href="#line-breaks" id="line-breaks">Line Breaks</a></h4>
 <p>If you want to make big lines across the screen, use three (or more) hyphens, asterisks, or underscores, in a line by themselves.</p>
 <hr />
-<a class="header" href="#links-and-images" id="links-and-images"><h4>Links and Images</h4></a>
+<h4><a class="header" href="#links-and-images" id="links-and-images">Links and Images</a></h4>
 <p>Links are pretty simple, and can have a specified tooltips for when they're hovered over, or converted into text and made into a hyperlink, or can remain a standard clickable link.</p>
-<p>To make a standard clickable link, wrap the URL with &quot;&lt;&gt;&quot;.</p>
+<p>To make a standard clickable link, wrap the URL with &quot;&lt;&gt;&quot;. </p>
 <p><a href="https://www.google.com">https://www.google.com</a></p>
 <p>To give a link a title that replaces the URL, first put the title within &quot;[]&quot;, and have it immediately followed by &quot;()&quot;.</p>
 <p>[example title](https://www.google.com)</p>
@@ -215,14 +220,14 @@ do_stuff()
 <p>[example title](https://www.google.com &quot;This Is Google!&quot;)</p>
 <p><a href="https://www.google.com" title="This Is Google!">example title</a></p>
 <p>If your image isn't uploaded onto the web, that's fine - just send me the file, and I can attach it on my side. Make a note for me, saying ![][image_1] for the first image, ![][image_2] for the second and so on, and I'll take care of the rest!</p>
-<a class="header" href="#headings" id="headings"><h4>Headings</h4></a>
+<h4><a class="header" href="#headings" id="headings">Headings</a></h4>
 <p>You can set six different bolded-sizes for headers, for visual distinction. A header is simply a number sign (#) followed by the text that is being head'ed. There can be one number sign, up to six number signs, preceding the text. One number sign is the largest, six the smallest.</p>
-<a class="header" href="#one-number-sign" id="one-number-sign"><h1>One Number Sign</h1></a>
-<a class="header" href="#two-number-signs" id="two-number-signs"><h2>Two Number Signs</h2></a>
-<a class="header" href="#three-number-signs" id="three-number-signs"><h3>Three Number Signs</h3></a>
-<a class="header" href="#four-number-signs" id="four-number-signs"><h4>Four Number Signs</h4></a>
-<a class="header" href="#five-number-signs" id="five-number-signs"><h5>Five Number Signs</h5></a>
-<a class="header" href="#six-number-signs" id="six-number-signs"><h6>Six Number Signs</h6></a>
+<h1><a class="header" href="#one-number-sign" id="one-number-sign">One Number Sign</a></h1>
+<h2><a class="header" href="#two-number-signs" id="two-number-signs">Two Number Signs</a></h2>
+<h3><a class="header" href="#three-number-signs" id="three-number-signs">Three Number Signs</a></h3>
+<h4><a class="header" href="#four-number-signs" id="four-number-signs">Four Number Signs</a></h4>
+<h5><a class="header" href="#five-number-signs" id="five-number-signs">Five Number Signs</a></h5>
+<h6><a class="header" href="#six-number-signs" id="six-number-signs">Six Number Signs</a></h6>
 
                     </main>
 
@@ -235,7 +240,7 @@ do_stuff()
                         
 
                         
-                            <a rel="next" href="to_do.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="chapter_1_0.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -253,7 +258,7 @@ do_stuff()
                 
 
                 
-                    <a href="to_do.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="chapter_1_0.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

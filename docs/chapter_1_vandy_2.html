@@ -4,6 +4,8 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Localisation - Modding Resources</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,9 +32,12 @@
 
         
     </head>
-    <body class="light">
+    <body class="rust">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">var path_to_root = "";</script>
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
@@ -53,8 +58,8 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = 'light'; }
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
         </script>
@@ -72,7 +77,10 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html" class="active"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html" class="active"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -89,8 +97,8 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -102,12 +110,13 @@
                             
                         </div>
 
-                        <h1 class="menu-title">Modding Resources</h1> 
+                        <h1 class="menu-title">Modding Resources</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -136,17 +145,17 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#localisation" id="localisation"><h1>Localisation</h1></a>
-<a class="header" href="#by-vandy" id="by-vandy"><h2>By Vandy</h2></a>
+                        <h1><a class="header" href="#localisation" id="localisation">Localisation</a></h1>
+<h2><a class="header" href="#by-vandy" id="by-vandy">By Vandy</a></h2>
 <p>Hello and welcome! Look no further for a simple tutorial to create custom text in <em>Total War!</em></p>
-<p><strong><em>PLEASE NOTE:</em></strong> <em>This tutorial assume basic knowledge of PackFiles, the modding tools available, and other basic nomenclature regarding modding.</em></p>
+<p><em><strong>PLEASE NOTE:</strong></em> <em>This tutorial assume basic knowledge of PackFiles, the modding tools available, and other basic nomenclature regarding modding.</em></p>
 <p>Firstly, yes - obviously, custom text is possible, otherwise I wouldn’t have typed these words into this internet. Text in-game is known as localisation, and consists of basically all text you see - from the Help Pages, to building names, to mission text, to subtitles in quest battles - all of these are localisable text, meaning we can edit or add text.</p>
 <p>There are two ways to edit and add text, and I'll show them both in turn. While the PackFile editing method is probably the one most will use - and the one I recommend - we'll go over both. Assembly Kit Localisation is good to know just for visualization, and it will help me teach your how to use it in the PackFile, so please read on!</p>
-<a class="header" href="#ak-localisation" id="ak-localisation"><h4>AK Localisation</h4></a>
+<h4><a class="header" href="#ak-localisation" id="ak-localisation">AK Localisation</a></h4>
 <p>Making new localisation in the Assembly Kit is remarkably simple. All you have to do is find the columns with the localisation you want to add, fill in the text, apply your changes. After using <code>Export -&gt; Export Changes to Binary</code>, close DaVE and open up BoB. Within BoB, use the <code>Retail Pack</code> option, and boom, your localisation files are done!</p>
 <p>One BIG thing to note here: just like exporting db in the Assembly Kit, it has <em>all</em> records within that .loc file, not just the ones you've edited. This is real bad for compatibility, so you should know how to directly edit the .loc file. Read on!</p>
-<p><strong><em>WARHAMMER II USERS:</em></strong> <em>At the date of this publication (July 3, 2019), the Localisation feature of the retail AK for WH2 is disabled. To enable it (which is really easy), check out the bottom section, way down below..</em></p>
-<a class="header" href="#packfile-localisation" id="packfile-localisation"><h4>PackFile Localisation</h4></a>
+<p><em><strong>WARHAMMER II USERS:</strong></em> <em>At the date of this publication (July 3, 2019), the Localisation feature of the retail AK for WH2 is disabled. To enable it (which is really easy), check out the bottom section, way down below..</em></p>
+<h4><a class="header" href="#packfile-localisation" id="packfile-localisation">PackFile Localisation</a></h4>
 <p>You can either copy over a .loc file, thieved from either a CA retail pack or something exported from AK like above, or create a new one from scratch. The former can be done either with the <code>Add -&gt; Add from Packfile</code> action in RPFM, or just &quot;Add File&quot;, whereas created a new one can be done with the <code>Create -&gt; Create Loc</code> action. Make sure the path for the .loc file is in <code>.pack/text/db/</code>.</p>
 <p>However you do it, you'll get something like the following picture, with three columns: <code>Key</code>, <code>Text</code>, and <code>It Doesn't Really Matter, Just Set It To True</code>.</p>
 <p><img src="images/chapter_1_vandy_2/04.png" alt="test" /></p>
@@ -157,7 +166,7 @@
 <p>After that, all of them have either <code>localised_text</code> or <code>localised_description</code>. These are the two columns we can see in the Assembly Kit for the effect_bundles table. Some tables have only one localisable field, some have many - just check the Assembly Kit or existing .loc files for what those are and what they're used for.</p>
 <p>The last one is the <em>db</em> key. For example, if we look up <code>wh_main_payload_disaster_flood_region</code> in the effect_bundles table in the Assembly Kit, we can see it's an actual key used in that table:</p>
 <p><img src="images/chapter_1_vandy_2/05.png" alt="test" /></p>
-<p>For the case of the flood_region effect bundle, we can see it broken down into the three parts.</p>
+<p>For the case of the flood_region effect bundle, we can see it broken down into the three parts. </p>
 <p>First, there's the table name: <strong>effect_bundles_</strong></p>
 <p>Then, there's the column name: <strong>localised_text_</strong></p>
 <p>Then, the key: <strong>wh_main_payload_disaster_flood_region</strong></p>
@@ -169,7 +178,7 @@
 <li>You can divide the .loc files up by table, like they are in vanilla - or you can have them all in one big .loc file. It's up to you!</li>
 <li>The .loc files <em>need</em> to be in the folder structure <code>./pack/text/db</code>.</li>
 </ul>
-<a class="header" href="#excelling-at-localisation" id="excelling-at-localisation"><h4>Excelling at Localisation</h4></a>
+<h4><a class="header" href="#excelling-at-localisation" id="excelling-at-localisation">Excelling at Localisation</a></h4>
 <p>If you have Excel, or another data program, it's incredibly easy to automate localisation. I used to type every single loc key, until one day I decided to start concatenating, and it's reduced time spent <em>tremendously</em>. Continuing with the same example above, I would set up a new worksheet with the following:</p>
 <p><img src="images/chapter_1_vandy_2/06.png" alt="test" /></p>
 <p>Column A, the table key, Column B the db column key. Column C will be filled out with db keys (normally, copied from RPFM or the AK).</p>
@@ -181,7 +190,7 @@
 <p>At that point, copy the D2 function, and paste it for the rest of the rows.</p>
 <p><img src="images/chapter_1_vandy_2/11.png" alt="test" /></p>
 <p>And that's it. Copy the stuff you want to export, and paste it into a .loc file within RPFM.</p>
-<a class="header" href="#common-pitfalls" id="common-pitfalls"><h4>Common Pitfalls</h4></a>
+<h4><a class="header" href="#common-pitfalls" id="common-pitfalls">Common Pitfalls</a></h4>
 <p>It doesn't work! Here are some common mistakes with localisation:</p>
 <ul>
 <li><strong>Misnomer</strong>: Double, triple, and double check your spelling.</li>
@@ -190,7 +199,7 @@
 <li><strong>Combo keys</strong>: common case localizing building_culture_variants, you have to include any culture/subculture/faction key you have in the building's line, in that order, whenever present. Analogous to how UITR work (below).</li>
 <li><strong>Who Knows?</strong>: Sometimes it just doesn't work. If nothing else, try remaking it from scratch.</li>
 </ul>
-<a class="header" href="#localisation-options" id="localisation-options"><h4>Localisation Options</h4></a>
+<h4><a class="header" href="#localisation-options" id="localisation-options">Localisation Options</a></h4>
 <p>There are a couple of cool things we can put in the localised text, such as colored text, or images. I'll go over the most common ones here:</p>
 <p><strong><strong>VALUE</strong></strong></p>
 <p>You'll see in the <code>effects</code> table <code>%+n</code>. This is a wildcard that replaces itself with whatever the value in the <code>value</code> column is, when that effect is linked to an effect bundle or building or skill or what-have-you. So if the effect's text is something like &quot;This increases something by %+n&quot;, and the value in <code>effect_bundle_to_effects</code> is 5, it'll read &quot;This increases something by 5&quot;.</p>
@@ -209,7 +218,7 @@
 <p><img src="images/chapter_1_vandy_2/12.png" alt="test" /></p>
 <p>There's an extra <em>suffix</em> to some uitr loc keys, which can refer to <em>subcultures</em>. In this above example, the treasury header text changes for Beastmen/Chaos/Vampire Counts, and it's read automatically. All you have to do is add a new row in the db file and the .loc file!</p>
 <p><img src="images/chapter_1_vandy_2/13.png" alt="test" /></p>
-<a class="header" href="#addendum-warhammer-ii-assembly-kit-localisation" id="addendum-warhammer-ii-assembly-kit-localisation"><h4>Addendum: Warhammer II Assembly Kit Localisation</h4></a>
+<h4><a class="header" href="#addendum-warhammer-ii-assembly-kit-localisation" id="addendum-warhammer-ii-assembly-kit-localisation">Addendum: Warhammer II Assembly Kit Localisation</a></h4>
 <p>First things first, get <a href="files/TExc_LocalisableFields.xml">this file</a>. Take it, and move it to: <code>steam/steamapps/common/Total War WARHAMMER II/assembly_kit/raw_data/db</code>, overwrite the existing file.</p>
 <p>That will <em>enable</em> localisation. There's a small and slightly annoying thing that must be done to get around it. When you edit a localisable field, you'll get a small little exclamation to the left of the text like this:</p>
 <p><img src="images/chapter_1_vandy_2/01.png" alt="test" /></p>
@@ -218,7 +227,7 @@
 <p>Now that we have only our edited cells, highlight all of them - ONLY the localisation spots - and press the <code>For Editing/Approval</code> button on the top right, which is right next to the checkbox we just used.</p>
 <p><img src="images/chapter_1_vandy_2/03.png" alt="test" /></p>
 <p>After doing so, they should vanish from the filter for <code>Only Display Records Without Text State</code>, and will export properly! And that's all!</p>
-<a class="header" href="#summary" id="summary"><h4>Summary</h4></a>
+<h4><a class="header" href="#summary" id="summary">Summary</a></h4>
 <p>Get out there and get localising. I don't have much more to say here.</p>
 
                     </main>

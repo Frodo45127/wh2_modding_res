@@ -4,6 +4,8 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Mod Troubleshooting Guide - Modding Resources</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,9 +32,12 @@
 
         
     </head>
-    <body class="light">
+    <body class="rust">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">var path_to_root = "";</script>
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
@@ -53,8 +58,8 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = 'light'; }
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
         </script>
@@ -72,7 +77,10 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html" class="active"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html" class="active"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.3.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.3.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -89,8 +97,8 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -102,12 +110,13 @@
                             
                         </div>
 
-                        <h1 class="menu-title">Modding Resources</h1> 
+                        <h1 class="menu-title">Modding Resources</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -136,14 +145,14 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#mod-troubleshooting-guide" id="mod-troubleshooting-guide"><h1>Mod Troubleshooting Guide</h1></a>
-<a class="header" href="#by-cataph" id="by-cataph"><h2>By Cataph</h2></a>
+                        <h1><a class="header" href="#mod-troubleshooting-guide" id="mod-troubleshooting-guide">Mod Troubleshooting Guide</a></h1>
+<h2><a class="header" href="#by-cataph" id="by-cataph">By Cataph</a></h2>
 <p>This is a troubleshooting guide for mod users in TW: Warhammer 2. The generic pointers should be valid for all recent TW games.
 - Your neighbourhood Cataph</p>
-<a class="header" href="#managing-mods" id="managing-mods"><h2>Managing Mods</h2></a>
+<h2><a class="header" href="#managing-mods" id="managing-mods">Managing Mods</a></h2>
 <p>So, you have subscribed to mods on the workshop. You now open CA's current mod manager (hereby called <strong>George II</strong>) and - they don't work. We called it George II cause it's the new launcher. He's new in town, prettier than George, but he's still not good at what he should be doing and forgets to make mods work. We're sorry but George II needs some time.</p>
 <p>If mods appear to not work, check the support pages about it. If that doesn't work, which is feasible, the standing recommendation is to rollback to George I (<code>game properties&gt; betas&gt; launcher_release_candidate</code>). George I is faulty as well but slightly more reliable.
-<strong><em>[disregard all of the above right now (during P&amp;W dlc release), they're both bugged more than before; this is basically a &quot;shut up and use KMM&quot;]</em></strong></p>
+<em><strong>[disregard all of the above right now (during P&amp;W dlc release), they're both bugged more than before; this is basically a &quot;shut up and use KMM&quot;]</strong></em></p>
 <p>Even better, just use the <a href="https://github.com/Kaedrin/warhammer-mod-manager">community mod manager</a> (hereby called KMM). Long story short, George is unwieldy and has grown responsible for a lot of issues of its own, becoming hated by modders and users alike. Among other things, KMM can launch the game without even bothering George.</p>
 <p>One of the things George I cannot do is let you change load order because it only uses the default alphabetical order. KMM and even George II have that function, so sometimes you'd be tempted to change load order manually, right? WRONG.
 The truth is that <strong>compatibility-minded modders already handle load order on their own</strong> as far as possible. Manually changing load order may do absolutely nothing <strong>or break everything</strong>.
@@ -151,19 +160,19 @@ Some context. There are six main possible categories of folders in a mod pack an
 <ul>
 <li><strong>Db</strong>: table name.</li>
 <li><strong>Scripts</strong>: pack name.</li>
-<li><strong>Startpos</strong>: the big bad, pack name.</li>
+<li><strong>Startpos</strong>: the big bad, pack name. </li>
 <li><strong>Text</strong>: table name.</li>
 <li><strong>UI</strong>: pack name.</li>
 <li><strong>Variants</strong>: pack name.</li>
 </ul>
 <p>And that is if the modder doesn't redirect content. KMM can only affect pack name order, so there are things like balance submods (Db overrides) that are still completely in the hands of the modders and intentionally so.</p>
-<p>In other words, <strong>there are <strong>only two possible cases</strong> in which you may want to alter load order manually: UI and variants</strong>, basically if you want to use specific reskin B.pack in the midst of larger reskin A.pack, in which case you push B on top.</p>
+<p>In other words, <strong>there are <strong>only two possible cases</strong> in which you may want to alter load order manually: UI and variants</strong>, basically if you want to use specific reskin B.pack in the midst of larger reskin A.pack, in which case you push B on top. </p>
 <p>You DON'T WANT to change script or startpos load order, because bad stuff happens. For example, the Community Modding Framework, aka bunch of script hooks, should always be LAST or you'll break things.</p>
 <p><em>In conclusion, you want to follow KMM's instructions, give Steam time to download/remove mods and mostly keep load order in an alphabetical fashion (e.g. order by name and save profile), especially after adding new mods.</em></p>
-<p>Which, incidentally, is this:
+<p>Which, incidentally, is this: 
 ! # $ % &amp; ' ( ) + , - ; = @ 0-9 a-z [ ] ^ _ ` { } ~
 Where &quot;!&quot; wins over &quot;a&quot;.</p>
-<a class="header" href="#common-troubleshooting" id="common-troubleshooting"><h2>Common Troubleshooting</h2></a>
+<h2><a class="header" href="#common-troubleshooting" id="common-troubleshooting">Common Troubleshooting</a></h2>
 <p>In an efficient mod, at least half of the reported issues are down to user error or what is technically called launcher f***-up. We’re going to try and cut that amount down for the greater good.</p>
 <p><strong>Most common user mistakes</strong>:</p>
 <ol>
@@ -205,23 +214,23 @@ Where &quot;!&quot; wins over &quot;a&quot;.</p>
 <li><strong>Freeze on start</strong>: try again.</li>
 <li><strong>DLC not found</strong>: I don’t know the specifics but 1.8.6 should fix that from .4. If it doesn’t, Detect installs again. Past that, report to Kaedrin with what he needs or rollback to the .2.</li>
 </ol>
-<a class="header" href="#appendix-trimming-the-mod-list" id="appendix-trimming-the-mod-list"><h2>APPENDIX: Trimming the Mod List</h2></a>
+<h2><a class="header" href="#appendix-trimming-the-mod-list" id="appendix-trimming-the-mod-list">APPENDIX: Trimming the Mod List</a></h2>
 <p>You should always keep in mind that even if the mod list is technically sound there is always a <strong>background mod limit of unknown entity</strong>. Long story short, beyond 40 mods you’re potentially flirting with disaster because risk of incompatibility increases and the game may simply throw more random problems and crashes, or just plain balance issues. At 70ish, you surely have something wrong going on somewhere.
 As a rule of thumb, try not to overload it. No, don’t assemble and publish a bunch of mods, that kind of thing is terribly dangerous and bad for a variety of reasons. We’ll go more in-depth about this another time.</p>
-<a class="header" href="#finding-the-culprit" id="finding-the-culprit"><h3>Finding the culprit</h3></a>
+<h3><a class="header" href="#finding-the-culprit" id="finding-the-culprit">Finding the culprit</a></h3>
 <p>The other problem with large mod lists is this: bad, I got a crash; worse, which one of the N mods I have is the culprit?</p>
-<p>Generic pointers:</p>
+<p>Generic pointers: </p>
 <ul>
 <li>Pure Text, Variant and UI mods can NEVER crash the game for the user. If they do, it’s a botched download.</li>
 <li>Sort by date either on KMM or George to find the most recent updates, if you didn’t add additional mods those may be responsible.</li>
 <li>If you had the issue during a campaign, do not remove mods that have custom items, units or buildings because you’re just going to crash harder if they are around in the campaign map.</li>
 </ul>
-<p>One of the things you should try upon encountering a reproducible crash is to toggle off all mods  from the ground up by loading the bare minimum to make that mod work, for example loading only the Unlocker+ and CMF. And up from there, adding one or small groups of mods at a time until you can reproduce the issue.
+<p>One of the things you should try upon encountering a reproducible crash is to toggle off all mods  from the ground up by loading the bare minimum to make that mod work, for example loading only the Unlocker+ and CMF. And up from there, adding one or small groups of mods at a time until you can reproduce the issue. 
 <strong>Keep in mind mod requirements while you do this.</strong></p>
-<p>It’s patient work but the modder will appreciate it.
+<p>It’s patient work but the modder will appreciate it. 
 Remember: a happy modder is a happy user.</p>
-<a class="header" href="#appendix-scripts" id="appendix-scripts"><h2>APPENDIX: Scripts</h2></a>
-<p>Scripts are being increasingly used by mods. Scripters are getting smarter by the day to maintain compatibility, but some mods still require frameworks like CMF or UIMF (we’ll read about them later).</p>
+<h2><a class="header" href="#appendix-scripts" id="appendix-scripts">APPENDIX: Scripts</a></h2>
+<p>Scripts are being increasingly used by mods. Scripters are getting smarter by the day to maintain compatibility, but some mods still require frameworks like CMF or UIMF (we’ll read about them later). </p>
 <p>You may encounter symptoms of broken scripts, due to botched downloads, bad compatibility, lack of CMF/UIMF or just plain unforeseen issues because we can just mess stuff up sometimes. Script glitches tend to be quite tricky.</p>
 <p>How to recognize broken scripts:</p>
 <ul>
@@ -231,22 +240,22 @@ Remember: a happy modder is a happy user.</p>
 <img src="images/1_1-01.png" alt="Example (with broken Books too)" />.</li>
 <li>Chaos and all Rogue armies may spawn immediately.</li>
 <li>Campaign camera on a fresh campaign starts zoomed-out and doesn’t pan in.</li>
-<li>Chivalry starts at 0.</li>
+<li>Chivalry starts at 0. </li>
 <li>Some LLs appear as trapezist Loremasters (e.g. in TEB).</li>
 <li>One of the worst, characters do not gain XP (this may sometimes happen in full vanilla too, requires repair).</li>
 </ul>
 <p>What do?
-In most cases, it’s just a botched download (see Launcher error 3). Other times it may be trickier and require you to start trimming the mod list to find the culprit. When/if you report the issue to modders, remember to provide as much info as humanly possible because finding a script break can turn ugly and complicated.
+In most cases, it’s just a botched download (see Launcher error 3). Other times it may be trickier and require you to start trimming the mod list to find the culprit. When/if you report the issue to modders, remember to provide as much info as humanly possible because finding a script break can turn ugly and complicated. 
 Please also consider using <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1271877744">this debugger mod</a> and sending the resulting log, generated in Steam\steamapps\common\Total War WARHAMMER II. Specific scripty mods may come with additional instructions.</p>
-<a class="header" href="#appendix-a-hrefhttpsteamcommunitycomworkshopfiledetailsid1175369579community-modding-framework-cmfa" id="appendix-a-hrefhttpsteamcommunitycomworkshopfiledetailsid1175369579community-modding-framework-cmfa"><h2>APPENDIX: <a href="http://steamcommunity.com/workshop/filedetails/?id=1175369579">Community Modding Framework (CMF)</a></h2></a>
-<a class="header" href="#currently-needs-maintenance-as-of-7-may" id="currently-needs-maintenance-as-of-7-may"><h2>CURRENTLY NEEDS MAINTENANCE, AS OF 7 MAY</h2></a>
-<p>CMF is basically a community-driven dock where all ships come to do whatever ships do in ports. In other words, <strong>it is a required framework that allows high layers of compatibility between a bunch of mods</strong>. It used to be pretty mandatory before new opportunities arose, but it’s still required for some mods out there. A bunch of problems are caused by not having CMF, or by a botched download of the latter.</p>
+<h2><a class="header" href="#appendix-a-hrefhttpsteamcommunitycomworkshopfiledetailsid1175369579community-modding-framework-cmfa" id="appendix-a-hrefhttpsteamcommunitycomworkshopfiledetailsid1175369579community-modding-framework-cmfa">APPENDIX: <a href="http://steamcommunity.com/workshop/filedetails/?id=1175369579">Community Modding Framework (CMF)</a></a></h2>
+<h2><a class="header" href="#currently-needs-maintenance-as-of-7-may" id="currently-needs-maintenance-as-of-7-may">CURRENTLY NEEDS MAINTENANCE, AS OF 7 MAY</a></h2>
+<p>CMF is basically a community-driven dock where all ships come to do whatever ships do in ports. In other words, <strong>it is a required framework that allows high layers of compatibility between a bunch of mods</strong>. It used to be pretty mandatory before new opportunities arose, but it’s still required for some mods out there. A bunch of problems are caused by not having CMF, or by a botched download of the latter. </p>
 <p>So, what to do:</p>
 <ol>
 <li>If it’s a required mod, do grab it.</li>
 <li>ALWAYS keep CMF right at the bottom of the mod list if you are using KMM. Always.</li>
 </ol>
-<a class="header" href="#appendix-a-hrefhttpssteamcommunitycomsharedfilesfiledetailsid1354363596ui-modding-frameworka" id="appendix-a-hrefhttpssteamcommunitycomsharedfilesfiledetailsid1354363596ui-modding-frameworka"><h2>APPENDIX: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1354363596">UI Modding Framework</a></h2></a>
+<h2><a class="header" href="#appendix-a-hrefhttpssteamcommunitycomsharedfilesfiledetailsid1354363596ui-modding-frameworka" id="appendix-a-hrefhttpssteamcommunitycomsharedfilesfiledetailsid1354363596ui-modding-frameworka">APPENDIX: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1354363596">UI Modding Framework</a></a></h2>
 <p>Pretty much the same reasoning, this mod was a breakthrough that allowed UI mods via scripting, and there are zero reasons not to have it around just in case one of your mods is actually using it or starts doing it.
 This framework may be required by scripty mods that do pretty nifty stuff including new UI panels and such.</p>
 

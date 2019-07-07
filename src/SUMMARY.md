@@ -2,7 +2,6 @@
 
 [Modding Resources](./modding_resources.md)
 [Converting to Markdown](./convert_to_md.md)
-[TO DO](./to_do.md)
 
 - [Tools & Resources](./chapter_1_0.md)
     - [Self-Testing Multiplayer (Battle & Campaign)](./chapter_1_norse_1.md)
