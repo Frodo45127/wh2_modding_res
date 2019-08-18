@@ -261,7 +261,7 @@ out(e) → 5.04
     out(table[4]) → nil -- doesn't exist!
 </code></pre>
 <p><em><strong>NOTE:</strong></em> <em>Arrays in Lua start at index ONE, not index ZERO. <code>table[0]</code> would be invalid in the above example!</em></p>
-<p>Arrays are numbered automatically, so it really reads &quot;the first index of table is 5, the second index of table is 10&quot;, and so on. You <em>access</em> those indexes by using the <code>[num\]</code> operator, which we'll look further at in the next tables tutorial later on. The reason this works, however, is because Lua is automatically numbering these values, giving them a <em>key</em>. When you make an array like that, Lua reads it more like the following:</p>
+<p>Arrays are numbered automatically, so it really reads &quot;the first index of table is 5, the second index of table is 10&quot;, and so on. You <em>access</em> those indexes by using the <code>\[num\]</code> operator, which we'll look further at in the next tables tutorial later on. The reason this works, however, is because Lua is automatically numbering these values, giving them a <em>key</em>. When you make an array like that, Lua reads it more like the following:</p>
 <pre><code class="language-lua">    a = 5
     b = 10
     c = 17
