@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Siege Battle Maps (3k) - Modding Resources</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="rust">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="modding_resources.html">Modding Resources</a></li><li class="affix"><a href="convert_to_md.html">Converting to Markdown</a></li><li><a href="chapter_1_0.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><ol class="section"><li><a href="chapter_1_norse_1.html"><strong aria-hidden="true">1.1.</strong> Self-Testing Multiplayer (Battle &amp; Campaign)</a></li><li><a href="chapter_1_marth_1.html"><strong aria-hidden="true">1.2.</strong> Custom Portraits and Portholes</a></li><li><a href="chapter_1_maruka_1.html"><strong aria-hidden="true">1.3.</strong> Custom Settlement Skins</a></li><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.4.</strong> Mod Troubleshooting Guide</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.5.</strong> Tolerant Tables</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.6.</strong> Unit Card Guide</a></li><li><a href="chapter_1_4.html"><strong aria-hidden="true">1.7.</strong> Building Buildings</a></li><li><a href="chapter_1_vandy_2.html"><strong aria-hidden="true">1.8.</strong> Localisation</a></li><li><a href="chapter_1_cryswar_1.html"><strong aria-hidden="true">1.9.</strong> Creating Custom Units</a></li><li><a href="chapter_1_cryswar_2.html"><strong aria-hidden="true">1.10.</strong> Custom Legendary Lord</a></li><li><a href="chapter_1_cryswar_3.html"><strong aria-hidden="true">1.11.</strong> Custom Skills, Items, and Effects</a></li><li><a href="chapter_1_cryswar_4.html"><strong aria-hidden="true">1.12.</strong> Creating and Editing Abilities</a></li><li><a href="chapter_1_cryswar_5.html"><strong aria-hidden="true">1.13.</strong> Creating a New Faction</a></li></ol></li><li><a href="chapter_2_0.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3_0.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.</strong> Essential Setup</a></li><li><ol class="section"><li><a href="chapter_3_1_0_1.html"><strong aria-hidden="true">3.1.1.</strong> Devtool Console/Repl.it</a></li></ol></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.2.</strong> Hello World</a></li><li><ol class="section"><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.2.1.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.2.2.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.2.3.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.2.4.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.2.5.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.2.6.</strong> Commands, Interfaces &amp; Listeners</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.2.7.</strong> Calling Scripts</a></li><li><a href="chapter_3_1_9.html"><strong aria-hidden="true">3.2.8.</strong> Lua Keywords</a></li><li><a href="chapter_3_1_10.html"><strong aria-hidden="true">3.2.9.</strong> Tables and Loops</a></li><li><ol class="section"><li><a href="chapter_3_1_10_1.html"><strong aria-hidden="true">3.2.9.1.</strong> Advanced Conditionals</a></li></ol></li><li><a href="chapter_3_1_11.html"><strong aria-hidden="true">3.2.10.</strong> Debugging</a></li><li><a href="chapter_3_1_12.html"><strong aria-hidden="true">3.2.11.</strong> Object-Oriented Programming</a></li></ol></li><li><a href="chapter_3_1_faq.html"><strong aria-hidden="true">3.3.</strong> FAQ</a></li></ol></li><li><a href="chapter_4_0.html"><strong aria-hidden="true">4.</strong> Battle Maps</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Land Battle Maps</a></li><li><a href="chapter_4_2_wh.html"><strong aria-hidden="true">4.2.</strong> Siege Battle Maps (WH 1&amp;2)</a></li><li><a href="chapter_4_2_3k.html" class="active"><strong aria-hidden="true">4.3.</strong> Siege Battle Maps (3k)</a></li><li><a href="chapter_4_extra_0.html"><strong aria-hidden="true">4.4.</strong> Glossary &amp; Extras</a></li><li><ol class="section"><li><a href="chapter_4_extra_1.html"><strong aria-hidden="true">4.4.1.</strong> Custom Vistas</a></li></ol></li></ol></li><li><a href="etc.html"><strong aria-hidden="true">5.</strong> Etc</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Modding Resources</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#siege-battle-maps-3k" id="siege-battle-maps-3k">Siege Battle Maps (3K)</a></h1>
+<pre><code>NOTE: This is an adaptation of the WH2 Siege Map tutorial, 
+so some parts are literally copy/pasted from there. 
+
+If you come from Warhammer 2 MapMaking community, 
+then you'll feel like home here.
+</code></pre>
+<p>Siege maps are.... complex beasts. They're the most detailed, time-consuming, and memorable battlemaps you can play in a Total War game, yet they're so complex people often fail to get their full potential realized. So today, we're going to <strong>learn how to make a proper siege map</strong>. With proper walls, capture nodes, working towers and AI support. So if the AI doesn't work as you want, you can no longer say it's just the AI's fault!</p>
+<p>Before we begin, a little warning: this tutorial is on the <em><strong>advanced side,</strong></em> and it's quite technical. I'll try to explain all the stuff that is hard to understand, but this assumes you have at least learnt how to do basic things in Terry, like painting the map, placing buildings, etc. If not, go watch another tutorial that cover the basics, then come back when you can move around Terry.</p>
+<p><img src="images/siege_battle_map_tutorial/sleeping_tiger.jpg" alt="The tiger, sleeping, awaiting for you..." /></p>
+<h2><a class="header" href="#requirements" id="requirements">Requirements</a></h2>
+<p>First, we need a few tools and resources to make a proper siege battle map:</p>
+<ul>
+<li><strong><code>Assembly Kit</code></strong>: You can install it from Steam. We'll use Terry, one of the included tools in the Assembly Kit to make the map.</li>
+<li><strong><code>Sleeping Tiger of Tianshan</code></strong>: You can get it from <a href="files/zheng_jiang_best_waifu.7z">here</a>. These are the source files of <em><strong>Sleeping Tiger of TianShan</strong></em>'s Custom Map, to serve as an example of a fully working SiegeAI, because otherwise people seems unable to make the SiegeAI work..... Just don't reupload this map, neither his source files or exported packfile.</li>
+</ul>
+<p>Once we have these tools and resources, we can start talking about making maps! Next, let's get clear the <em><strong>technical requirements of a Siege Battle Map</strong></em>. First, for it to just <em>work</em> we need:</p>
+<ul>
+<li><strong>Two Deployment Zones</strong>. One for the attacker, one for the defender.</li>
+<li><strong>One Additive Deployment Region</strong> inside of each deployment zone.</li>
+<li><strong>Walls</strong>. Yeah, walls. With gates, towers, and even more walls.</li>
+</ul>
+<p>That's enough to make it kinda work in a player vs player game, but it'll be barely playable. For a proper player vs AI, there's quite a lot more to do:</p>
+<ul>
+<li><strong>Deployment AI Hints</strong>, only in the attacker's deployment zone.</li>
+<li><strong>Attacker/Defender Reinforcement Lines</strong>. Optional, only needed if you plan to make the map work in campaign.</li>
+<li><strong>Battlefield Zones</strong>, to make the walls garrisonable.</li>
+<li><strong>Capture Points</strong>, to be able to capture places.</li>
+<li><strong>SiegeAI Layout</strong>, to make the AI work in the map.</li>
+<li><strong>Fort Perimeter AI Hint</strong>, to make the SiegeAI Layout not crash the game.</li>
+<li><strong>Barricades</strong>: to make you and the AI able to place barricades on the map.</li>
+<li><strong>Civilians</strong>: to make civilians spawn on your map.</li>
+<li><strong>Set the map to load as a Siege Battle Map</strong>, not a Land Battle Map. Otherwise, part of the AI will be broken.</li>
+</ul>
+<p>And if you want to do like me, and go beyond that, there's still the possibility of adding custom buildings, custom towers, or other unique gimmicks, but that's outside the scope of this tutorial, so we're going to keep it simple, and just focus on those requirements.</p>
+<p>And now we're going to go through the five phases of siege mapmaking.</p>
+<h3><a class="header" href="#phase-1-the-funny-part" id="phase-1-the-funny-part">Phase 1: the funny part.</a></h3>
+<p>To begin, create a new map in Terry, name it whatever you want,, set it as a <strong>Siege BattleMap</strong> and.... start building it. Place your buildings, change your terrain... just make the map you want. But you need to keep some things in mind: </p>
+<ul>
+<li>First, <em><strong>MAKE STREETS WIDE ENOUGH</strong></em>. The number one problem of siege maps is street width. People tend to make them too narrow, and then units can’t be deployed or maneuvered properly, and the map is a nightmare to fight on. This is the biggest thing you have to take into account: don't make narrow streets. Make them at least big enough you can fit one and a half ultra-sized infantry units, on wide formation. Less than that will give you big problems in playability.</li>
+<li>Second, <em><strong>USE WALL BUILDINGS/PREFABS, NOT WALL PROPS</strong></em>. A building has logic and collision. A prop doesn't have logic nor collision. When placing your walls, always use the walls from the <code>Buildings</code> or <code>Prefab</code> sections, never from the <code>Props</code> section.</li>
+<li>Third, <em><strong>keep your city/castle/town layout simple</strong></em>. The more complex it gets (for example, very long and zigzagging streets or narrow streets) the harder it gets for the AI to defend it and attack it effectively. Also, the harder it gets for your CPU to get the pathfinding for the units working, which means more CPU load.</li>
+<li>Fourth, <em><strong>don't make curved walls!</strong></em> As we're going to see in a later point, walls need a special, very precise set-up to work. So don't make your map planning on having working curved walls. You can have fake unusable curved walls, but not real ones.</li>
+</ul>
+<p><img src="images/siege_battle_map_tutorial/curved_walls.png" alt="Curved Walls" /></p>
+<p>With those points in mind, create your map. Once you have put down your buildings, painted your map, and had fun, it's time for the serious business.</p>
+<h3><a class="header" href="#phase-2-trust-me-im-an-engineer" id="phase-2-trust-me-im-an-engineer">Phase 2: Trust me, I'm an Engineer.</a></h3>
+<p>Now we are going to make the map playable, which means finishing the first of the two requirements list. First, the deployment zones.</p>
+<p><em><strong>Deployment Zones</strong></em> control where a specific alliance or player can deploy their units at the start of the battle. It's simple: make one around the place you want the attacker to deploy, and the same for the defender. Each defender zone you create will automatically have an <strong><code>additive</code> region</strong> inside it. You can create different regions within a deployment zone:</p>
+<ul>
+<li><strong><code>Additive</code></strong>: The units of this alliance can deploy inside it.</li>
+<li><strong><code>Subtractive</code></strong>: The units of this alliance cannot deploy inside it.</li>
+<li><strong><code>Guerrilla Exclusion Additive</code></strong>: The units of the enemy alliance cannot deploy inside it when using vanguard deployment.</li>
+<li><strong><code>Guerrilla Exclusion Subtractive</code></strong>: The units of the enemy alliance can deploy inside it when using vanguard deployment.</li>
+</ul>
+<p>For a simple land battle map, you can just use the default additive region and let the game generate the vanguard deployment zones by itself. But in this case, I <strong>personally recommend</strong> you make the vanguard zones yourself, especially if your settlement's borders have weirdly-shaped deployment zones/walls. To do that you have to follow some simple steps:</p>
+<ul>
+<li>Starting with your additive deployment regions already done, draw a <code>Guerrilla Exclusion Additive</code> <strong>around the entire map</strong>. That'll remove the auto-generated vanguard deployment zones.</li>
+<li>Then, draw a <code>Guerrilla Exclusion Subtractive</code> <strong>around the enemy's deployment zone</strong>. The enemy's vanguard-deploying units will only be able to deploy here, so make sure their original <code>Additive</code> region is contained inside this one. Otherwise, there may be parts of their base deployment region where vanguard units cannot be deployed!</li>
+</ul>
+<p>You can select the alliance in the entity options of the Deployment Zone. Alliance <code>0</code> is the attacker, <code>1</code> is the defender, and <code>2</code> and <code>3</code> are for FFA maps, so don't use them here.</p>
+<p>Also, you need to place some <code>Deployment AI Hints</code> to tell the AI for good places to deploy inside their normal/vanguard deployment zone. Just draw a few of them in single lines. If you draw a line with more that two vertex the AI will ignore it.</p>
+<p>Next, <strong>the walls</strong>. A good siege needs a good wall. Everybody knows that. Everybody. Walls are the first basic obstacle the attacker has to pass. So we have to make one.</p>
+<p><img src="images/siege_battle_map_tutorial/the_wall.jpg" alt="The Wall" /></p>
+<p>Walls are special buildings with special logic, and such they need to be placed in a special way. For this task I recommend you enabling <em><strong><code>Grid Snapping</code></strong></em> and <em><strong><code>Show Building Collision Outlines</code></strong></em> settings in Terry. <code>Grid Snapping</code> will make sure your buildings are placed at fixed intervals when placing or moving them (not <code>0.324-&gt;0.325-&gt;0.326</code>, but <code>0-&gt;1-&gt;2</code>). <code>Show Building Collision Outlines</code> will make the collision line of your walls (that pink border you may see around each piece of wall) appear, which is very helpful to find moved/misaligned walls.</p>
+<p>First, the walls, gates, towers, etc, we are going to use are the ones from <code>Prefabs</code>, not the ones from <code>Buildings</code>. Why? Because they already include most of the things we need to make them work.</p>
+<p>Next, walls need to be placed one after another, with perfect precision. And I mean <strong>PERFECT PRECISION</strong>. A <code>0.001</code> of difference between wall pieces will break their connection, causing problems with units trying to scale/garrison them. Walls usually are made with a fixed size (for example, they're <code>24x10</code> in Three Kingdoms), so if you put a wall on (<code>x:50, y:0, z:10</code>) the next one has to be in (<code>x:74, y:0, z:10</code>) to work. Perfectly connected, as all things should be. And knowing that, just place them forming your great wall. The same happens for even more special walls, like Corners, Blocks, Gates and Towers. Just align them properly, and you're done.</p>
+<p><img src="images/siege_battle_map_tutorial/misaligned_wall_3k.png" alt="This is an example of what you should not have on your map: a Missaligned Wall" /></p>
+<p>Next, <em><strong>Barricades</strong></em>. These are simple: pick the barricade prefab, place it on the map and... done. It should work &quot;as is&quot;. Just take this into account:</p>
+<ul>
+<li><em><strong>There should be no walkable space</strong></em> between their ends and the border of the street.</li>
+<li>You <em><strong>can't physically lock out parts of your city</strong></em> (or the AI will bug out in marvellous ways).</li>
+</ul>
+<p>With that, you should be able to export your wonderful map, start the game, start the battle and... <strong>it'll barely work</strong>. Gates and Towers will work, but the walls will not be garrisonable and the AI will behave erratically. Then you cry. Then you beg everyone for help. Then you realize <strong>you still have work to do</strong>. </p>
+<h3><a class="header" href="#phase-3-why-u-not-work" id="phase-3-why-u-not-work">Phase 3: WHY U NOT WORK????</a></h3>
+<p>Now it's time for the second hardest part. To make your map work. Take a coffee (or a tea if you’re a British cartographer), and relax. You'll need it.</p>
+<p>First, we're going to make the walls work. As I said before, walls are special buildings. They have logic, but that logic <strong>doesn't work</strong> <em><strong>as is</strong></em>. That logic only works when the building is put inside a <code>Battlefield Zone</code>. A <code>Battlefield Zone</code> is what makes your units able to get in formation atop the walls. Just click in the <code>Battlefield Zone (locked)</code> button under logic stuff and draw a <code>Battlefield Zone</code> around your walls and gates.</p>
+<p>Once you get the <code>Battlefield Zones</code> you need for your walls, you can load your map in-game and lo and behold! Your units <strong>can now get in formation atop the walls!</strong></p>
+<p><img src="images/siege_battle_map_tutorial/atop_the_walls_3k.jpg" alt="Atop the walls" /></p>
+<p>Next, let's make the map winnable by capping. Make one or more <code>Capture Zones</code>, set them as <em>Major, Victory</em> and... you're done. Gates and Towers already include their own capture zones, so we don't need zones for them.</p>
+<p><img src="images/siege_battle_map_tutorial/capture_point_3k.jpg" alt="Capture Point" /></p>
+<p>Now we can export it again, and test it. Many things will still be broken, but you can use this test to <strong>ensure your <code>Capture Zones</code> are setted up correctly</strong>. The VP should have a special icon and appear on the minimap!</p>
+<p>That ends the second hardest part. Now it comes the first one: <em><strong><code>SiegeAI</code></strong></em>.</p>
+<h3><a class="header" href="#phase-4-every-time-i-export-the-gods-toss-a-coin-in-the-air" id="phase-4-every-time-i-export-the-gods-toss-a-coin-in-the-air">Phase 4: Every time I export, the gods toss a coin in the air.</a></h3>
+<p>Siege and Resource Battle Maps use a system called <code>SiegeAI</code> to get the AI to understand the layout of a map. The system is basically a layout of nodes and links. Like <strong>an overlay over the map</strong> that the AI can understand. Here is where a lot of people start getting angry because a bad set-up of this system <strong>can and will crash your game</strong>.</p>
+<p><img src="images/siege_battle_map_tutorial/siege_graph_3k.png" alt="Siege Graph" /></p>
+<p>First, let's explain the parts of the <code>SiegeAI</code> System. The system consist of <code>Nodes</code> (for the AI to recognize important places to defend) and <code>Edges</code> (links between those places). </p>
+<p><code>Nodes</code> are usually composed by the node itself (pink) and a linked boundary (purple). The node is what the units will recognize and use to move, the boundary is used to define the logical borders of the node. The different types of nodes are:</p>
+<ul>
+<li><em><strong><code>Area Node</code></strong></em>: Where the AI will deploy its units. Also, these areas are going to be actively defended by them. Use them for gates, victory points, capture points, and whatever place you want the AI to keep and eye on. Also, the more of these nodes, the less the AI will blob up in big nodes.</li>
+<li><em><strong><code>Intersection Node</code></strong></em>: for intersections you don't want the AI to actively protect.</li>
+<li><em><strong><code>Wall Area Node</code></strong></em>: No idea. I suspect that it's to make the AI see special places as walls, but... Haven't been able to get it working.</li>
+<li><em><strong><code>Entry Node</code></strong></em>: For open entrances on unfortified maps.</li>
+<li><em><strong><code>Firing Node</code></strong></em>: No idea. We tried to use it multiple times and we only got crashes with it.</li>
+</ul>
+<p>Those are the nodes, now the edges:</p>
+<ul>
+<li><em><strong><code>Street Edge</code></strong></em>: What you're going to use to connect intersections/areas. It has one edge (pink inner line) and two boundaries (purple), one on each side.</li>
+<li><em><strong><code>Area Connection Edge</code></strong></em>: Don't really know its use, but it looks and works similar to the street edge. </li>
+<li><em><strong><code>Wall Edge</code></strong></em>: Just a line. Draw it from one end of the wall section (and by section I mean the entire wall line, not just each little wall piece), all the way to the other. The line should be about midway through the wall. This will make the AI see the wall and use it for both, attacking and defending.</li>
+<li><em><strong><code>Palisade Edge</code></strong></em>: To make the AI see palisades it can garrison. I guess. We don't need it because the palisades we have already include it.</li>
+</ul>
+<p>Also, there are two AI Hints you'll need to make these maps work:</p>
+<ul>
+<li><em><strong><code>Fort Link</code></strong></em>: This one is used to '<em>join</em>' your Wall Edges so, in the end, your Wall Edges + Fort Links form a closed perimeter.</li>
+<li><em><strong><code>Fort Perimeter</code></strong></em>: This makes the entire SiegeAI system work, and your map <em><strong>will hard-crash if you don't have it</strong></em>. It's also the culprit of most of the AI problems in a Siege.</li>
+</ul>
+<p>Now, what do we do with this stuff? Simple:</p>
+<ul>
+<li><strong>Place every non-walkable zone of the map under a No-Go Region</strong>. This is useful to reduce the amount of narrow places your units can get stuck, and to... <em>smooth</em> the walkable terrain for the units pathfinding.</li>
+<li><strong>Place an Area/Intersection Node in all intersections</strong> of your Siege Battle Map. As an advice, do plenty of Area Nodes, and leave Intersection Nodes for small intersections. That'll give the AI plenty of space to deploy/defend, instead of concentrating all its forces in one place.</li>
+<li><strong>Use Street Edges to connect all your Area/Intersection Nodes</strong>. To connect an Edge with a Node, just make sure the Edge (pink) intersects with the Node (pink) and both boundaries of the Edge (purple) intersects with the Node's boundary (purple). Like cables, blue to blue, red to red. For no-exit streets, you can leave the street edge and its boundaries open.</li>
+<li><strong>Draw a Wall Edge from the beginning of the first Wall</strong>, to the end of the Last Wall. Usually, there should be one Wall Edge per wall section, but for some reason only the first Wall Edge is used by the AI. The rest are ignored. So, if you have multiple wall segments, connect them using the same Wall Edge.</li>
+<li><strong>Draw a Fort Link closing both ends of the Wall Edge</strong>. You just need to make their ends intersect.</li>
+<li><strong>Draw a Fort Perimeter around your entire fort</strong>. Not too far from the walls, not too close to the walls. Around 20 units away from the wall is ok.</li>
+</ul>
+<p>Once you got all that sorted out, you can play the map and... you'll see the AI working. Or not. In that case, you'll have to tweak you SiegeAI layout and try again. And once you got it working the way you want... the map is done.</p>
+<p>Hope this guide has proved itself useful to you, and that you have fun (and suffer) while making Siege Battle Maps!</p>
+<h3><a class="header" href="#bonus-phase-every-man-can-fight-if-you-give-them-the-right-motivation" id="bonus-phase-every-man-can-fight-if-you-give-them-the-right-motivation">Bonus Phase: Every man can fight, if you give them the right motivation.</a></h3>
+<p>As a bonus, let's add civilians to our map! It's really simple: place a big <code>Civilian Deployment</code> zone where you want your civilians to spawn. Then, add some <code>Civilian Shelters</code> to it. The shelters are just a line with one end green, and one red. Just place the green end in a walkable area, and the red end in a no-go region. Also, if you don't place any shelters, YOUR MAP WILL CRASH. That's all. With that, when there are no units in the civilian deployment zone, civilians will spawn.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_4_2_wh.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_4_extra_0.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="chapter_4_2_wh.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="chapter_4_extra_0.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
